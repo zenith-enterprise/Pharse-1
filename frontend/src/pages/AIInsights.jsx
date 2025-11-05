@@ -140,24 +140,6 @@ const AIInsights = ({ user, onLogout }) => {
     }).format(value || 0);
   };
 
-  const renderAlgorithmResult = (title, data, icon) => {
-    return (
-      <Card className="stat-card">
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-base">
-            {icon}
-            {title}
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <pre className="text-sm text-slate-700 whitespace-pre-wrap font-sans">
-            {JSON.stringify(data, null, 2)}
-          </pre>
-        </CardContent>
-      </Card>
-    );
-  };
-
   const COLORS = ['#1E3A8A', '#7C3AED', '#14B8A6', '#F59E0B', '#EF4444'];
 
   return (
