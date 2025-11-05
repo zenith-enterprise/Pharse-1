@@ -17,6 +17,8 @@ const AIInsights = ({ user, onLogout }) => {
   const [analysis, setAnalysis] = useState(null);
   const [loading, setLoading] = useState(false);
   const [loadingInvestors, setLoadingInvestors] = useState(true);
+  const [aggregateData, setAggregateData] = useState(null);
+  const [activeTab, setActiveTab] = useState('individual');
 
   useEffect(() => {
     loadInvestors();
@@ -25,12 +27,88 @@ const AIInsights = ({ user, onLogout }) => {
   const loadInvestors = async () => {
     try {
       const response = await axios.get('/investors');
-      setInvestors(response.data.data || []);
+      const investorData = response.data.data || [];
+      setInvestors(investorData);
+      
+      // Calculate aggregate data
+      calculateAggregateData(investorData);
     } catch (error) {
       toast.error('Failed to load investors');
     } finally {
       setLoadingInvestors(false);
     }
+  };
+
+  const calculateAggregateData = (investorData) => {
+    if (!investorData.length) return;
+
+    // Calculate aggregate metrics
+    const totalInvestors = investorData.length;
+    const totalAUM = investorData.reduce((sum, inv) => sum + inv.total_aum, 0);
+    const totalInvested = investorData.reduce((sum, inv) => sum + inv.total_invested, 0);
+    const avgReturns = investorData.reduce((sum, inv) => sum + inv.gain_loss_pct, 0) / totalInvestors;
+    
+    // Risk profile distribution
+    const riskDist = investorData.reduce((acc, inv) => {
+      acc[inv.risk_profile] = (acc[inv.risk_profile] || 0) + 1;
+      return acc;
+    }, {});
+    
+    const riskDistribution = Object.entries(riskDist).map(([name, value]) => ({ name, value }));
+    
+    // Performance distribution
+    const perfBuckets = {
+      'Negative': 0,
+      '0-5%': 0,
+      '5-10%': 0,
+      '10-15%': 0,
+      '15%+': 0
+    };
+    
+    investorData.forEach(inv => {
+      if (inv.gain_loss_pct < 0) perfBuckets['Negative']++;
+      else if (inv.gain_loss_pct < 5) perfBuckets['0-5%']++;
+      else if (inv.gain_loss_pct < 10) perfBuckets['5-10%']++;
+      else if (inv.gain_loss_pct < 15) perfBuckets['10-15%']++;
+      else perfBuckets['15%+']++;
+    });
+    
+    const performanceDistribution = Object.entries(perfBuckets).map(([name, value]) => ({ name, value }));
+    
+    // Top and bottom performers
+    const sortedByPerformance = [...investorData].sort((a, b) => b.gain_loss_pct - a.gain_loss_pct);
+    const topPerformers = sortedByPerformance.slice(0, 5);
+    const bottomPerformers = sortedByPerformance.slice(-5).reverse();
+    
+    // AUM distribution
+    const aumBuckets = {
+      '<5L': 0,
+      '5-10L': 0,
+      '10-15L': 0,
+      '15L+': 0
+    };
+    
+    investorData.forEach(inv => {
+      const aum = inv.total_aum / 100000; // Convert to lakhs
+      if (aum < 5) aumBuckets['<5L']++;
+      else if (aum < 10) aumBuckets['5-10L']++;
+      else if (aum < 15) aumBuckets['10-15L']++;
+      else aumBuckets['15L+']++;
+    });
+    
+    const aumDistribution = Object.entries(aumBuckets).map(([name, value]) => ({ name, value }));
+
+    setAggregateData({
+      totalInvestors,
+      totalAUM,
+      totalInvested,
+      avgReturns,
+      riskDistribution,
+      performanceDistribution,
+      topPerformers,
+      bottomPerformers,
+      aumDistribution
+    });
   };
 
   const runAnalysis = async () => {
