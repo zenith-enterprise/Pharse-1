@@ -240,23 +240,28 @@ const AIInsights = ({ user, onLogout }) => {
               )}
 
               {!loading && analysis && (
-            <div className="space-y-6 animate-fadeIn">
-              {/* AI Summary */}
-              <Card className="border-2 border-purple-300 bg-gradient-to-br from-purple-50 to-white" data-testid="ai-summary-section">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2 text-xl">
-                    <Brain className="w-6 h-6 text-purple-600" />
-                    ChatGPT AI Summary
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="bg-white rounded-lg p-6 shadow-sm" data-testid="chatgpt-summary">
-                    <p className="text-slate-800 whitespace-pre-wrap leading-relaxed">
-                      {analysis.summary?.summary || 'No summary available'}
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
+                <div className="space-y-6 animate-fadeIn">
+                  {/* ChatGPT AI Summary - Prominent */}
+                  <Card className="border-2 border-purple-300 shadow-lg bg-gradient-to-br from-purple-50 via-white to-purple-50" data-testid="ai-summary-section">
+                    <CardHeader className="bg-gradient-to-r from-purple-600 to-purple-500 text-white rounded-t-lg">
+                      <CardTitle className="flex items-center gap-2 text-xl">
+                        <Brain className="w-7 h-7" />
+                        ChatGPT AI Analysis Summary
+                      </CardTitle>
+                      <p className="text-sm text-purple-100 mt-2">
+                        Powered by GPT-4o-mini • Generated using 20 AI algorithms
+                      </p>
+                    </CardHeader>
+                    <CardContent className="pt-6">
+                      <div className="bg-white rounded-lg p-6 border-2 border-purple-200 shadow-sm" data-testid="chatgpt-summary">
+                        <div className="prose prose-slate max-w-none">
+                          <p className="text-slate-700 leading-relaxed whitespace-pre-wrap text-base">
+                            {analysis.summary?.summary || 'No summary available'}
+                          </p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
 
               {/* Performance Summary */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
