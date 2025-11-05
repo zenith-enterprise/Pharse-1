@@ -263,139 +263,16 @@ const AIInsights = ({ user, onLogout }) => {
                     </CardContent>
                   </Card>
 
-              {/* Performance Summary */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <Card className="stat-card">
-                  <CardHeader className="pb-2">
-                    <CardTitle className="text-sm font-medium text-slate-600">Invested Amount</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="text-2xl font-bold text-slate-900" data-testid="analysis-invested">
-                      {formatCurrency(analysis.analysis?.performance?.invested)}
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card className="stat-card">
-                  <CardHeader className="pb-2">
-                    <CardTitle className="text-sm font-medium text-slate-600">Current Value</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="text-2xl font-bold text-slate-900" data-testid="analysis-value">
-                      {formatCurrency(analysis.analysis?.performance?.value)}
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card className="stat-card">
-                  <CardHeader className="pb-2">
-                    <CardTitle className="text-sm font-medium text-slate-600">Gain/Loss</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className={`text-2xl font-bold flex items-center gap-2 ${
-                      (analysis.analysis?.performance?.gainLoss || 0) >= 0 ? 'text-green-600' : 'text-red-600'
-                    }`} data-testid="analysis-gain-loss">
-                      {(analysis.analysis?.performance?.gainLoss || 0) >= 0 ? <TrendingUp /> : <TrendingDown />}
-                      {(analysis.analysis?.performance?.gainLoss || 0).toFixed(2)}%
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-
-              {/* Key Alerts */}
-              {analysis.analysis?.concentration?.alerts?.length > 0 && (
-                <Card className="border-2 border-yellow-300 bg-yellow-50/30">
-                  <CardHeader>
-                    <CardTitle className="flex items-center gap-2 text-lg">
-                      <AlertTriangle className="w-5 h-5 text-yellow-600" />
-                      Concentration Alerts
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="space-y-2" data-testid="concentration-alerts">
-                      {analysis.analysis.concentration.alerts.map((alert, idx) => (
-                        <div key={idx} className="bg-white rounded-lg p-4 border border-yellow-200">
-                          <p className="font-semibold text-yellow-800">{alert.type}</p>
-                          <p className="text-sm text-slate-600">AMC: {alert.amc} - {alert.pct}%</p>
-                        </div>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              )}
-
-              {/* Diversification Score */}
-              <Card className="border-2 border-green-300 bg-green-50/30">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2 text-lg">
-                    <CheckCircle className="w-5 h-5 text-green-600" />
-                    Diversification Quality
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4" data-testid="diversification-metrics">
-                    <div className="bg-white rounded-lg p-4">
-                      <p className="text-sm text-slate-600">Diversification Score</p>
-                      <p className="text-3xl font-bold text-green-600">
-                        {analysis.analysis?.diversification?.diversificationScore || 0}
-                      </p>
-                    </div>
-                    <div className="bg-white rounded-lg p-4">
-                      <p className="text-sm text-slate-600">AMC Count</p>
-                      <p className="text-3xl font-bold text-slate-900">
-                        {analysis.analysis?.diversification?.amcCount || 0}
-                      </p>
-                    </div>
-                    <div className="bg-white rounded-lg p-4">
-                      <p className="text-sm text-slate-600">Category Count</p>
-                      <p className="text-3xl font-bold text-slate-900">
-                        {analysis.analysis?.diversification?.catCount || 0}
-                      </p>
-                    </div>
+                  {/* AI Analysis Cards */}
+                  <div>
+                    <h3 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                      <Activity className="w-5 h-5 text-purple-600" />
+                      Detailed Insights
+                    </h3>
+                    <AIAnalysisCards analysis={analysis.analysis} />
                   </div>
-                </CardContent>
-              </Card>
-
-              {/* Recommendations */}
-              {analysis.analysis?.rebalancing_recommendations?.suggestions?.length > 0 && (
-                <Card className="border-2 border-blue-300 bg-blue-50/30">
-                  <CardHeader>
-                    <CardTitle className="text-lg">Rebalancing Recommendations</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-2" data-testid="rebalancing-recommendations">
-                      {analysis.analysis.rebalancing_recommendations.suggestions.map((suggestion, idx) => (
-                        <li key={idx} className="bg-white rounded-lg p-4 border border-blue-200 flex items-start gap-3">
-                          <CheckCircle className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
-                          <span className="text-slate-700">{suggestion}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
+                </div>
               )}
-
-              {/* All Algorithm Results */}
-              <Card>
-                <CardHeader>
-                  <CardTitle>Detailed Algorithm Results (20 Analyses)</CardTitle>
-                  <p className="text-sm text-slate-600 mt-2">
-                    Complete output from all AI algorithms
-                  </p>
-                </CardHeader>
-                <CardContent>
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                    {renderAlgorithmResult('Portfolio Performance', analysis.analysis?.performance, <TrendingUp className="w-4 h-4 text-blue-600" />)}
-                    {renderAlgorithmResult('Asset Allocation', analysis.analysis?.allocation, <TrendingUp className="w-4 h-4 text-teal-600" />)}
-                    {renderAlgorithmResult('SIP Health', analysis.analysis?.sip_health, <CheckCircle className="w-4 h-4 text-green-600" />)}
-                    {renderAlgorithmResult('Risk Mismatch', analysis.analysis?.risk_mismatch, <AlertTriangle className="w-4 h-4 text-yellow-600" />)}
-                    {renderAlgorithmResult('Churn Risk', analysis.analysis?.churn_risk, <AlertTriangle className="w-4 h-4 text-red-600" />)}
-                    {renderAlgorithmResult('Goal Forecast', analysis.analysis?.goal_forecast, <TrendingUp className="w-4 h-4 text-purple-600" />)}
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          )}
 
           {!loading && !analysis && (
             <div className="text-center py-20">
