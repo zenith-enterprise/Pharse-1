@@ -27,6 +27,25 @@ AMC_LIST = [
 CATEGORY_LIST = ['Equity', 'Debt', 'Hybrid', 'ELSS', 'Liquid', 'Balanced']
 TXN_TYPES = ['Buy', 'Sell', 'Switch', 'Dividend', 'SIP']
 
+# Indian names for realistic data
+FIRST_NAMES = [
+    'Rajesh', 'Priya', 'Amit', 'Sneha', 'Vikram', 'Ananya', 'Arjun', 'Kavya',
+    'Rohan', 'Neha', 'Sanjay', 'Divya', 'Karan', 'Pooja', 'Aditya', 'Riya',
+    'Rahul', 'Meera', 'Nikhil', 'Shreya', 'Varun', 'Anjali', 'Harsh', 'Ishita',
+    'Sameer', 'Swati', 'Kunal', 'Tanvi', 'Manish', 'Nidhi', 'Deepak', 'Preeti',
+    'Gaurav', 'Ritika', 'Ashish', 'Sakshi', 'Prakash', 'Simran', 'Suresh', 'Kritika',
+    'Anil', 'Jyoti', 'Ramesh', 'Aarti', 'Manoj', 'Pallavi', 'Vivek', 'Shweta',
+    'Akash', 'Nisha', 'Ravi', 'Megha', 'Sunil', 'Tara', 'Naveen', 'Aditi',
+    'Vishal', 'Madhuri', 'Ajay', 'Ritu', 'Sandeep', 'Bhavna', 'Yogesh', 'Shilpa'
+]
+
+LAST_NAMES = [
+    'Sharma', 'Verma', 'Patel', 'Kumar', 'Singh', 'Gupta', 'Reddy', 'Nair',
+    'Kapoor', 'Mehta', 'Shah', 'Joshi', 'Rao', 'Desai', 'Chopra', 'Malhotra',
+    'Agarwal', 'Bhatia', 'Khanna', 'Sethi', 'Bansal', 'Choudhary', 'Jain', 'Iyer',
+    'Kulkarni', 'Pandey', 'Mishra', 'Sinha', 'Saxena', 'Tiwari', 'Trivedi', 'Pillai'
+]
+
 def random_int(min_val, max_val):
     return random.randint(min_val, max_val)
 
