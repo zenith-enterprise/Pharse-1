@@ -274,12 +274,207 @@ const AIInsights = ({ user, onLogout }) => {
                 </div>
               )}
 
-          {!loading && !analysis && (
-            <div className="text-center py-20">
-              <Brain className="w-16 h-16 text-slate-300 mx-auto mb-4" />
-              <p className="text-slate-600 text-lg">Select an investor and run analysis to see results</p>
-            </div>
-          )}
+              {!loading && !analysis && (
+                <div className="text-center py-20">
+                  <Brain className="w-16 h-16 text-slate-300 mx-auto mb-4" />
+                  <p className="text-slate-600 text-lg">Select an investor and run analysis to see results</p>
+                </div>
+              )}
+            </TabsContent>
+
+            {/* Aggregate Dashboard Tab */}
+            <TabsContent value="aggregate" className="space-y-6">
+              {aggregateData ? (
+                <>
+                  {/* Aggregate Stats */}
+                  <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+                    <Card className="stat-card">
+                      <CardHeader className="pb-2">
+                        <CardTitle className="text-sm font-medium text-slate-600">Total Investors</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <div className="text-3xl font-bold text-slate-900">
+                          {aggregateData.totalInvestors}
+                        </div>
+                        <p className="text-xs text-slate-500 mt-1">Active clients</p>
+                      </CardContent>
+                    </Card>
+
+                    <Card className="stat-card">
+                      <CardHeader className="pb-2">
+                        <CardTitle className="text-sm font-medium text-slate-600">Total AUM</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <div className="text-3xl font-bold text-slate-900">
+                          {formatCurrency(aggregateData.totalAUM)}
+                        </div>
+                        <p className="text-xs text-slate-500 mt-1">Assets under management</p>
+                      </CardContent>
+                    </Card>
+
+                    <Card className="stat-card">
+                      <CardHeader className="pb-2">
+                        <CardTitle className="text-sm font-medium text-slate-600">Total Invested</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <div className="text-3xl font-bold text-slate-900">
+                          {formatCurrency(aggregateData.totalInvested)}
+                        </div>
+                        <p className="text-xs text-slate-500 mt-1">Principal amount</p>
+                      </CardContent>
+                    </Card>
+
+                    <Card className="stat-card">
+                      <CardHeader className="pb-2">
+                        <CardTitle className="text-sm font-medium text-slate-600">Avg Returns</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <div className={`text-3xl font-bold flex items-center gap-2 ${
+                          aggregateData.avgReturns >= 0 ? 'text-green-600' : 'text-red-600'
+                        }`}>
+                          {aggregateData.avgReturns >= 0 ? <TrendingUp /> : <TrendingDown />}
+                          {aggregateData.avgReturns.toFixed(2)}%
+                        </div>
+                        <p className="text-xs text-slate-500 mt-1">Portfolio performance</p>
+                      </CardContent>
+                    </Card>
+                  </div>
+
+                  {/* Charts Grid */}
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    {/* Risk Profile Distribution */}
+                    <Card>
+                      <CardHeader>
+                        <CardTitle className="flex items-center gap-2">
+                          <PieChart className="w-5 h-5 text-blue-600" />
+                          Risk Profile Distribution
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <ResponsiveContainer width="100%" height={300}>
+                          <RePieChart>
+                            <Pie
+                              data={aggregateData.riskDistribution}
+                              cx="50%"
+                              cy="50%"
+                              labelLine={false}
+                              label={({ name, value }) => `${name}: ${value}`}
+                              outerRadius={80}
+                              fill="#8884d8"
+                              dataKey="value"
+                            >
+                              {aggregateData.riskDistribution.map((entry, index) => (
+                                <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                              ))}
+                            </Pie>
+                            <Tooltip />
+                            <Legend />
+                          </RePieChart>
+                        </ResponsiveContainer>
+                      </CardContent>
+                    </Card>
+
+                    {/* Performance Distribution */}
+                    <Card>
+                      <CardHeader>
+                        <CardTitle className="flex items-center gap-2">
+                          <BarChart3 className="w-5 h-5 text-green-600" />
+                          Performance Distribution
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <ResponsiveContainer width="100%" height={300}>
+                          <BarChart data={aggregateData.performanceDistribution}>
+                            <CartesianGrid strokeDasharray="3 3" />
+                            <XAxis dataKey="name" />
+                            <YAxis />
+                            <Tooltip />
+                            <Bar dataKey="value" fill="#14B8A6" />
+                          </BarChart>
+                        </ResponsiveContainer>
+                      </CardContent>
+                    </Card>
+
+                    {/* AUM Distribution */}
+                    <Card>
+                      <CardHeader>
+                        <CardTitle className="flex items-center gap-2">
+                          <BarChart3 className="w-5 h-5 text-purple-600" />
+                          AUM Distribution
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <ResponsiveContainer width="100%" height={300}>
+                          <BarChart data={aggregateData.aumDistribution}>
+                            <CartesianGrid strokeDasharray="3 3" />
+                            <XAxis dataKey="name" />
+                            <YAxis />
+                            <Tooltip />
+                            <Bar dataKey="value" fill="#7C3AED" />
+                          </BarChart>
+                        </ResponsiveContainer>
+                      </CardContent>
+                    </Card>
+
+                    {/* Top Performers */}
+                    <Card>
+                      <CardHeader>
+                        <CardTitle className="flex items-center gap-2">
+                          <TrendingUp className="w-5 h-5 text-green-600" />
+                          Top 5 Performers
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <div className="space-y-3">
+                          {aggregateData.topPerformers.map((inv, idx) => (
+                            <div key={idx} className="flex items-center justify-between p-3 bg-green-50 rounded-lg border border-green-200">
+                              <div>
+                                <p className="font-semibold text-slate-900">{inv.name}</p>
+                                <p className="text-xs text-slate-500">{formatCurrency(inv.total_aum)}</p>
+                              </div>
+                              <div className="text-right">
+                                <p className="text-lg font-bold text-green-600">
+                                  +{inv.gain_loss_pct.toFixed(2)}%
+                                </p>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </div>
+
+                  {/* Bottom Performers */}
+                  <Card className="border-2 border-red-200">
+                    <CardHeader>
+                      <CardTitle className="flex items-center gap-2">
+                        <TrendingDown className="w-5 h-5 text-red-600" />
+                        Bottom 5 Performers (Need Attention)
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+                        {aggregateData.bottomPerformers.map((inv, idx) => (
+                          <div key={idx} className="p-4 bg-red-50 rounded-lg border border-red-200">
+                            <p className="font-semibold text-slate-900 text-sm mb-1">{inv.name}</p>
+                            <p className="text-xs text-slate-500 mb-2">{formatCurrency(inv.total_aum)}</p>
+                            <p className="text-xl font-bold text-red-600">
+                              {inv.gain_loss_pct.toFixed(2)}%
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                </>
+              ) : (
+                <div className="text-center py-20">
+                  <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mb-4"></div>
+                  <p className="text-slate-600">Loading aggregate data...</p>
+                </div>
+              )}
+            </TabsContent>
+          </Tabs>
         </main>
       </div>
     </div>
