@@ -69,11 +69,17 @@ async def seed_database():
     for i in range(1, INVESTOR_COUNT + 1):
         investor_id = f"INV{str(i).zfill(4)}"
         
+        # Generate random name
+        first_name = sample(FIRST_NAMES)
+        last_name = sample(LAST_NAMES)
+        full_name = f"{first_name} {last_name}"
+        email_name = f"{first_name.lower()}.{last_name.lower()}{i}"
+        
         investor = {
             'investor_id': investor_id,
-            'name': f'Investor {i}',
+            'name': full_name,
             'pan': f'PAN{str(i).zfill(5)}X',
-            'email': f'investor{i}@example.com',
+            'email': f'{email_name}@example.com',
             'mobile': f'98{random_int(10000000, 99999999)}',
             'onboarding_date': (datetime.now() - timedelta(days=random_int(30, 1000))).isoformat(),
             'risk_profile': sample(['Low', 'Moderate', 'High']),
