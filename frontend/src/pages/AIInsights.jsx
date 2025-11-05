@@ -158,6 +158,8 @@ const AIInsights = ({ user, onLogout }) => {
     );
   };
 
+  const COLORS = ['#1E3A8A', '#7C3AED', '#14B8A6', '#F59E0B', '#EF4444'];
+
   return (
     <div className="min-h-screen bg-slate-50" data-testid="ai-insights-page">
       <Sidebar onLogout={onLogout} />
@@ -165,54 +167,69 @@ const AIInsights = ({ user, onLogout }) => {
         <Header user={user} title="AI Insights" />
         
         <main className="pt-16 p-6">
-          {/* Control Panel */}
-          <Card className="mb-6 border-2 border-purple-200">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Brain className="w-6 h-6 text-purple-600" />
-                AI Portfolio Analysis
-              </CardTitle>
-              <p className="text-sm text-slate-600 mt-2">
-                Select an investor and run comprehensive AI analysis using 20 algorithms + ChatGPT summarization
-              </p>
-            </CardHeader>
-            <CardContent>
-              <div className="flex flex-col md:flex-row gap-4">
-                <div className="flex-1">
-                  <Select value={selectedInvestor || ''} onValueChange={setSelectedInvestor} disabled={loadingInvestors}>
-                    <SelectTrigger className="w-full h-11" data-testid="select-investor">
-                      <SelectValue placeholder="Select an investor" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {investors.map((inv) => (
-                        <SelectItem key={inv.investor_id} value={inv.investor_id}>
-                          {inv.name} - {inv.email}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                </div>
-                <Button
-                  onClick={runAnalysis}
-                  disabled={loading || !selectedInvestor}
-                  data-testid="run-analysis-button"
-                  className="bg-purple-600 hover:bg-purple-700 text-white px-8"
-                >
-                  {loading ? (
-                    <>
-                      <Loader className="w-4 h-4 mr-2 animate-spin" />
-                      Analyzing...
-                    </>
-                  ) : (
-                    <>
-                      <Brain className="w-4 h-4 mr-2" />
-                      Run Analysis
-                    </>
-                  )}
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
+          {/* Tabs for Individual vs Aggregate */}
+          <Tabs value={activeTab} onValueChange={setActiveTab} className="mb-6">
+            <TabsList className="grid w-full max-w-md grid-cols-2">
+              <TabsTrigger value="individual" className="flex items-center gap-2">
+                <Users className="w-4 h-4" />
+                Individual Analysis
+              </TabsTrigger>
+              <TabsTrigger value="aggregate" className="flex items-center gap-2">
+                <BarChart3 className="w-4 h-4" />
+                Aggregate Dashboard
+              </TabsTrigger>
+            </TabsList>
+
+            {/* Individual Analysis Tab */}
+            <TabsContent value="individual" className="space-y-6">
+              {/* Control Panel */}
+              <Card className="border-2 border-purple-200">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <Brain className="w-6 h-6 text-purple-600" />
+                    AI Portfolio Analysis
+                  </CardTitle>
+                  <p className="text-sm text-slate-600 mt-2">
+                    Select an investor and run comprehensive AI analysis using 20 algorithms + ChatGPT summarization
+                  </p>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-col md:flex-row gap-4">
+                    <div className="flex-1">
+                      <Select value={selectedInvestor || ''} onValueChange={setSelectedInvestor} disabled={loadingInvestors}>
+                        <SelectTrigger className="w-full h-11" data-testid="select-investor">
+                          <SelectValue placeholder="Select an investor" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          {investors.map((inv) => (
+                            <SelectItem key={inv.investor_id} value={inv.investor_id}>
+                              {inv.name} - {inv.email}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                    </div>
+                    <Button
+                      onClick={runAnalysis}
+                      disabled={loading || !selectedInvestor}
+                      data-testid="run-analysis-button"
+                      className="bg-purple-600 hover:bg-purple-700 text-white px-8"
+                    >
+                      {loading ? (
+                        <>
+                          <Loader className="w-4 h-4 mr-2 animate-spin" />
+                          Analyzing...
+                        </>
+                      ) : (
+                        <>
+                          <Brain className="w-4 h-4 mr-2" />
+                          Run Analysis
+                        </>
+                      )}
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
 
           {/* Results */}
           {loading && (
