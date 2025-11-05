@@ -231,15 +231,15 @@ const AIInsights = ({ user, onLogout }) => {
                 </CardContent>
               </Card>
 
-          {/* Results */}
-          {loading && (
-            <div className="text-center py-20">
-              <div className="inline-block animate-spin rounded-full h-16 w-16 border-b-2 border-purple-600 mb-4"></div>
-              <p className="text-slate-600 text-lg">Running 20 AI algorithms...</p>
-            </div>
-          )}
+              {/* Individual Analysis Results */}
+              {loading && (
+                <div className="text-center py-20">
+                  <div className="inline-block animate-spin rounded-full h-16 w-16 border-b-2 border-purple-600 mb-4"></div>
+                  <p className="text-slate-600 text-lg">Running 20 AI algorithms...</p>
+                </div>
+              )}
 
-          {!loading && analysis && (
+              {!loading && analysis && (
             <div className="space-y-6 animate-fadeIn">
               {/* AI Summary */}
               <Card className="border-2 border-purple-300 bg-gradient-to-br from-purple-50 to-white" data-testid="ai-summary-section">
