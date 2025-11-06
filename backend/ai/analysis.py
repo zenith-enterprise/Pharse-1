@@ -180,23 +180,75 @@ def sip_discontinuation_prediction(investor: Dict) -> Dict:
     portfolios = investor.get('portfolios', [])
     sips = [p for p in portfolios if p.get('sip_flag', False)]
     
-    missed = []
-    for s in sips:
-        next_due = s.get('next_due_date')
-        if next_due:
-            try:
-                due_date = datetime.fromisoformat(next_due.replace('Z', '+00:00'))
-                days = (datetime.now() - due_date).days
-                if days > 60:
-                    missed.append(s)
-            except:
-                pass
+    if not sips:
+        return {
+            'sipCount': 0,
+            'missedCount': 0,
+            'risk': 'None',
+            'details': 'No active SIPs'
+        }
     
-    risk = 'High' if len(missed) > 0 else 'Low'
+    high_risk = []
+    medium_risk = []
+    low_risk = []
+    
+    for s in sips:
+        last_payment = s.get('last_sip_payment_date')
+        next_due = s.get('next_due_date')
+        
+        if last_payment:
+            try:
+                last_date = datetime.fromisoformat(last_payment.replace('Z', '+00:00'))
+                days_since_last = (datetime.now() - last_date).days
+                
+                # Categorize based on days since last payment
+                if days_since_last > 60:  # Missed 2+ payments
+                    high_risk.append(s)
+                elif days_since_last > 35:  # Missed 1 payment
+                    medium_risk.append(s)
+                else:
+                    low_risk.append(s)
+            except:
+                # If can't parse, check next due date
+                if next_due:
+                    try:
+                        due_date = datetime.fromisoformat(next_due.replace('Z', '+00:00'))
+                        days_overdue = (datetime.now() - due_date).days
+                        if days_overdue > 30:
+                            high_risk.append(s)
+                        elif days_overdue > 0:
+                            medium_risk.append(s)
+                        else:
+                            low_risk.append(s)
+                    except:
+                        low_risk.append(s)
+        else:
+            low_risk.append(s)
+    
+    # Determine overall risk
+    total_sips = len(sips)
+    high_count = len(high_risk)
+    medium_count = len(medium_risk)
+    missed_count = high_count + medium_count
+    
+    if high_count > 0:
+        if high_count >= total_sips * 0.5:  # 50%+ high risk
+            risk = 'Very High'
+        else:
+            risk = 'High'
+    elif medium_count > 0:
+        risk = 'Medium'
+    else:
+        risk = 'Low'
+    
     return {
-        'sipCount': len(sips),
-        'missedCount': len(missed),
-        'risk': risk
+        'sipCount': total_sips,
+        'missedCount': missed_count,
+        'highRiskCount': high_count,
+        'mediumRiskCount': medium_count,
+        'lowRiskCount': len(low_risk),
+        'risk': risk,
+        'details': f'{high_count} SIPs with 2+ missed payments, {medium_count} with 1 missed payment'
     }
 
 def redemption_likelihood(investor: Dict) -> Dict:
