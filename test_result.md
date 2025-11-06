@@ -210,11 +210,14 @@ frontend:
     file: "/app/frontend/src/pages/Dashboard.jsx"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: true
         agent: "main"
         comment: "Created scrollable list showing top 10 SIP investors ranked by total SIP value with formatted currency display."
+      - working: true
+        agent: "testing"
+        comment: "PASSED: Top 10 SIP Investors list is fully functional. Displays scrollable list with 10 investors ranked by SIP value. Each item shows rank number (1-10), investor name, and total SIP value in proper INR currency format (₹). List has proper hover effects and is contained within the SIP Insights section."
 
   - task: "Dashboard UI - Upcoming SIP Expiry Alerts"
     implemented: true
