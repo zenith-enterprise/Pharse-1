@@ -90,7 +90,7 @@ async def seed_database():
             'pan': f'PAN{str(i).zfill(5)}X',
             'email': f'{email_name}@example.com',
             'mobile': f'98{random_int(10000000, 99999999)}',
-            'onboarding_date': (datetime.now() - timedelta(days=onboarding_days)).isoformat(),
+            'onboarding_date': (datetime.now(timezone.utc) - timedelta(days=onboarding_days)).isoformat(),
             'risk_profile': sample(['Low', 'Moderate', 'High']),
             'investor_type': sample(['Individual', 'Family']),
             'portfolios': [],
