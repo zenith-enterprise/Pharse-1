@@ -18,9 +18,7 @@ const InvestorDetail = ({ user, onLogout }) => {
   const { investorId } = useParams();
   const navigate = useNavigate();
   const [investor, setInvestor] = useState(null);
-  const [analysis, setAnalysis] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [analyzingAI, setAnalyzingAI] = useState(false);
 
   useEffect(() => {
     loadInvestorDetail();
