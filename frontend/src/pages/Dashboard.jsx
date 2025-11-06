@@ -11,6 +11,7 @@ import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip, BarChart, Ba
 
 const Dashboard = ({ user, onLogout }) => {
   const [stats, setStats] = useState(null);
+  const [enhancedAnalytics, setEnhancedAnalytics] = useState(null);
   const [loading, setLoading] = useState(true);
   const [seeding, setSeeding] = useState(false);
   const navigate = useNavigate();
@@ -50,6 +51,12 @@ const Dashboard = ({ user, onLogout }) => {
       const analytics = calculateComprehensiveAnalytics(investors);
       console.log('Analytics calculated:', analytics);
       setStats(analytics);
+
+      // Fetch enhanced dashboard analytics
+      console.log('Fetching enhanced analytics...');
+      const enhancedResponse = await axios.get('/dashboard/analytics');
+      console.log('Enhanced analytics received:', enhancedResponse.data);
+      setEnhancedAnalytics(enhancedResponse.data.data);
     } catch (error) {
       console.error('Error loading dashboard:', error);
       console.error('Error details:', error.message, error.response);
