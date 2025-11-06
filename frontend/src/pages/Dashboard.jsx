@@ -62,10 +62,15 @@ const Dashboard = ({ user, onLogout }) => {
   };
 
   const calculateComprehensiveAnalytics = (investors) => {
-    const totalInvestors = investors.length;
-    const totalAUM = investors.reduce((sum, inv) => sum + inv.total_aum, 0);
-    const totalInvested = investors.reduce((sum, inv) => sum + inv.total_invested, 0);
-    const avgGain = totalInvestors > 0 ? investors.reduce((sum, inv) => sum + inv.gain_loss_pct, 0) / totalInvestors : 0;
+    try {
+      console.log('Starting analytics calculation for', investors?.length, 'investors');
+      
+      const totalInvestors = investors.length;
+      const totalAUM = investors.reduce((sum, inv) => sum + (inv.total_aum || 0), 0);
+      const totalInvested = investors.reduce((sum, inv) => sum + (inv.total_invested || 0), 0);
+      const avgGain = totalInvestors > 0 ? investors.reduce((sum, inv) => sum + (inv.gain_loss_pct || 0), 0) / totalInvestors : 0;
+      
+      console.log('Basic stats:', { totalInvestors, totalAUM, totalInvested, avgGain });
 
     // Investor Segmentation
     const now = new Date();
