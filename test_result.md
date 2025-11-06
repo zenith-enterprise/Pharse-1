@@ -149,11 +149,14 @@ backend:
     file: "/app/backend/server.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: true
         agent: "main"
         comment: "Calculates monthly SIP transaction totals for last 12 months by parsing all SIP transactions and grouping by month."
+      - working: true
+        agent: "testing"
+        comment: "PASSED: Monthly SIP inflow calculation working correctly. Returns exactly 12 months of data with proper month/inflow structure. Sample data shows Dec 2024: ₹11.6M, Jan 2025: ₹14.1M, Feb 2025: ₹12.7M. All values are numeric and non-negative."
 
   - task: "High-Potential Investors Logic"
     implemented: true
