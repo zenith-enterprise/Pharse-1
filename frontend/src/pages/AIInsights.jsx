@@ -18,6 +18,7 @@ const AIInsights = ({ user, onLogout }) => {
   const [loading, setLoading] = useState(false);
   const [loadingInvestors, setLoadingInvestors] = useState(true);
   const [aggregateData, setAggregateData] = useState(null);
+  const [enhancedAnalytics, setEnhancedAnalytics] = useState(null);
   const [activeTab, setActiveTab] = useState('individual');
 
   useEffect(() => {
