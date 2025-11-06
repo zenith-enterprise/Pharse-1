@@ -141,11 +141,11 @@ async def seed_database():
                     # Last payment within frequency period
                     if sip_freq == 'Monthly':
                         days_since_last = random_int(1, 30)
-                        next_due = datetime.now() + timedelta(days=random_int(1, 30))
+                        next_due = datetime.now(timezone.utc) + timedelta(days=random_int(1, 30))
                     else:  # Quarterly
                         days_since_last = random_int(1, 85)
-                        next_due = datetime.now() + timedelta(days=random_int(1, 30))
-                    last_sip_date = datetime.now() - timedelta(days=days_since_last)
+                        next_due = datetime.now(timezone.utc) + timedelta(days=random_int(1, 30))
+                    last_sip_date = datetime.now(timezone.utc) - timedelta(days=days_since_last)
                     
                 elif risk_category < 0.80:  # Paused SIPs - 20%
                     # Missed 1-2 payments but not stopped
