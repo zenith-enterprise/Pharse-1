@@ -31,15 +31,31 @@ const Dashboard = ({ user, onLogout }) => {
       }
 
       // Load investors with portfolios for comprehensive stats
+      console.log('Fetching investors with portfolios...');
       const response = await axios.get('/investors?include_portfolios=true');
+      console.log('Response received:', response.data);
+      
       const investors = response.data.data;
+      console.log('Investors count:', investors?.length);
+      
+      if (!investors || investors.length === 0) {
+        console.error('No investors data received');
+        setStats({ needsSeeding: true });
+        setLoading(false);
+        return;
+      }
 
       // Calculate comprehensive analytics
+      console.log('Calculating analytics...');
       const analytics = calculateComprehensiveAnalytics(investors);
+      console.log('Analytics calculated:', analytics);
       setStats(analytics);
     } catch (error) {
       console.error('Error loading dashboard:', error);
-      toast.error('Failed to load dashboard data');
+      console.error('Error details:', error.message, error.response);
+      toast.error(`Failed to load dashboard data: ${error.message}`);
+      // Set empty stats to prevent showing 0s
+      setStats({ needsSeeding: true });
     } finally {
       setLoading(false);
     }
