@@ -124,6 +124,35 @@ async def seed_database():
             nav = round(random_float(10, 250), 2)
             units = round(current_value / nav, 4)
             
+            # Determine SIP status
+            has_sip = random.random() > 0.4  # 60% have SIPs
+            
+            # For SIP folios, create realistic payment scenarios
+            if has_sip:
+                sip_freq = sample(['Monthly', 'Quarterly'])
+                
+                # 25% of SIP investors have missed payments (high risk)
+                # 15% have recent gaps (medium risk)  
+                # 60% are regular (low risk)
+                risk_category = random.random()
+                
+                if risk_category < 0.25:  # High risk - missed 2+ payments
+                    days_since_last = random_int(61, 120)
+                    last_sip_date = datetime.now() - timedelta(days=days_since_last)
+                    next_due = datetime.now() - timedelta(days=random_int(30, 60))  # Overdue
+                elif risk_category < 0.40:  # Medium risk - missed 1 payment
+                    days_since_last = random_int(35, 60)
+                    last_sip_date = datetime.now() - timedelta(days=days_since_last)
+                    next_due = datetime.now() + timedelta(days=random_int(1, 15))
+                else:  # Low risk - regular payments
+                    days_since_last = random_int(1, 30)
+                    last_sip_date = datetime.now() - timedelta(days=days_since_last)
+                    next_due = datetime.now() + timedelta(days=random_int(1, 30))
+            else:
+                sip_freq = None
+                last_sip_date = None
+                next_due = None
+            
             folio = {
                 'folio_id': f"{investor_id}-F{f+1}",
                 'amc_name': amc['name'],
@@ -137,9 +166,10 @@ async def seed_database():
                 'invested_amount': invested_amount,
                 'current_value': current_value,
                 'gain_loss_pct': gain_loss_pct,
-                'sip_flag': random.random() > 0.5,
-                'sip_freq': sample(['Monthly', 'Quarterly']),
-                'next_due_date': (datetime.now() + timedelta(days=random_int(1, 30))).isoformat(),
+                'sip_flag': has_sip,
+                'sip_freq': sip_freq,
+                'last_sip_payment_date': last_sip_date.isoformat() if last_sip_date else None,
+                'next_due_date': next_due.isoformat() if next_due else None,
                 'transactions': []
             }
             
