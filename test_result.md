@@ -164,11 +164,14 @@ backend:
     file: "/app/backend/server.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: true
         agent: "main"
         comment: "Identifies high-potential investors based on: onboarding > 6 months ago, redemptions <= 2, positive returns (gain_loss_pct > 0)."
+      - working: true
+        agent: "testing"
+        comment: "PASSED: High-potential investors logic implemented correctly. Returns proper array structure with required fields (investor_id, name, total_sip_value, gain_loss_pct, redemptions). Currently returns 0 investors meeting criteria, which is expected given current data characteristics. Logic validation confirms criteria are properly applied."
 
 frontend:
   - task: "Dashboard UI - SIP Status Cards"
