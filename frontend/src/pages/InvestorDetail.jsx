@@ -28,46 +28,11 @@ const InvestorDetail = ({ user, onLogout }) => {
     try {
       const response = await axios.get(`/investors/${investorId}`);
       setInvestor(response.data.data);
-
-      // Try to load cached AI analysis
-      try {
-        const aiResponse = await axios.get(`/ai/summary/${investorId}`);
-        if (aiResponse.data.data) {
-          setAnalysis({
-            analysis: aiResponse.data.data.analysis_result,
-            ai_summary: aiResponse.data.data.ai_summary
-          });
-        }
-      } catch (err) {
-        // No cached analysis
-        console.log('No cached analysis found');
-      }
     } catch (error) {
       toast.error('Failed to load investor details');
       navigate('/investors');
     } finally {
       setLoading(false);
-    }
-  };
-
-  const runAIAnalysis = async () => {
-    setAnalyzingAI(true);
-    try {
-      toast.info('Running AI analysis... This may take a few seconds.');
-      const response = await axios.post(`/ai/run/${investorId}`);
-      if (response.data.success) {
-        // Update analysis state with fresh data
-        setAnalysis({
-          analysis: response.data.data.analysis,
-          ai_summary: response.data.data.summary
-        });
-        toast.success('AI analysis completed!');
-      }
-    } catch (error) {
-      console.error('AI analysis error:', error);
-      toast.error('Failed to run AI analysis');
-    } finally {
-      setAnalyzingAI(false);
     }
   };
 
