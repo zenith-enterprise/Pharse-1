@@ -606,8 +606,8 @@ const Dashboard = ({ user, onLogout }) => {
                 </CardContent>
               </Card>
 
-              {/* Enhanced Analytics - SIP Insights */}
-              {enhancedAnalytics && !enhancedAnalytics.needsSeeding && (
+              {/* Quick Actions */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <>
                   {/* SIP Status Overview */}
                   <div className="mb-8">
