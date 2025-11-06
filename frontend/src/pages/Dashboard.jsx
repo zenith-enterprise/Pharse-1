@@ -111,7 +111,10 @@ const Dashboard = ({ user, onLogout }) => {
       .slice(0, 10)
       .filter(item => item.value > 0);
     
-    console.log('AMC Weightage:', amcWeightage);
+    console.log('AMC Data:', amcData);
+    console.log('AMC Weightage Array:', amcWeightage);
+    console.log('Total SIPs:', totalSIPs, 'SIP Value:', sipValue);
+    console.log('New Investors:', newInvestors.length);
 
     // SIP Statistics
     let totalSIPs = 0;
