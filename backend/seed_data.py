@@ -75,13 +75,22 @@ async def seed_database():
         full_name = f"{first_name} {last_name}"
         email_name = f"{first_name.lower()}.{last_name.lower()}{i}"
         
+        # Realistic onboarding date distribution
+        # 10% new (0-30 days), 20% recent (31-90 days), 70% established (91+ days)
+        if i <= 30:  # 10% new investors
+            onboarding_days = random_int(1, 30)
+        elif i <= 90:  # 20% recent
+            onboarding_days = random_int(31, 90)
+        else:  # 70% established
+            onboarding_days = random_int(91, 1000)
+        
         investor = {
             'investor_id': investor_id,
             'name': full_name,
             'pan': f'PAN{str(i).zfill(5)}X',
             'email': f'{email_name}@example.com',
             'mobile': f'98{random_int(10000000, 99999999)}',
-            'onboarding_date': (datetime.now() - timedelta(days=random_int(30, 1000))).isoformat(),
+            'onboarding_date': (datetime.now() - timedelta(days=onboarding_days)).isoformat(),
             'risk_profile': sample(['Low', 'Moderate', 'High']),
             'investor_type': sample(['Individual', 'Family']),
             'portfolios': [],
