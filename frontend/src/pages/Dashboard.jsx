@@ -11,7 +11,6 @@ import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip, BarChart, Ba
 
 const Dashboard = ({ user, onLogout }) => {
   const [stats, setStats] = useState(null);
-  const [enhancedAnalytics, setEnhancedAnalytics] = useState(null);
   const [loading, setLoading] = useState(true);
   const [seeding, setSeeding] = useState(false);
   const navigate = useNavigate();
