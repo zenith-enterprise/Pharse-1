@@ -28,7 +28,8 @@ def portfolio_performance_summary(investor: Dict) -> Dict:
 def asset_allocation_analysis(investor: Dict) -> Dict:
     """Algorithm 2: Analyze asset allocation by category"""
     portfolios = investor.get('portfolios', [])
-    total = sum(safe_num(p.get('current_value', 0)) for p in portfolios) or 1
+    # Use total_aum for consistency
+    total = safe_num(investor.get('total_aum')) or 1
     
     by_cat = {}
     for p in portfolios:
