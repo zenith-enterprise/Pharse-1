@@ -148,6 +148,9 @@ const Dashboard = ({ user, onLogout }) => {
         });
       }
     });
+    
+    console.log('Total SIPs:', totalSIPs, 'SIP Value:', sipValue);
+    console.log('New Investors:', newInvestors.length);
 
     // Performance Distribution
     const performanceBuckets = {
