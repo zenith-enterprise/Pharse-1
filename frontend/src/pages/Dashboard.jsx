@@ -54,11 +54,14 @@ const Dashboard = ({ user, onLogout }) => {
     // Investor Segmentation
     const now = new Date();
     const thirtyDaysAgo = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
-    const ninetyDaysAgo = new Date(now.getTime() - 90 * 24 * 60 * 60 * 1000);
 
     const newInvestors = investors.filter(inv => {
-      const onboardingDate = new Date(inv.onboarding_date);
-      return onboardingDate >= thirtyDaysAgo;
+      try {
+        const onboardingDate = new Date(inv.onboarding_date);
+        return onboardingDate >= thirtyDaysAgo;
+      } catch {
+        return false;
+      }
     });
 
     const activeInvestors = investors.filter(inv => inv.gain_loss_pct >= 0);
