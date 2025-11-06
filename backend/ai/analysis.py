@@ -100,7 +100,8 @@ def diversification_quality_score(investor: Dict) -> Dict:
 def risk_mismatch_detection(investor: Dict) -> Dict:
     """Algorithm 7: Detect risk profile mismatches"""
     portfolios = investor.get('portfolios', [])
-    total = sum(safe_num(p.get('current_value', 0)) for p in portfolios) or 1
+    # Use total_aum for consistency
+    total = safe_num(investor.get('total_aum')) or 1
     
     equity = sum(safe_num(p.get('current_value', 0)) 
                  for p in portfolios if p.get('category') == 'Equity')
