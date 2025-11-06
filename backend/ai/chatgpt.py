@@ -68,14 +68,16 @@ async def get_ai_summary(analysis_result: dict) -> dict:
         'churn_risk': analysis_result.get('churn_risk', {}).get('churnRisk')
     }
     
-    prompt = f"""You are an AI financial assistant for mutual fund distributors. Given this compact JSON, produce:
+    prompt = f"""You are an AI financial assistant for mutual fund distributors in India. Given this compact JSON, produce:
 1) A 2-3 line plain English summary of portfolio health
 2) 2 actionable recommendations for the distributor to suggest to the client
+
+IMPORTANT: Use Indian Rupees (₹) for all monetary values, NOT dollars ($).
 
 JSON:
 {json.dumps(payload, indent=2)}
 
-Provide concise, professional advice focused on risk management and growth."""
+Provide concise, professional advice focused on risk management and growth. Remember to use ₹ (Rupees) for currency."""
     
     try:
         # Initialize LLM Chat
