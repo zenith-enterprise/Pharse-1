@@ -99,37 +99,23 @@ const InvestorDetail = ({ user, onLogout }) => {
           {/* Investor Header */}
           <Card className="mb-6">
             <CardContent className="pt-6">
-              <div className="flex items-start justify-between">
-                <div>
-                  <h1 className="text-3xl font-bold text-slate-900 mb-2" data-testid="investor-name">{investor.name}</h1>
-                  <div className="space-y-1 text-slate-600">
-                    <p data-testid="investor-email">Email: {investor.email}</p>
-                    <p data-testid="investor-mobile">Mobile: {investor.mobile}</p>
-                    <p data-testid="investor-pan">PAN: {investor.pan}</p>
-                    <p>Risk Profile: <span className={`font-semibold ${
-                      investor.risk_profile === 'Low' ? 'text-green-600' :
-                      investor.risk_profile === 'High' ? 'text-red-600' : 'text-yellow-600'
-                    }`}>{investor.risk_profile}</span></p>
-                  </div>
+              <div>
+                <h1 className="text-3xl font-bold text-slate-900 mb-2" data-testid="investor-name">{investor.name}</h1>
+                <div className="space-y-1 text-slate-600">
+                  <p data-testid="investor-email">Email: {investor.email}</p>
+                  <p data-testid="investor-mobile">Mobile: {investor.mobile}</p>
+                  <p data-testid="investor-pan">PAN: {investor.pan}</p>
+                  <p>Risk Profile: <span className={`font-semibold ${
+                    investor.risk_profile === 'Low' ? 'text-green-600' :
+                    investor.risk_profile === 'High' ? 'text-red-600' : 'text-yellow-600'
+                  }`}>{investor.risk_profile}</span></p>
                 </div>
-                <Button
-                  onClick={runAIAnalysis}
-                  disabled={analyzingAI}
-                  data-testid="run-ai-analysis-button"
-                  className="bg-purple-600 hover:bg-purple-700 text-white"
-                >
-                  {analyzingAI ? (
-                    <>
-                      <Loader className="w-4 h-4 mr-2 animate-spin" />
-                      Analyzing...
-                    </>
-                  ) : (
-                    <>
-                      <Brain className="w-4 h-4 mr-2" />
-                      Run AI Analysis
-                    </>
-                  )}
-                </Button>
+                <div className="mt-4 p-4 bg-purple-50 border border-purple-200 rounded-lg">
+                  <p className="text-sm text-purple-800 flex items-center gap-2">
+                    <Brain className="w-4 h-4" />
+                    <span>For AI-powered portfolio analysis, visit the <strong>AI Insights</strong> module</span>
+                  </p>
+                </div>
               </div>
             </CardContent>
           </Card>
