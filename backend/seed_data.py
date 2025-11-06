@@ -153,12 +153,12 @@ async def seed_database():
                         days_since_last = random_int(40, 150)
                     else:  # Quarterly
                         days_since_last = random_int(110, 170)
-                    last_sip_date = datetime.now() - timedelta(days=days_since_last)
+                    last_sip_date = datetime.now(timezone.utc) - timedelta(days=days_since_last)
                     # Some have upcoming due dates within 3 months
                     if random.random() < 0.4:
-                        next_due = datetime.now() + timedelta(days=random_int(1, 90))
+                        next_due = datetime.now(timezone.utc) + timedelta(days=random_int(1, 90))
                     else:
-                        next_due = datetime.now() - timedelta(days=random_int(1, 30))  # Overdue
+                        next_due = datetime.now(timezone.utc) - timedelta(days=random_int(1, 30))  # Overdue
                     
                 else:  # Stopped SIPs - 20%
                     # Long gap, 6+ months
