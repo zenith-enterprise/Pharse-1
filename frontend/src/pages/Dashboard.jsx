@@ -208,24 +208,31 @@ const Dashboard = ({ user, onLogout }) => {
 
     const riskDistribution = Object.entries(riskDist).map(([name, value]) => ({ name, value }));
 
-    return {
-      totalInvestors,
-      totalAUM,
-      totalInvested,
-      avgGain,
-      newInvestors: newInvestors.length,
-      activeInvestors: activeInvestors.length,
-      inactiveInvestors: inactiveInvestors.length,
-      aumByAssetClass,
-      amcWeightage,
-      totalSIPs,
-      sipValue,
-      performanceDistribution,
-      aumDistribution,
-      topInvestors,
-      riskDistribution,
-      needsSeeding: false
-    };
+      const result = {
+        totalInvestors,
+        totalAUM,
+        totalInvested,
+        avgGain,
+        newInvestors: newInvestors.length,
+        activeInvestors: activeInvestors.length,
+        inactiveInvestors: inactiveInvestors.length,
+        aumByAssetClass,
+        amcWeightage,
+        totalSIPs,
+        sipValue,
+        performanceDistribution,
+        aumDistribution,
+        topInvestors,
+        riskDistribution,
+        needsSeeding: false
+      };
+      
+      console.log('Final analytics result:', result);
+      return result;
+    } catch (error) {
+      console.error('Error in calculateComprehensiveAnalytics:', error);
+      throw error;
+    }
   };
 
   const handleSeedData = async () => {
