@@ -240,11 +240,14 @@ frontend:
     file: "/app/frontend/src/pages/Dashboard.jsx"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: true
         agent: "main"
         comment: "Created card displaying high-potential investors with SIP value, gain percentage, and redemption count. Shows 'No data available' when criteria not met."
+      - working: true
+        agent: "testing"
+        comment: "PASSED: High-Potential Investors card is working correctly. Card has proper green border styling and star icon. Title and subtitle ('Long-term holders with minimal redemptions') are displayed correctly. Currently shows 'No data available' message as expected since no investors meet the high-potential criteria. Card structure is properly implemented for when data is available."
 
   - task: "Dashboard UI - Profit/Loss Split"
     implemented: true
