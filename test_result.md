@@ -255,11 +255,14 @@ frontend:
     file: "/app/frontend/src/pages/Dashboard.jsx"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: true
         agent: "main"
         comment: "Implemented pie chart and summary cards showing investors in profit vs loss with percentages and counts. Green for profit, red for loss."
+      - working: true
+        agent: "testing"
+        comment: "PASSED: Profit/Loss Split section is fully functional. Pie chart displays proper data visualization with green for profit (250 investors, 83.3%) and red for loss (50 investors, 16.7%). Summary cards on the right show detailed breakdown with proper color coding - green background for profit card, red background for loss card. Legend and tooltips are working correctly."
 
   - task: "API Integration - Enhanced Analytics Fetch"
     implemented: true
