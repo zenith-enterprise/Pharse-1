@@ -282,60 +282,80 @@ const InvestorDetail = ({ user, onLogout }) => {
             </div>
           )}
 
-          {/* Portfolios Table */}
-          <Card>
-            <CardHeader>
-              <CardTitle>Portfolios ({investor.portfolios?.length || 0})</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="overflow-x-auto">
-                <table className="w-full custom-table" data-testid="portfolios-table">
-                  <thead>
-                    <tr>
-                      <th className="text-left">Scheme Name</th>
-                      <th className="text-left">AMC</th>
-                      <th className="text-left">Category</th>
-                      <th className="text-right">Invested</th>
-                      <th className="text-right">Current Value</th>
-                      <th className="text-right">Gain/Loss</th>
-                      <th className="text-center">SIP</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {investor.portfolios?.map((portfolio, idx) => (
-                      <tr key={idx} data-testid={`portfolio-row-${idx}`}>
-                        <td className="font-semibold text-slate-900">{portfolio.scheme_name}</td>
-                        <td className="text-slate-600">{portfolio.amc_name}</td>
-                        <td>
-                          <span className="inline-block px-2 py-1 rounded text-xs font-semibold bg-blue-100 text-blue-700">
-                            {portfolio.category}
-                          </span>
-                        </td>
-                        <td className="text-right">{formatCurrency(portfolio.invested_amount)}</td>
-                        <td className="text-right font-semibold">{formatCurrency(portfolio.current_value)}</td>
-                        <td className="text-right">
-                          <span className={`font-semibold ${
-                            portfolio.gain_loss_pct >= 0 ? 'text-green-600' : 'text-red-600'
-                          }`}>
-                            {portfolio.gain_loss_pct >= 0 ? '+' : ''}{portfolio.gain_loss_pct.toFixed(2)}%
-                          </span>
-                        </td>
-                        <td className="text-center">
-                          {portfolio.sip_flag ? (
-                            <span className="inline-block px-2 py-1 rounded text-xs font-semibold bg-green-100 text-green-700">
-                              Active
-                            </span>
-                          ) : (
-                            <span className="text-slate-400">-</span>
-                          )}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </CardContent>
-          </Card>
+          {/* Tabs for Portfolios and Transactions */}
+          <Tabs defaultValue="portfolios" className="w-full">
+            <TabsList className="grid w-full max-w-md grid-cols-2 mb-6">
+              <TabsTrigger value="portfolios" className="flex items-center gap-2">
+                <BarChart3 className="w-4 h-4" />
+                Portfolios ({investor.portfolios?.length || 0})
+              </TabsTrigger>
+              <TabsTrigger value="transactions" className="flex items-center gap-2">
+                <Calendar className="w-4 h-4" />
+                Transactions
+              </TabsTrigger>
+            </TabsList>
+
+            <TabsContent value="portfolios">
+              <Card>
+                <CardHeader>
+                  <CardTitle>Portfolio Holdings</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="overflow-x-auto rounded-lg border border-slate-200">
+                    <table className="w-full" data-testid="portfolios-table">
+                      <thead className="bg-slate-50 border-b border-slate-200">
+                        <tr>
+                          <th className="px-4 py-3 text-left font-semibold text-sm text-slate-700">Scheme Name</th>
+                          <th className="px-4 py-3 text-left font-semibold text-sm text-slate-700">AMC</th>
+                          <th className="px-4 py-3 text-left font-semibold text-sm text-slate-700">Category</th>
+                          <th className="px-4 py-3 text-right font-semibold text-sm text-slate-700">Invested</th>
+                          <th className="px-4 py-3 text-right font-semibold text-sm text-slate-700">Current Value</th>
+                          <th className="px-4 py-3 text-right font-semibold text-sm text-slate-700">Gain/Loss</th>
+                          <th className="px-4 py-3 text-center font-semibold text-sm text-slate-700">SIP</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {investor.portfolios?.map((portfolio, idx) => (
+                          <tr key={idx} data-testid={`portfolio-row-${idx}`} className="border-b border-slate-100 hover:bg-slate-50 transition-colors">
+                            <td className="px-4 py-3 font-semibold text-sm text-slate-900">{portfolio.scheme_name}</td>
+                            <td className="px-4 py-3 text-sm text-slate-600">{portfolio.amc_name}</td>
+                            <td className="px-4 py-3">
+                              <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-700 border border-blue-200">
+                                {portfolio.category}
+                              </span>
+                            </td>
+                            <td className="px-4 py-3 text-sm text-right text-slate-700">{formatCurrency(portfolio.invested_amount)}</td>
+                            <td className="px-4 py-3 text-sm text-right font-semibold text-slate-900">{formatCurrency(portfolio.current_value)}</td>
+                            <td className="px-4 py-3 text-sm text-right">
+                              <span className={`font-semibold flex items-center justify-end gap-1 ${
+                                portfolio.gain_loss_pct >= 0 ? 'text-green-600' : 'text-red-600'
+                              }`}>
+                                {portfolio.gain_loss_pct >= 0 ? <TrendingUp className="w-4 h-4" /> : <TrendingDown className="w-4 h-4" />}
+                                {portfolio.gain_loss_pct >= 0 ? '+' : ''}{portfolio.gain_loss_pct.toFixed(2)}%
+                              </span>
+                            </td>
+                            <td className="px-4 py-3 text-center">
+                              {portfolio.sip_flag ? (
+                                <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-700 border border-green-200">
+                                  Active
+                                </span>
+                              ) : (
+                                <span className="text-slate-400 text-sm">-</span>
+                              )}
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </CardContent>
+              </Card>
+            </TabsContent>
+
+            <TabsContent value="transactions">
+              <TransactionsTable portfolios={investor.portfolios || []} />
+            </TabsContent>
+          </Tabs>
         </main>
       </div>
     </div>
