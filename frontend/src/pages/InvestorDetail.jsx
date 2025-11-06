@@ -34,9 +34,15 @@ const InvestorDetail = ({ user, onLogout }) => {
       // Try to load cached AI analysis
       try {
         const aiResponse = await axios.get(`/ai/summary/${investorId}`);
-        setAnalysis(aiResponse.data.data);
+        if (aiResponse.data.data) {
+          setAnalysis({
+            analysis: aiResponse.data.data.analysis_result,
+            ai_summary: aiResponse.data.data.ai_summary
+          });
+        }
       } catch (err) {
         // No cached analysis
+        console.log('No cached analysis found');
       }
     } catch (error) {
       toast.error('Failed to load investor details');
