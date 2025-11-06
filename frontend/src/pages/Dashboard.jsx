@@ -91,9 +91,14 @@ const Dashboard = ({ user, onLogout }) => {
     });
 
     const amcWeightage = Object.entries(amcData)
-      .map(([name, value]) => ({ name, value, percentage: (value / totalAUM * 100).toFixed(2) }))
+      .map(([name, value]) => ({ 
+        name, 
+        value, 
+        percentage: parseFloat((value / totalAUM * 100).toFixed(2))
+      }))
       .sort((a, b) => b.value - a.value)
-      .slice(0, 10);
+      .slice(0, 10)
+      .filter(item => item.value > 0);
 
     // SIP Statistics
     let totalSIPs = 0;
