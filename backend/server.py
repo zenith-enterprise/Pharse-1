@@ -126,7 +126,8 @@ async def get_investors(
     q: Optional[str] = Query(None, description="Search query"),
     minAum: Optional[float] = Query(None, description="Minimum AUM"),
     maxAum: Optional[float] = Query(None, description="Maximum AUM"),
-    risk: Optional[str] = Query(None, description="Risk profile")
+    risk: Optional[str] = Query(None, description="Risk profile"),
+    include_portfolios: Optional[bool] = Query(False, description="Include portfolio details")
 ):
     """Get list of investors with optional filters"""
     query = {}
@@ -149,9 +150,11 @@ async def get_investors(
     if risk:
         query['risk_profile'] = risk
     
-    investors = await db.investors.find(
-        query,
-        {
+    # Projection based on include_portfolios parameter
+    if include_portfolios:
+        projection = {'_id': 0}  # Include everything except _id
+    else:
+        projection = {
             '_id': 0,
             'investor_id': 1,
             'name': 1,
@@ -161,9 +164,11 @@ async def get_investors(
             'total_aum': 1,
             'total_invested': 1,
             'gain_loss_pct': 1,
-            'risk_profile': 1
+            'risk_profile': 1,
+            'onboarding_date': 1
         }
-    ).to_list(1000)
+    
+    investors = await db.investors.find(query, projection).to_list(1000)
     
     return {'success': True, 'data': investors, 'count': len(investors)}
 
