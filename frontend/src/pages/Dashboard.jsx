@@ -69,17 +69,24 @@ const Dashboard = ({ user, onLogout }) => {
 
     // AUM by Asset Class (from portfolios)
     const assetClassData = {};
+    let totalPortfolios = 0;
     investors.forEach(inv => {
-      inv.portfolios?.forEach(portfolio => {
-        const category = portfolio.category || 'Other';
-        assetClassData[category] = (assetClassData[category] || 0) + portfolio.current_value;
-      });
+      if (inv.portfolios && Array.isArray(inv.portfolios)) {
+        inv.portfolios.forEach(portfolio => {
+          totalPortfolios++;
+          const category = portfolio.category || 'Other';
+          const value = parseFloat(portfolio.current_value) || 0;
+          assetClassData[category] = (assetClassData[category] || 0) + value;
+        });
+      }
     });
 
     const aumByAssetClass = Object.entries(assetClassData)
-      .map(([name, value]) => ({ name, value }))
+      .map(([name, value]) => ({ name, value: parseFloat(value.toFixed(2)) }))
       .sort((a, b) => b.value - a.value)
       .filter(item => item.value > 0);
+    
+    console.log('Asset Class Data:', aumByAssetClass);
 
     // AMC Weightage
     const amcData = {};
