@@ -14,10 +14,10 @@ def safe_num(v):
 
 def portfolio_performance_summary(investor: Dict) -> Dict:
     """Algorithm 1: Calculate overall portfolio performance"""
-    portfolios = investor.get('portfolios', [])
-    invested = sum(safe_num(p.get('invested_amount', 0)) for p in portfolios)
-    value = sum(safe_num(p.get('current_value', 0)) for p in portfolios)
-    gain_loss = 0 if invested == 0 else ((value - invested) / invested) * 100
+    # Use pre-calculated totals from investor document for consistency
+    invested = safe_num(investor.get('total_invested'))
+    value = safe_num(investor.get('total_aum'))
+    gain_loss = safe_num(investor.get('gain_loss_pct'))
     
     return {
         'invested': round(invested, 2),
