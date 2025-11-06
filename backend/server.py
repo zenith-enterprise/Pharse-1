@@ -279,6 +279,213 @@ async def get_ai_summary_cached(investor_id: str):
     
     return {'success': True, 'data': analysis}
 
+# ==================== Dashboard Analytics Routes ====================
+
+@api_router.get("/dashboard/analytics")
+async def get_dashboard_analytics():
+    """Get comprehensive dashboard analytics including SIP insights and investor segmentation"""
+    try:
+        # Fetch all investors with portfolios
+        investors = await db.investors.find({}, {'_id': 0}).to_list(None)
+        
+        if not investors or len(investors) == 0:
+            return {
+                'success': True,
+                'data': {
+                    'needsSeeding': True
+                }
+            }
+        
+        now = datetime.now(timezone.utc)
+        
+        # Initialize analytics data
+        analytics = {
+            'sip_status': {
+                'active': 0,
+                'paused': 0,
+                'stopped': 0
+            },
+            'monthly_sip_inflow': [],
+            'average_sip_ticket_size': 0,
+            'top_sip_investors': [],
+            'upcoming_sip_expiry': [],
+            'profit_loss_split': {
+                'profit': 0,
+                'loss': 0
+            },
+            'high_potential_investors': []
+        }
+        
+        # Collect all SIP data and transaction data
+        sip_portfolios = []
+        sip_transactions_by_month = {}
+        investor_sip_totals = {}
+        
+        for investor in investors:
+            investor_sip_value = 0
+            investor_redemptions = 0
+            
+            # Calculate profit/loss split
+            if investor.get('gain_loss_pct', 0) >= 0:
+                analytics['profit_loss_split']['profit'] += 1
+            else:
+                analytics['profit_loss_split']['loss'] += 1
+            
+            if not investor.get('portfolios'):
+                continue
+                
+            for portfolio in investor['portfolios']:
+                if portfolio.get('sip_flag'):
+                    sip_portfolios.append({
+                        'investor_id': investor['investor_id'],
+                        'investor_name': investor['name'],
+                        'portfolio': portfolio,
+                        'investor_onboarding': investor.get('onboarding_date')
+                    })
+                    investor_sip_value += portfolio.get('current_value', 0)
+                    
+                    # Determine SIP status
+                    last_sip_date_str = portfolio.get('last_sip_payment_date')
+                    sip_freq = portfolio.get('sip_freq', 'Monthly')
+                    
+                    if last_sip_date_str:
+                        try:
+                            last_sip_date = datetime.fromisoformat(last_sip_date_str.replace('Z', '+00:00'))
+                            days_since_last = (now - last_sip_date).days
+                            
+                            # Determine status based on frequency
+                            if sip_freq == 'Monthly':
+                                if days_since_last <= 35:
+                                    analytics['sip_status']['active'] += 1
+                                elif days_since_last <= 180:
+                                    analytics['sip_status']['paused'] += 1
+                                else:
+                                    analytics['sip_status']['stopped'] += 1
+                            else:  # Quarterly
+                                if days_since_last <= 100:
+                                    analytics['sip_status']['active'] += 1
+                                elif days_since_last <= 180:
+                                    analytics['sip_status']['paused'] += 1
+                                else:
+                                    analytics['sip_status']['stopped'] += 1
+                        except:
+                            analytics['sip_status']['stopped'] += 1
+                    else:
+                        analytics['sip_status']['stopped'] += 1
+                    
+                    # Check for upcoming expiry (within 3 months)
+                    next_due_str = portfolio.get('next_due_date')
+                    if next_due_str:
+                        try:
+                            next_due = datetime.fromisoformat(next_due_str.replace('Z', '+00:00'))
+                            days_until_due = (next_due - now).days
+                            
+                            if 0 <= days_until_due <= 90:
+                                analytics['upcoming_sip_expiry'].append({
+                                    'investor_id': investor['investor_id'],
+                                    'investor_name': investor['name'],
+                                    'scheme_name': portfolio.get('scheme_name'),
+                                    'next_due_date': next_due_str,
+                                    'days_until_due': days_until_due,
+                                    'sip_amount': portfolio.get('invested_amount', 0)
+                                })
+                        except:
+                            pass
+                
+                # Count transactions for high-potential logic and SIP inflow
+                if portfolio.get('transactions'):
+                    for txn in portfolio['transactions']:
+                        if txn.get('txn_type') == 'Sell':
+                            investor_redemptions += 1
+                        
+                        # Track SIP transactions by month
+                        if txn.get('txn_type') == 'SIP':
+                            try:
+                                txn_date = datetime.fromisoformat(txn['txn_date'].replace('Z', '+00:00'))
+                                month_key = txn_date.strftime('%Y-%m')
+                                sip_transactions_by_month[month_key] = sip_transactions_by_month.get(month_key, 0) + txn.get('txn_amount', 0)
+                            except:
+                                pass
+            
+            # Store investor SIP totals
+            if investor_sip_value > 0:
+                investor_sip_totals[investor['investor_id']] = {
+                    'investor_id': investor['investor_id'],
+                    'name': investor['name'],
+                    'total_sip_value': investor_sip_value,
+                    'redemptions': investor_redemptions,
+                    'onboarding_date': investor.get('onboarding_date'),
+                    'gain_loss_pct': investor.get('gain_loss_pct', 0)
+                }
+        
+        # Calculate average SIP ticket size
+        if sip_portfolios:
+            total_sip_value = sum(p['portfolio'].get('current_value', 0) for p in sip_portfolios)
+            analytics['average_sip_ticket_size'] = round(total_sip_value / len(sip_portfolios), 2)
+        
+        # Top 10 SIP investors
+        top_sip = sorted(investor_sip_totals.values(), key=lambda x: x['total_sip_value'], reverse=True)[:10]
+        analytics['top_sip_investors'] = [
+            {
+                'investor_id': inv['investor_id'],
+                'name': inv['name'],
+                'total_sip_value': round(inv['total_sip_value'], 2)
+            }
+            for inv in top_sip
+        ]
+        
+        # Monthly SIP inflow for last 12 months
+        monthly_inflow = []
+        for i in range(11, -1, -1):
+            month_date = now - timedelta(days=i * 30)
+            month_key = month_date.strftime('%Y-%m')
+            inflow = sip_transactions_by_month.get(month_key, 0)
+            monthly_inflow.append({
+                'month': month_date.strftime('%b %Y'),
+                'inflow': round(inflow, 2)
+            })
+        analytics['monthly_sip_inflow'] = monthly_inflow
+        
+        # High-potential investors (long-term, minimal redemptions, positive returns)
+        six_months_ago = now - timedelta(days=180)
+        for inv_data in investor_sip_totals.values():
+            try:
+                onboarding = datetime.fromisoformat(inv_data['onboarding_date'].replace('Z', '+00:00'))
+                if (onboarding < six_months_ago and 
+                    inv_data['redemptions'] <= 2 and 
+                    inv_data['gain_loss_pct'] > 0):
+                    analytics['high_potential_investors'].append({
+                        'investor_id': inv_data['investor_id'],
+                        'name': inv_data['name'],
+                        'total_sip_value': round(inv_data['total_sip_value'], 2),
+                        'gain_loss_pct': inv_data['gain_loss_pct'],
+                        'redemptions': inv_data['redemptions']
+                    })
+            except:
+                pass
+        
+        # Sort high-potential by gain_loss_pct
+        analytics['high_potential_investors'] = sorted(
+            analytics['high_potential_investors'], 
+            key=lambda x: x['gain_loss_pct'], 
+            reverse=True
+        )[:10]
+        
+        # Sort upcoming expiry by days
+        analytics['upcoming_sip_expiry'] = sorted(
+            analytics['upcoming_sip_expiry'],
+            key=lambda x: x['days_until_due']
+        )[:10]
+        
+        return {'success': True, 'data': analytics}
+        
+    except Exception as e:
+        logging.error(f"Error calculating dashboard analytics: {str(e)}")
+        raise HTTPException(
+            status_code=500,
+            detail=f"Error calculating analytics: {str(e)}"
+        )
+
 # ==================== Seed Routes ====================
 
 @api_router.post("/seed/run", response_model=RunSeedResponse)
