@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Sidebar from '../components/Sidebar';
 import Header from '../components/Header';
-import { TrendingUp, TrendingDown, Users, Wallet, Brain, ArrowRight, UserCheck, UserX, UserPlus, Activity, PieChart as PieChartIcon, BarChart3, DollarSign, AlertCircle, Star, Pause, StopCircle, Play } from 'lucide-react';
+import { TrendingUp, TrendingDown, Users, Wallet, Brain, ArrowRight, UserCheck, UserX, UserPlus, Activity, PieChart as PieChartIcon, BarChart3 } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';
