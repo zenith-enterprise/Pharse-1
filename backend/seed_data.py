@@ -101,11 +101,25 @@ async def seed_database():
         
         # Generate portfolios (3-8 per investor)
         num_folios = random_int(3, 8)
+        
+        # To ensure some inactive investors, make 15% have losses
+        force_negative = i <= 45  # First 15% will have negative returns
+        
         for f in range(num_folios):
             amc = sample(AMC_LIST)
             category = sample(CATEGORY_LIST)
             invested_amount = random_int(20000, 300000)
-            gain_loss_pct = round(random_float(-5, 20), 2)
+            
+            # Realistic gain/loss distribution
+            if force_negative:
+                gain_loss_pct = round(random_float(-15, -5), 2)  # Force negative for inactive
+            else:
+                # 80% positive, 20% slight negative
+                if random.random() < 0.8:
+                    gain_loss_pct = round(random_float(0, 20), 2)
+                else:
+                    gain_loss_pct = round(random_float(-4, 0), 2)
+            
             current_value = round(invested_amount * (1 + gain_loss_pct / 100), 2)
             nav = round(random_float(10, 250), 2)
             units = round(current_value / nav, 4)
