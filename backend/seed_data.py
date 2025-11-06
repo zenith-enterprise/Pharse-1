@@ -192,7 +192,7 @@ async def seed_database():
             
             # Generate transactions (20-30 per folio)
             txn_count = random_int(20, 30)
-            start_date = datetime.now() - timedelta(days=24 * 30)  # 24 months back
+            start_date = datetime.now(timezone.utc) - timedelta(days=24 * 30)  # 24 months back
             
             # Control redemption frequency for high-potential investor creation
             # 70% investors will have 0-2 redemptions (high-potential candidates)
