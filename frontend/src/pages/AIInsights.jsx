@@ -33,6 +33,10 @@ const AIInsights = ({ user, onLogout }) => {
       
       // Calculate aggregate data
       calculateAggregateData(investorData);
+      
+      // Fetch enhanced dashboard analytics
+      const enhancedResponse = await axios.get('/dashboard/analytics');
+      setEnhancedAnalytics(enhancedResponse.data.data);
     } catch (error) {
       toast.error('Failed to load investors');
     } finally {
