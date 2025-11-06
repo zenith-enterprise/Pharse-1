@@ -163,7 +163,7 @@ async def seed_database():
                 else:  # Stopped SIPs - 20%
                     # Long gap, 6+ months
                     days_since_last = random_int(200, 500)
-                    last_sip_date = datetime.now() - timedelta(days=days_since_last)
+                    last_sip_date = datetime.now(timezone.utc) - timedelta(days=days_since_last)
                     next_due = None  # No next due for stopped SIPs
             else:
                 sip_freq = None
