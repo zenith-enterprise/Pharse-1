@@ -194,16 +194,28 @@ async def seed_database():
             txn_count = random_int(20, 30)
             start_date = datetime.now() - timedelta(days=24 * 30)  # 24 months back
             
+            # Control redemption frequency for high-potential investor creation
+            # 70% investors will have 0-2 redemptions (high-potential candidates)
+            max_redemptions = 0 if i < 210 else random_int(3, 8)
+            redemption_count = 0
+            
             for t in range(txn_count):
                 # Calculate transaction date (spread over 24 months)
                 days_offset = int((t / txn_count) * (24 * 30))
                 txn_date = start_date + timedelta(days=days_offset)
                 
-                txn_types_pool = TXN_TYPES.copy()
-                if folio['sip_flag']:
-                    txn_types_pool.append('SIP')  # More SIP likelihood
+                # Determine transaction type with controlled redemptions
+                if folio['sip_flag'] and random.random() < 0.6:
+                    # 60% SIP transactions for SIP folios
+                    txn_type = 'SIP'
+                elif redemption_count < max_redemptions and random.random() < 0.15:
+                    # 15% sell transactions (controlled by max_redemptions)
+                    txn_type = 'Sell'
+                    redemption_count += 1
+                else:
+                    # Other transaction types (Buy, Switch, Dividend)
+                    txn_type = sample(['Buy', 'Switch', 'Dividend'])
                 
-                txn_type = sample(txn_types_pool)
                 txn_nav = round(random_float(10, 250), 2)
                 amount = random_int(1000, 50000)
                 units_txn = round(amount / txn_nav, 4)
