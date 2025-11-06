@@ -141,7 +141,8 @@ def aum_concentration_risk(investor: Dict) -> Dict:
     
     top3 = sorted_portfolios[:3]
     top_sum = sum(safe_num(p.get('current_value', 0)) for p in top3)
-    total = sum(safe_num(p.get('current_value', 0)) for p in portfolios) or 1
+    # Use total_aum for consistency
+    total = safe_num(investor.get('total_aum')) or 1
     
     concentration = round((top_sum / total) * 100, 2)
     
