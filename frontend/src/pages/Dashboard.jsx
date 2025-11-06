@@ -30,8 +30,8 @@ const Dashboard = ({ user, onLogout }) => {
         return;
       }
 
-      // Load investors for comprehensive stats
-      const response = await axios.get('/investors');
+      // Load investors with portfolios for comprehensive stats
+      const response = await axios.get('/investors?include_portfolios=true');
       const investors = response.data.data;
 
       // Calculate comprehensive analytics
