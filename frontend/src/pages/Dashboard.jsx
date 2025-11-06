@@ -91,21 +91,26 @@ const Dashboard = ({ user, onLogout }) => {
     // AMC Weightage
     const amcData = {};
     investors.forEach(inv => {
-      inv.portfolios?.forEach(portfolio => {
-        const amc = portfolio.amc_name || 'Other';
-        amcData[amc] = (amcData[amc] || 0) + portfolio.current_value;
-      });
+      if (inv.portfolios && Array.isArray(inv.portfolios)) {
+        inv.portfolios.forEach(portfolio => {
+          const amc = portfolio.amc_name || 'Other';
+          const value = parseFloat(portfolio.current_value) || 0;
+          amcData[amc] = (amcData[amc] || 0) + value;
+        });
+      }
     });
 
     const amcWeightage = Object.entries(amcData)
       .map(([name, value]) => ({ 
         name, 
-        value, 
-        percentage: parseFloat((value / totalAUM * 100).toFixed(2))
+        value: parseFloat(value.toFixed(2)), 
+        percentage: parseFloat(((value / totalAUM) * 100).toFixed(2))
       }))
       .sort((a, b) => b.value - a.value)
       .slice(0, 10)
       .filter(item => item.value > 0);
+    
+    console.log('AMC Weightage:', amcWeightage);
 
     // SIP Statistics
     let totalSIPs = 0;
