@@ -134,8 +134,6 @@ const Dashboard = ({ user, onLogout }) => {
     
     console.log('AMC Data:', amcData);
     console.log('AMC Weightage Array:', amcWeightage);
-    console.log('Total SIPs:', totalSIPs, 'SIP Value:', sipValue);
-    console.log('New Investors:', newInvestors.length);
 
     // SIP Statistics
     let totalSIPs = 0;
