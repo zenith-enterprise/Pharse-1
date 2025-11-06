@@ -32,7 +32,7 @@ python3 seed_data.py
 ```
 
 ### Access the Application
-- Frontend: https://wealth-insight-4.preview.emergentagent.com
+- Frontend: https://wealth-insights-13.preview.emergentagent.com
 - Login with credentials created during signup
 
 ## 📊 Key Features
