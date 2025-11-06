@@ -131,23 +131,40 @@ async def seed_database():
             if has_sip:
                 sip_freq = sample(['Monthly', 'Quarterly'])
                 
-                # 25% of SIP investors have missed payments (high risk)
-                # 15% have recent gaps (medium risk)  
-                # 60% are regular (low risk)
+                # Realistic distribution:
+                # 60% Active (regular payments)
+                # 20% Paused (missed 1-2 payments)  
+                # 20% Stopped (long gap, 6+ months)
                 risk_category = random.random()
                 
-                if risk_category < 0.25:  # High risk - missed 2+ payments
-                    days_since_last = random_int(61, 120)
+                if risk_category < 0.60:  # Active SIPs - 60%
+                    # Last payment within frequency period
+                    if sip_freq == 'Monthly':
+                        days_since_last = random_int(1, 30)
+                        next_due = datetime.now() + timedelta(days=random_int(1, 30))
+                    else:  # Quarterly
+                        days_since_last = random_int(1, 85)
+                        next_due = datetime.now() + timedelta(days=random_int(1, 30))
                     last_sip_date = datetime.now() - timedelta(days=days_since_last)
-                    next_due = datetime.now() - timedelta(days=random_int(30, 60))  # Overdue
-                elif risk_category < 0.40:  # Medium risk - missed 1 payment
-                    days_since_last = random_int(35, 60)
+                    
+                elif risk_category < 0.80:  # Paused SIPs - 20%
+                    # Missed 1-2 payments but not stopped
+                    if sip_freq == 'Monthly':
+                        days_since_last = random_int(40, 150)
+                    else:  # Quarterly
+                        days_since_last = random_int(110, 170)
                     last_sip_date = datetime.now() - timedelta(days=days_since_last)
-                    next_due = datetime.now() + timedelta(days=random_int(1, 15))
-                else:  # Low risk - regular payments
-                    days_since_last = random_int(1, 30)
+                    # Some have upcoming due dates within 3 months
+                    if random.random() < 0.4:
+                        next_due = datetime.now() + timedelta(days=random_int(1, 90))
+                    else:
+                        next_due = datetime.now() - timedelta(days=random_int(1, 30))  # Overdue
+                    
+                else:  # Stopped SIPs - 20%
+                    # Long gap, 6+ months
+                    days_since_last = random_int(200, 500)
                     last_sip_date = datetime.now() - timedelta(days=days_since_last)
-                    next_due = datetime.now() + timedelta(days=random_int(1, 30))
+                    next_due = None  # No next due for stopped SIPs
             else:
                 sip_freq = None
                 last_sip_date = None
