@@ -78,7 +78,8 @@ const Dashboard = ({ user, onLogout }) => {
 
     const aumByAssetClass = Object.entries(assetClassData)
       .map(([name, value]) => ({ name, value }))
-      .sort((a, b) => b.value - a.value);
+      .sort((a, b) => b.value - a.value)
+      .filter(item => item.value > 0);
 
     // AMC Weightage
     const amcData = {};
