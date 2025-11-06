@@ -7,7 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Brain, Loader, TrendingUp, TrendingDown, AlertTriangle, CheckCircle, Users, BarChart3, PieChart, Activity } from 'lucide-react';
+import { Brain, Loader, TrendingUp, TrendingDown, AlertTriangle, CheckCircle, Users, BarChart3, PieChart, Activity, Play, Pause, StopCircle, Star, AlertCircle, DollarSign } from 'lucide-react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart as RePieChart, Pie, Cell, Legend, LineChart, Line } from 'recharts';
 import { toast } from 'sonner';
 
