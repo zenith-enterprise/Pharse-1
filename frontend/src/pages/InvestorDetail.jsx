@@ -52,10 +52,15 @@ const InvestorDetail = ({ user, onLogout }) => {
       toast.info('Running AI analysis... This may take a few seconds.');
       const response = await axios.post(`/ai/run/${investorId}`);
       if (response.data.success) {
-        setAnalysis(response.data.data);
+        // Update analysis state with fresh data
+        setAnalysis({
+          analysis: response.data.data.analysis,
+          ai_summary: response.data.data.summary
+        });
         toast.success('AI analysis completed!');
       }
     } catch (error) {
+      console.error('AI analysis error:', error);
       toast.error('Failed to run AI analysis');
     } finally {
       setAnalyzingAI(false);
