@@ -50,12 +50,6 @@ const Dashboard = ({ user, onLogout }) => {
       const analytics = calculateComprehensiveAnalytics(investors);
       console.log('Analytics calculated:', analytics);
       setStats(analytics);
-
-      // Fetch enhanced dashboard analytics
-      console.log('Fetching enhanced analytics...');
-      const enhancedResponse = await axios.get('/dashboard/analytics');
-      console.log('Enhanced analytics received:', enhancedResponse.data);
-      setEnhancedAnalytics(enhancedResponse.data.data);
     } catch (error) {
       console.error('Error loading dashboard:', error);
       console.error('Error details:', error.message, error.response);
