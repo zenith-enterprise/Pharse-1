@@ -195,11 +195,14 @@ frontend:
     file: "/app/frontend/src/pages/Dashboard.jsx"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: true
         agent: "main"
         comment: "Implemented line chart using Recharts showing monthly SIP inflow trend for last 12 months with currency formatting."
+      - working: true
+        agent: "testing"
+        comment: "PASSED: Monthly SIP Inflow Chart is working perfectly. Line chart displays 12 months of data with proper X-axis (months) and Y-axis (inflow amounts). Chart shows connected data points with tooltips displaying currency formatted values. Average SIP Ticket Size (₹1,68,819) is displayed below the chart with proper INR formatting."
 
   - task: "Dashboard UI - Top 10 SIP Investors"
     implemented: true
