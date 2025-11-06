@@ -116,12 +116,14 @@ const Dashboard = ({ user, onLogout }) => {
     let totalSIPs = 0;
     let sipValue = 0;
     investors.forEach(inv => {
-      inv.portfolios?.forEach(portfolio => {
-        if (portfolio.sip_flag) {
-          totalSIPs++;
-          sipValue += portfolio.current_value;
-        }
-      });
+      if (inv.portfolios && Array.isArray(inv.portfolios)) {
+        inv.portfolios.forEach(portfolio => {
+          if (portfolio.sip_flag) {
+            totalSIPs++;
+            sipValue += parseFloat(portfolio.current_value) || 0;
+          }
+        });
+      }
     });
 
     // Performance Distribution
