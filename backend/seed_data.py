@@ -1,7 +1,7 @@
 """Seeding script to generate 300 investors with portfolios and transactions"""
 import random
 import os
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from motor.motor_asyncio import AsyncIOMotorClient
 from dotenv import load_dotenv
 import asyncio
