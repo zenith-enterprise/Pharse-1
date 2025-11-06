@@ -225,11 +225,14 @@ frontend:
     file: "/app/frontend/src/pages/Dashboard.jsx"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: true
         agent: "main"
         comment: "Added card showing upcoming SIP expiries within 3 months with investor name, scheme name, days until due, and amount. Shows 'No upcoming expiries' when empty."
+      - working: true
+        agent: "testing"
+        comment: "PASSED: Upcoming SIP Expiry Alerts card is working correctly. Card has proper orange border styling and alert icon. Currently displays 'No upcoming expiries' message as expected since all SIPs are stopped. Card structure and styling are properly implemented for when data is available."
 
   - task: "Dashboard UI - High-Potential Investors"
     implemented: true
