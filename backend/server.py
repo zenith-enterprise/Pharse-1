@@ -185,6 +185,112 @@ async def get_investor_detail(investor_id: str):
     
     return {'success': True, 'data': investor}
 
+@api_router.post("/investors")
+async def create_investor(investor_data: dict):
+    """Create a new investor"""
+    try:
+        # Generate new investor ID
+        count = await db.investors.count_documents({})
+        new_investor_id = f"INV{str(count + 1).zfill(4)}"
+        
+        # Prepare investor document
+        investor = {
+            'investor_id': new_investor_id,
+            'name': investor_data.get('name'),
+            'pan': investor_data.get('pan'),
+            'email': investor_data.get('email'),
+            'mobile': investor_data.get('mobile'),
+            'onboarding_date': investor_data.get('onboarding_date', datetime.now(timezone.utc).isoformat()),
+            'risk_profile': investor_data.get('risk_profile', 'Moderate'),
+            'investor_type': investor_data.get('investor_type', 'Individual'),
+            'portfolios': investor_data.get('portfolios', []),
+            'total_invested': investor_data.get('total_invested', 0),
+            'total_aum': investor_data.get('total_aum', 0),
+            'gain_loss_pct': investor_data.get('gain_loss_pct', 0)
+        }
+        
+        # Insert into database
+        await db.investors.insert_one(investor)
+        
+        return {
+            'success': True,
+            'message': 'Investor created successfully',
+            'data': {'investor_id': new_investor_id}
+        }
+    except Exception as e:
+        logging.error(f"Error creating investor: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Error creating investor: {str(e)}")
+
+@api_router.put("/investors/{investor_id}")
+async def update_investor(investor_id: str, investor_data: dict):
+    """Update an existing investor"""
+    try:
+        # Check if investor exists
+        existing = await db.investors.find_one({'investor_id': investor_id}, {'_id': 0})
+        if not existing:
+            raise HTTPException(status_code=404, detail="Investor not found")
+        
+        # Prepare update data (only update provided fields)
+        update_data = {}
+        allowed_fields = ['name', 'pan', 'email', 'mobile', 'risk_profile', 'investor_type', 
+                         'portfolios', 'total_invested', 'total_aum', 'gain_loss_pct']
+        
+        for field in allowed_fields:
+            if field in investor_data:
+                update_data[field] = investor_data[field]
+        
+        if not update_data:
+            raise HTTPException(status_code=400, detail="No valid fields to update")
+        
+        # Update investor
+        await db.investors.update_one(
+            {'investor_id': investor_id},
+            {'$set': update_data}
+        )
+        
+        # Get updated investor
+        updated_investor = await db.investors.find_one({'investor_id': investor_id}, {'_id': 0})
+        
+        return {
+            'success': True,
+            'message': 'Investor updated successfully',
+            'data': updated_investor
+        }
+    except HTTPException:
+        raise
+    except Exception as e:
+        logging.error(f"Error updating investor: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Error updating investor: {str(e)}")
+
+@api_router.delete("/investors/{investor_id}")
+async def delete_investor(investor_id: str):
+    """Delete an investor"""
+    try:
+        # Check if investor exists
+        existing = await db.investors.find_one({'investor_id': investor_id}, {'_id': 0})
+        if not existing:
+            raise HTTPException(status_code=404, detail="Investor not found")
+        
+        # Delete investor
+        result = await db.investors.delete_one({'investor_id': investor_id})
+        
+        if result.deleted_count == 0:
+            raise HTTPException(status_code=500, detail="Failed to delete investor")
+        
+        # Also delete associated AI analyses
+        await db.ai_analyses.delete_many({'investor_id': investor_id})
+        
+        return {
+            'success': True,
+            'message': 'Investor deleted successfully',
+            'data': {'investor_id': investor_id}
+        }
+    except HTTPException:
+        raise
+    except Exception as e:
+        logging.error(f"Error deleting investor: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Error deleting investor: {str(e)}")
+
 # ==================== AI Routes ====================
 
 @api_router.post("/ai/run/{investor_id}")
