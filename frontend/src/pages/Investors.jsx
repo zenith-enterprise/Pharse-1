@@ -213,16 +213,36 @@ const Investors = ({ user, onLogout }) => {
                             </span>
                           </td>
                           <td className="text-center">
-                            <Button
-                              size="sm"
-                              variant="outline"
-                              onClick={() => navigate(`/investors/${investor.investor_id}`)}
-                              data-testid={`view-investor-${investor.investor_id}`}
-                              className="hover:bg-blue-50 hover:text-blue-700 hover:border-blue-300"
-                            >
-                              <Eye className="w-4 h-4 mr-1" />
-                              View
-                            </Button>
+                            <div className="flex items-center justify-center gap-2">
+                              <Button
+                                size="sm"
+                                variant="outline"
+                                onClick={() => navigate(`/investors/${investor.investor_id}`)}
+                                data-testid={`view-investor-${investor.investor_id}`}
+                                className="hover:bg-blue-50 hover:text-blue-700 hover:border-blue-300"
+                              >
+                                <Eye className="w-4 h-4 mr-1" />
+                                View
+                              </Button>
+                              <Button
+                                size="sm"
+                                variant="outline"
+                                onClick={(e) => handleEditInvestor(investor, e)}
+                                data-testid={`edit-investor-${investor.investor_id}`}
+                                className="hover:bg-green-50 hover:text-green-700 hover:border-green-300"
+                              >
+                                <Edit className="w-4 h-4" />
+                              </Button>
+                              <Button
+                                size="sm"
+                                variant="outline"
+                                onClick={(e) => handleDeleteInvestor(investor, e)}
+                                data-testid={`delete-investor-${investor.investor_id}`}
+                                className="hover:bg-red-50 hover:text-red-700 hover:border-red-300"
+                              >
+                                <Trash2 className="w-4 h-4" />
+                              </Button>
+                            </div>
                           </td>
                         </tr>
                       ))}
