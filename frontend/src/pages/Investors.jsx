@@ -7,8 +7,10 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Button } from '@/components/ui/button';
-import { Search, TrendingUp, TrendingDown, Eye } from 'lucide-react';
+import { Search, TrendingUp, TrendingDown, Eye, Plus, Edit, Trash2 } from 'lucide-react';
 import { toast } from 'sonner';
+import InvestorFormModal from '../components/InvestorFormModal';
+import DeleteConfirmDialog from '../components/DeleteConfirmDialog';
 
 const Investors = ({ user, onLogout }) => {
   const [investors, setInvestors] = useState([]);
@@ -16,6 +18,9 @@ const Investors = ({ user, onLogout }) => {
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
   const [riskFilter, setRiskFilter] = useState('all');
+  const [showFormModal, setShowFormModal] = useState(false);
+  const [showDeleteDialog, setShowDeleteDialog] = useState(false);
+  const [selectedInvestor, setSelectedInvestor] = useState(null);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -60,7 +65,32 @@ const Investors = ({ user, onLogout }) => {
       style: 'currency',
       currency: 'INR',
       maximumFractionDigits: 0
-    }).format(value);
+    }).format(value || 0);
+  };
+
+  const handleAddInvestor = () => {
+    setSelectedInvestor(null);
+    setShowFormModal(true);
+  };
+
+  const handleEditInvestor = (investor, e) => {
+    e.stopPropagation();
+    setSelectedInvestor(investor);
+    setShowFormModal(true);
+  };
+
+  const handleDeleteInvestor = (investor, e) => {
+    e.stopPropagation();
+    setSelectedInvestor(investor);
+    setShowDeleteDialog(true);
+  };
+
+  const handleFormSuccess = () => {
+    loadInvestors();
+  };
+
+  const handleDeleteSuccess = () => {
+    loadInvestors();
   };
 
   const maskPAN = (pan) => {
@@ -110,9 +140,19 @@ const Investors = ({ user, onLogout }) => {
             <CardHeader>
               <CardTitle className="flex items-center justify-between">
                 <span>All Investors</span>
-                <span className="text-sm font-normal text-slate-600" data-testid="investor-count">
-                  {filteredInvestors.length} investors
-                </span>
+                <div className="flex items-center gap-4">
+                  <span className="text-sm font-normal text-slate-600" data-testid="investor-count">
+                    {filteredInvestors.length} investors
+                  </span>
+                  <Button 
+                    onClick={handleAddInvestor}
+                    className="bg-blue-900 hover:bg-blue-800 text-white"
+                    data-testid="add-investor-button"
+                  >
+                    <Plus className="w-4 h-4 mr-2" />
+                    Add New Investor
+                  </Button>
+                </div>
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -136,7 +176,7 @@ const Investors = ({ user, onLogout }) => {
                         <th className="text-right">Invested</th>
                         <th className="text-right">Returns</th>
                         <th className="text-center">Risk Profile</th>
-                        <th className="text-center">Action</th>
+                        <th className="text-center">Actions</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -173,16 +213,36 @@ const Investors = ({ user, onLogout }) => {
                             </span>
                           </td>
                           <td className="text-center">
-                            <Button
-                              size="sm"
-                              variant="outline"
-                              onClick={() => navigate(`/investors/${investor.investor_id}`)}
-                              data-testid={`view-investor-${investor.investor_id}`}
-                              className="hover:bg-blue-50 hover:text-blue-700 hover:border-blue-300"
-                            >
-                              <Eye className="w-4 h-4 mr-1" />
-                              View
-                            </Button>
+                            <div className="flex items-center justify-center gap-2">
+                              <Button
+                                size="sm"
+                                variant="outline"
+                                onClick={() => navigate(`/investors/${investor.investor_id}`)}
+                                data-testid={`view-investor-${investor.investor_id}`}
+                                className="hover:bg-blue-50 hover:text-blue-700 hover:border-blue-300"
+                              >
+                                <Eye className="w-4 h-4 mr-1" />
+                                View
+                              </Button>
+                              <Button
+                                size="sm"
+                                variant="outline"
+                                onClick={(e) => handleEditInvestor(investor, e)}
+                                data-testid={`edit-investor-${investor.investor_id}`}
+                                className="hover:bg-green-50 hover:text-green-700 hover:border-green-300"
+                              >
+                                <Edit className="w-4 h-4" />
+                              </Button>
+                              <Button
+                                size="sm"
+                                variant="outline"
+                                onClick={(e) => handleDeleteInvestor(investor, e)}
+                                data-testid={`delete-investor-${investor.investor_id}`}
+                                className="hover:bg-red-50 hover:text-red-700 hover:border-red-300"
+                              >
+                                <Trash2 className="w-4 h-4" />
+                              </Button>
+                            </div>
                           </td>
                         </tr>
                       ))}
@@ -194,6 +254,21 @@ const Investors = ({ user, onLogout }) => {
           </Card>
         </main>
       </div>
+
+      {/* Modals */}
+      <InvestorFormModal
+        open={showFormModal}
+        onClose={() => setShowFormModal(false)}
+        investor={selectedInvestor}
+        onSuccess={handleFormSuccess}
+      />
+
+      <DeleteConfirmDialog
+        open={showDeleteDialog}
+        onClose={() => setShowDeleteDialog(false)}
+        investor={selectedInvestor}
+        onSuccess={handleDeleteSuccess}
+      />
     </div>
   );
 };
