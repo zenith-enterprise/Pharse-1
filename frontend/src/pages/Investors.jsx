@@ -140,9 +140,19 @@ const Investors = ({ user, onLogout }) => {
             <CardHeader>
               <CardTitle className="flex items-center justify-between">
                 <span>All Investors</span>
-                <span className="text-sm font-normal text-slate-600" data-testid="investor-count">
-                  {filteredInvestors.length} investors
-                </span>
+                <div className="flex items-center gap-4">
+                  <span className="text-sm font-normal text-slate-600" data-testid="investor-count">
+                    {filteredInvestors.length} investors
+                  </span>
+                  <Button 
+                    onClick={handleAddInvestor}
+                    className="bg-blue-900 hover:bg-blue-800 text-white"
+                    data-testid="add-investor-button"
+                  >
+                    <Plus className="w-4 h-4 mr-2" />
+                    Add New Investor
+                  </Button>
+                </div>
               </CardTitle>
             </CardHeader>
             <CardContent>
