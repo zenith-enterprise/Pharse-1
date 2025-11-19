@@ -24,23 +24,30 @@ def import_from_json():
     print("IMPORTING DATA TO PRODUCTION MONGODB ATLAS")
     print("=" * 60)
     
+    # Export directory
+    export_dir = '/app/backend/data_export'
+    
     # Load JSON files
     print("\n1. Loading JSON files...")
     try:
-        with open('/tmp/mf360_investors.json', 'r') as f:
+        with open(f'{export_dir}/mf360_investors.json', 'r') as f:
             investors = json.load(f)
         print(f"   ✓ Loaded {len(investors)} investors")
         
-        with open('/tmp/mf360_users.json', 'r') as f:
+        with open(f'{export_dir}/mf360_users.json', 'r') as f:
             users = json.load(f)
         print(f"   ✓ Loaded {len(users)} users")
         
-        with open('/tmp/mf360_analyses.json', 'r') as f:
+        with open(f'{export_dir}/mf360_analyses.json', 'r') as f:
             analyses = json.load(f)
         print(f"   ✓ Loaded {len(analyses)} AI analyses")
     except FileNotFoundError as e:
-        print(f"   ✗ Error: JSON files not found. Please run export script first.")
+        print(f"   ✗ Error: JSON files not found at {export_dir}/")
         print(f"   {e}")
+        print(f"\n   Files should be located at:")
+        print(f"   - {export_dir}/mf360_investors.json")
+        print(f"   - {export_dir}/mf360_users.json")
+        print(f"   - {export_dir}/mf360_analyses.json")
         return
     
     # Connect to production MongoDB
