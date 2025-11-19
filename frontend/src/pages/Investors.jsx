@@ -176,7 +176,7 @@ const Investors = ({ user, onLogout }) => {
                         <th className="text-right">Invested</th>
                         <th className="text-right">Returns</th>
                         <th className="text-center">Risk Profile</th>
-                        <th className="text-center">Action</th>
+                        <th className="text-center">Actions</th>
                       </tr>
                     </thead>
                     <tbody>
