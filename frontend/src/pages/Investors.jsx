@@ -7,8 +7,10 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Button } from '@/components/ui/button';
-import { Search, TrendingUp, TrendingDown, Eye } from 'lucide-react';
+import { Search, TrendingUp, TrendingDown, Eye, Plus, Edit, Trash2 } from 'lucide-react';
 import { toast } from 'sonner';
+import InvestorFormModal from '../components/InvestorFormModal';
+import DeleteConfirmDialog from '../components/DeleteConfirmDialog';
 
 const Investors = ({ user, onLogout }) => {
   const [investors, setInvestors] = useState([]);
@@ -16,6 +18,9 @@ const Investors = ({ user, onLogout }) => {
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
   const [riskFilter, setRiskFilter] = useState('all');
+  const [showFormModal, setShowFormModal] = useState(false);
+  const [showDeleteDialog, setShowDeleteDialog] = useState(false);
+  const [selectedInvestor, setSelectedInvestor] = useState(null);
   const navigate = useNavigate();
 
   useEffect(() => {
