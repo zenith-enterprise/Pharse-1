@@ -254,6 +254,21 @@ const Investors = ({ user, onLogout }) => {
           </Card>
         </main>
       </div>
+
+      {/* Modals */}
+      <InvestorFormModal
+        open={showFormModal}
+        onClose={() => setShowFormModal(false)}
+        investor={selectedInvestor}
+        onSuccess={handleFormSuccess}
+      />
+
+      <DeleteConfirmDialog
+        open={showDeleteDialog}
+        onClose={() => setShowDeleteDialog(false)}
+        investor={selectedInvestor}
+        onSuccess={handleDeleteSuccess}
+      />
     </div>
   );
 };
