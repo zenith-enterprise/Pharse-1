@@ -1,0 +1,5333 @@
+[
+  {
+    "investor_id": "INV0001",
+    "ai_summary": {
+      "summary": "1) The portfolio currently has an AUM of \u20b910,279,255.93, but is facing a loss of 8.66%. Additionally, there are several alerts related to various funds, indicating potential issues that need addressing. The portfolio is well-diversified; however, there is a high churn risk that could impact long-term stability.\n\n2) Recommendations:\n   - Consider reallocating some investments from the alerted funds to focus on more stable options that can mitigate potential losses and enhance growth.\n   - Review the overall investment strategy with the client, discussing the possibility of increasing exposure to equity or hybrid funds for better growth prospects, while ensuring proper risk management."
+    },
+    "analysis_result": {
+      "investor_id": "INV0001",
+      "name": "Rohan Bansal",
+      "performance": {
+        "invested": 1125336.0,
+        "value": 1027925.93,
+        "gainLoss": -8.66
+      },
+      "allocation": {
+        "total": 1027925.9299999999,
+        "allocation": {
+          "Hybrid": 13.64,
+          "Equity": 24.43,
+          "Liquid": 10.21,
+          "Balanced": 37.89,
+          "Debt": 13.82
+        }
+      },
+      "concentration": {
+        "totals": {
+          "Aditya Birla Sun Life": 140256.58,
+          "Franklin Templeton": 356083.02999999997,
+          "Kotak Mahindra": 242508.94,
+          "ICICI Prudential": 147004.89,
+          "SBI Mutual Fund": 142072.49
+        },
+        "alerts": []
+      },
+      "underperforming": [
+        {
+          "scheme": "Aditya Birla Sun Life Hybrid Fund 820",
+          "loss": -11.68
+        },
+        {
+          "scheme": "Franklin Templeton Equity Fund 380",
+          "loss": -6.62
+        },
+        {
+          "scheme": "Franklin Templeton Liquid Fund 844",
+          "loss": -5.05
+        },
+        {
+          "scheme": "Kotak Mahindra Balanced Fund 293",
+          "loss": -6.77
+        },
+        {
+          "scheme": "ICICI Prudential Balanced Fund 530",
+          "loss": -12.52
+        },
+        {
+          "scheme": "SBI Mutual Fund Debt Fund 806",
+          "loss": -10.59
+        }
+      ],
+      "sip_health": {
+        "active": 3,
+        "details": [
+          {
+            "scheme": "Aditya Birla Sun Life Hybrid Fund 820",
+            "freq": "Monthly",
+            "next_due": "2025-11-02T19:01:10.028393+00:00"
+          },
+          {
+            "scheme": "Franklin Templeton Equity Fund 380",
+            "freq": "Quarterly",
+            "next_due": "2025-10-14T19:01:10.028526+00:00"
+          },
+          {
+            "scheme": "Kotak Mahindra Balanced Fund 293",
+            "freq": "Quarterly",
+            "next_due": "2025-11-20T19:01:10.028726+00:00"
+          }
+        ]
+      },
+      "diversification": {
+        "amcCount": 5,
+        "catCount": 5,
+        "diversificationScore": 100
+      },
+      "risk_mismatch": {
+        "equityShare": 24.43,
+        "alert": null
+      },
+      "category_imbalance": {
+        "alerts": []
+      },
+      "aum_concentration": {
+        "top3": [
+          {
+            "scheme": "Franklin Templeton Equity Fund 380",
+            "value": 251105.36
+          },
+          {
+            "scheme": "Kotak Mahindra Balanced Fund 293",
+            "value": 242508.94
+          },
+          {
+            "scheme": "ICICI Prudential Balanced Fund 530",
+            "value": 147004.89
+          }
+        ],
+        "concentration": 62.32
+      },
+      "underperf_alert": [
+        {
+          "scheme": "Aditya Birla Sun Life Hybrid Fund 820",
+          "loss": -11.68
+        },
+        {
+          "scheme": "Franklin Templeton Equity Fund 380",
+          "loss": -6.62
+        },
+        {
+          "scheme": "Franklin Templeton Liquid Fund 844",
+          "loss": -5.05
+        },
+        {
+          "scheme": "Kotak Mahindra Balanced Fund 293",
+          "loss": -6.77
+        },
+        {
+          "scheme": "ICICI Prudential Balanced Fund 530",
+          "loss": -12.52
+        },
+        {
+          "scheme": "SBI Mutual Fund Debt Fund 806",
+          "loss": -10.59
+        }
+      ],
+      "liquidity": {
+        "illiquidSchemes": []
+      },
+      "sip_discontinuation": {
+        "sipCount": 3,
+        "missedCount": 0,
+        "highRiskCount": 0,
+        "mediumRiskCount": 0,
+        "lowRiskCount": 3,
+        "risk": "Low",
+        "details": "0 SIPs with 2+ missed payments, 0 with 1 missed payment"
+      },
+      "redemption_likelihood": {
+        "score": 0.0,
+        "flag": "Normal"
+      },
+      "aum_forecast": {
+        "projectedGrowthPct": 7.55
+      },
+      "churn_risk": {
+        "churnRisk": "High",
+        "score": 0.6
+      },
+      "goal_forecast": {
+        "status": "NoGoalDeclared"
+      },
+      "rebalancing_recommendations": {
+        "suggestions": [
+          "Increase debt allocation for stability"
+        ]
+      },
+      "performance_suggestions": {
+        "suggestions": [
+          "Consider replacing Aditya Birla Sun Life Hybrid Fund 820 with better performing same-category funds",
+          "Consider replacing Franklin Templeton Equity Fund 380 with better performing same-category funds",
+          "Consider replacing Franklin Templeton Liquid Fund 844 with better performing same-category funds",
+          "Consider replacing Kotak Mahindra Balanced Fund 293 with better performing same-category funds",
+          "Consider replacing ICICI Prudential Balanced Fund 530 with better performing same-category funds",
+          "Consider replacing SBI Mutual Fund Debt Fund 806 with better performing same-category funds"
+        ]
+      },
+      "goal_rebalancing_advice": {
+        "advice": "Map long-term goals to equity heavy funds and short-term to debt; rebalance annually."
+      },
+      "ai_summary": {
+        "portfolioScore": 91,
+        "summary": "Investor Rohan Bansal holds 6 schemes with -8.66% gain/loss.",
+        "recommendation": "Continue SIP discipline and review top losing funds."
+      }
+    },
+    "created_at": "2025-11-06T19:10:11.784141+00:00"
+  },
+  {
+    "investor_id": "INV0002",
+    "ai_summary": {
+      "summary": "**Summary of Portfolio Health:**  \nThe investor's portfolio is currently showing a loss of \u20b954,078.51 (approximately 7.5% negative change), with a total asset under management (AUM) of \u20b9721,046.83. The diversification level is optimal at 100, but there's a high churn risk associated with the investments.\n\n**Actionable Recommendations:**  \n1. **Review High-Risk Funds:** Recommend a thorough analysis of the funds flagged in alerts, especially considering the high churn risk. It may be beneficial to consider redeeming some investments in underperforming funds like the Aditya Birla Sun Life Hybrid Fund and reallocating into more stable options.  \n2. **Consider Balanced or Conservative Funds:** Suggest the client explore more balanced or conservative mutual funds to mitigate ongoing losses and enhance stability in their portfolio, particularly given the current market volatility."
+    },
+    "analysis_result": {
+      "investor_id": "INV0002",
+      "name": "Aditi Reddy",
+      "performance": {
+        "invested": 884986.0,
+        "value": 785695.3,
+        "gainLoss": -11.22
+      },
+      "allocation": {
+        "total": 785695.3,
+        "allocation": {
+          "Debt": 41.91,
+          "Balanced": 5.52,
+          "Hybrid": 52.56
+        }
+      },
+      "concentration": {
+        "totals": {
+          "Franklin Templeton": 329321.6,
+          "Aditya Birla Sun Life": 43402.37,
+          "DSP Mutual Fund": 192204.57,
+          "HDFC Mutual Fund": 220766.76
+        },
+        "alerts": [
+          {
+            "type": "HighAMCConcentration",
+            "amc": "Franklin Templeton",
+            "pct": 41.91
+          }
+        ]
+      },
+      "underperforming": [
+        {
+          "scheme": "Franklin Templeton Debt Fund 202",
+          "loss": -10.8
+        },
+        {
+          "scheme": "Aditya Birla Sun Life Balanced Fund 592",
+          "loss": -13.41
+        },
+        {
+          "scheme": "DSP Mutual Fund Hybrid Fund 377",
+          "loss": -12.46
+        },
+        {
+          "scheme": "HDFC Mutual Fund Hybrid Fund 992",
+          "loss": -10.37
+        },
+        {
+          "scheme": "Franklin Templeton Debt Fund 964",
+          "loss": -10.73
+        }
+      ],
+      "sip_health": {
+        "active": 5,
+        "details": [
+          {
+            "scheme": "Franklin Templeton Debt Fund 202",
+            "freq": "Quarterly",
+            "next_due": "2025-11-14T19:01:10.029013+00:00"
+          },
+          {
+            "scheme": "Aditya Birla Sun Life Balanced Fund 592",
+            "freq": "Quarterly",
+            "next_due": "2025-10-29T19:01:10.029092+00:00"
+          },
+          {
+            "scheme": "DSP Mutual Fund Hybrid Fund 377",
+            "freq": "Monthly",
+            "next_due": "2025-11-30T19:01:10.029198+00:00"
+          },
+          {
+            "scheme": "HDFC Mutual Fund Hybrid Fund 992",
+            "freq": "Quarterly",
+            "next_due": "2025-11-28T19:01:10.029283+00:00"
+          },
+          {
+            "scheme": "Franklin Templeton Debt Fund 964",
+            "freq": "Monthly",
+            "next_due": "2025-11-29T19:01:10.029370+00:00"
+          }
+        ]
+      },
+      "diversification": {
+        "amcCount": 4,
+        "catCount": 3,
+        "diversificationScore": 72
+      },
+      "risk_mismatch": {
+        "equityShare": 0.0,
+        "alert": null
+      },
+      "category_imbalance": {
+        "alerts": []
+      },
+      "aum_concentration": {
+        "top3": [
+          {
+            "scheme": "Franklin Templeton Debt Fund 964",
+            "value": 231625.3
+          },
+          {
+            "scheme": "HDFC Mutual Fund Hybrid Fund 992",
+            "value": 220766.76
+          },
+          {
+            "scheme": "DSP Mutual Fund Hybrid Fund 377",
+            "value": 192204.57
+          }
+        ],
+        "concentration": 82.04
+      },
+      "underperf_alert": [
+        {
+          "scheme": "Franklin Templeton Debt Fund 202",
+          "loss": -10.8
+        },
+        {
+          "scheme": "Aditya Birla Sun Life Balanced Fund 592",
+          "loss": -13.41
+        },
+        {
+          "scheme": "DSP Mutual Fund Hybrid Fund 377",
+          "loss": -12.46
+        },
+        {
+          "scheme": "HDFC Mutual Fund Hybrid Fund 992",
+          "loss": -10.37
+        },
+        {
+          "scheme": "Franklin Templeton Debt Fund 964",
+          "loss": -10.73
+        }
+      ],
+      "liquidity": {
+        "illiquidSchemes": []
+      },
+      "sip_discontinuation": {
+        "sipCount": 5,
+        "missedCount": 0,
+        "highRiskCount": 0,
+        "mediumRiskCount": 0,
+        "lowRiskCount": 5,
+        "risk": "Low",
+        "details": "0 SIPs with 2+ missed payments, 0 with 1 missed payment"
+      },
+      "redemption_likelihood": {
+        "score": 0.0,
+        "flag": "Normal"
+      },
+      "aum_forecast": {
+        "projectedGrowthPct": 5.7
+      },
+      "churn_risk": {
+        "churnRisk": "High",
+        "score": 0.6
+      },
+      "goal_forecast": {
+        "status": "NoGoalDeclared"
+      },
+      "rebalancing_recommendations": {
+        "suggestions": []
+      },
+      "performance_suggestions": {
+        "suggestions": [
+          "Consider replacing Franklin Templeton Debt Fund 202 with better performing same-category funds",
+          "Consider replacing Aditya Birla Sun Life Balanced Fund 592 with better performing same-category funds",
+          "Consider replacing DSP Mutual Fund Hybrid Fund 377 with better performing same-category funds",
+          "Consider replacing HDFC Mutual Fund Hybrid Fund 992 with better performing same-category funds",
+          "Consider replacing Franklin Templeton Debt Fund 964 with better performing same-category funds"
+        ]
+      },
+      "goal_rebalancing_advice": {
+        "advice": "Map long-term goals to equity heavy funds and short-term to debt; rebalance annually."
+      },
+      "ai_summary": {
+        "portfolioScore": 89,
+        "summary": "Investor Aditi Reddy holds 5 schemes with -11.22% gain/loss.",
+        "recommendation": "Continue SIP discipline and review top losing funds."
+      }
+    },
+    "created_at": "2025-11-06T19:08:06.827016+00:00"
+  },
+  {
+    "investor_id": "INV0003",
+    "ai_summary": {
+      "summary": "**Summary of Portfolio Health**: The investor has an asset under management (AUM) of \u20b9881,312.93, but is facing a slight loss of \u20b910.18. The portfolio shows high concentration in DSP Mutual Fund, which represents 58.86% of the total investments, and has a churn risk categorized as high, indicating potential instability.\n\n**Actionable Recommendations**:\n1. **Reduce Concentration Risk**: Suggest diversifying the investments beyond DSP Mutual Fund to mitigate high concentration risk and improve stability. Consider reallocating a portion of funds to other well-performing mutual funds to achieve a more balanced portfolio.\n  \n2. **Monitor Churn Risk**: Advise regular portfolio reviews and adjustments based on market conditions to manage the high churn risk. Encourage the client to adopt a long-term perspective to capture growth opportunities while minimizing impulsive decisions."
+    },
+    "analysis_result": {
+      "investor_id": "INV0003",
+      "name": "Simran Verma",
+      "performance": {
+        "invested": 981234.0,
+        "value": 881312.93,
+        "gainLoss": -10.18
+      },
+      "allocation": {
+        "total": 881312.93,
+        "allocation": {
+          "Hybrid": 31.38,
+          "ELSS": 41.14,
+          "Balanced": 27.48
+        }
+      },
+      "concentration": {
+        "totals": {
+          "DSP Mutual Fund": 518722.57999999996,
+          "Nippon India": 196066.07,
+          "Axis Mutual Fund": 166524.28
+        },
+        "alerts": [
+          {
+            "type": "HighAMCConcentration",
+            "amc": "DSP Mutual Fund",
+            "pct": 58.86
+          }
+        ]
+      },
+      "underperforming": [
+        {
+          "scheme": "DSP Mutual Fund Hybrid Fund 498",
+          "loss": -6.96
+        },
+        {
+          "scheme": "Nippon India ELSS Fund 300",
+          "loss": -12.66
+        },
+        {
+          "scheme": "Axis Mutual Fund ELSS Fund 229",
+          "loss": -10.88
+        },
+        {
+          "scheme": "DSP Mutual Fund Balanced Fund 104",
+          "loss": -11.18
+        }
+      ],
+      "sip_health": {
+        "active": 3,
+        "details": [
+          {
+            "scheme": "Nippon India ELSS Fund 300",
+            "freq": "Quarterly",
+            "next_due": "2025-11-13T19:01:10.029582+00:00"
+          },
+          {
+            "scheme": "Axis Mutual Fund ELSS Fund 229",
+            "freq": "Quarterly",
+            "next_due": "2025-12-31T19:01:10.029659+00:00"
+          },
+          {
+            "scheme": "DSP Mutual Fund Balanced Fund 104",
+            "freq": "Quarterly",
+            "next_due": "2025-12-06T19:01:10.029762+00:00"
+          }
+        ]
+      },
+      "diversification": {
+        "amcCount": 3,
+        "catCount": 3,
+        "diversificationScore": 60
+      },
+      "risk_mismatch": {
+        "equityShare": 0.0,
+        "alert": null
+      },
+      "category_imbalance": {
+        "alerts": []
+      },
+      "aum_concentration": {
+        "top3": [
+          {
+            "scheme": "DSP Mutual Fund Hybrid Fund 498",
+            "value": 276534.42
+          },
+          {
+            "scheme": "DSP Mutual Fund Balanced Fund 104",
+            "value": 242188.16
+          },
+          {
+            "scheme": "Nippon India ELSS Fund 300",
+            "value": 196066.07
+          }
+        ],
+        "concentration": 81.1
+      },
+      "underperf_alert": [
+        {
+          "scheme": "DSP Mutual Fund Hybrid Fund 498",
+          "loss": -6.96
+        },
+        {
+          "scheme": "Nippon India ELSS Fund 300",
+          "loss": -12.66
+        },
+        {
+          "scheme": "Axis Mutual Fund ELSS Fund 229",
+          "loss": -10.88
+        },
+        {
+          "scheme": "DSP Mutual Fund Balanced Fund 104",
+          "loss": -11.18
+        }
+      ],
+      "liquidity": {
+        "illiquidSchemes": [
+          "Nippon India ELSS Fund 300",
+          "Axis Mutual Fund ELSS Fund 229"
+        ]
+      },
+      "sip_discontinuation": {
+        "sipCount": 3,
+        "missedCount": 0,
+        "highRiskCount": 0,
+        "mediumRiskCount": 0,
+        "lowRiskCount": 3,
+        "risk": "Low",
+        "details": "0 SIPs with 2+ missed payments, 0 with 1 missed payment"
+      },
+      "redemption_likelihood": {
+        "score": 0.0,
+        "flag": "Normal"
+      },
+      "aum_forecast": {
+        "projectedGrowthPct": 7.15
+      },
+      "churn_risk": {
+        "churnRisk": "High",
+        "score": 0.6
+      },
+      "goal_forecast": {
+        "status": "NoGoalDeclared"
+      },
+      "rebalancing_recommendations": {
+        "suggestions": [
+          "Increase debt allocation for stability"
+        ]
+      },
+      "performance_suggestions": {
+        "suggestions": [
+          "Consider replacing DSP Mutual Fund Hybrid Fund 498 with better performing same-category funds",
+          "Consider replacing Nippon India ELSS Fund 300 with better performing same-category funds",
+          "Consider replacing Axis Mutual Fund ELSS Fund 229 with better performing same-category funds",
+          "Consider replacing DSP Mutual Fund Balanced Fund 104 with better performing same-category funds"
+        ]
+      },
+      "goal_rebalancing_advice": {
+        "advice": "Map long-term goals to equity heavy funds and short-term to debt; rebalance annually."
+      },
+      "ai_summary": {
+        "portfolioScore": 90,
+        "summary": "Investor Simran Verma holds 4 schemes with -10.18% gain/loss.",
+        "recommendation": "Continue SIP discipline and review top losing funds."
+      }
+    },
+    "created_at": "2025-11-06T19:08:27.151802+00:00"
+  },
+  {
+    "investor_id": "INV0250",
+    "ai_summary": {
+      "summary": "1) The portfolio shows a slight gain of 5.63% with a commendable diversification score of 84. However, there is a significant risk mismatch as it lacks equity exposure despite the investor's high-risk profile, and there is a high concentration in a single fund.\n\n2) Recommendations for the client:\n   - Introduce equity exposure to the portfolio to align it with the high-risk profile, potentially improving growth opportunities.\n   - Diversify holdings further by reducing concentration in Kotak Mahindra and exploring additional funds to minimize risk associated with over-dependence on a single asset."
+    },
+    "analysis_result": {
+      "investor_id": "INV0250",
+      "name": "Investor 250",
+      "performance": {
+        "invested": 596672.0,
+        "value": 630293.22,
+        "gainLoss": 5.63
+      },
+      "allocation": {
+        "total": 630293.2200000001,
+        "allocation": {
+          "Hybrid": 48.22,
+          "ELSS": 45.93,
+          "Liquid": 5.84
+        }
+      },
+      "concentration": {
+        "totals": {
+          "UTI Mutual Fund": 142028.32,
+          "SBI Mutual Fund": 27655.64,
+          "HDFC Mutual Fund": 161909.62,
+          "Kotak Mahindra": 261859.21,
+          "Nippon India": 36840.43
+        },
+        "alerts": [
+          {
+            "type": "HighAMCConcentration",
+            "amc": "Kotak Mahindra",
+            "pct": 41.55
+          }
+        ]
+      },
+      "underperforming": [],
+      "sip_health": {
+        "active": 3,
+        "details": [
+          {
+            "scheme": "UTI Mutual Fund Hybrid Fund 147",
+            "freq": "Quarterly",
+            "next_due": "2025-11-17T18:34:30.596800"
+          },
+          {
+            "scheme": "SBI Mutual Fund ELSS Fund 799",
+            "freq": "Monthly",
+            "next_due": "2025-12-04T18:34:30.596891"
+          },
+          {
+            "scheme": "HDFC Mutual Fund Hybrid Fund 658",
+            "freq": "Quarterly",
+            "next_due": "2025-11-28T18:34:30.596984"
+          }
+        ]
+      },
+      "diversification": {
+        "amcCount": 5,
+        "catCount": 3,
+        "diversificationScore": 84
+      },
+      "risk_mismatch": {
+        "equityShare": 0.0,
+        "alert": "Risk Mismatch: Equity only 0.0% but profile High"
+      },
+      "category_imbalance": {
+        "alerts": []
+      },
+      "aum_concentration": {
+        "top3": [
+          {
+            "scheme": "Kotak Mahindra ELSS Fund 720",
+            "value": 261859.21
+          },
+          {
+            "scheme": "HDFC Mutual Fund Hybrid Fund 658",
+            "value": 161909.62
+          },
+          {
+            "scheme": "UTI Mutual Fund Hybrid Fund 147",
+            "value": 142028.32
+          }
+        ],
+        "concentration": 89.77
+      },
+      "underperf_alert": [],
+      "liquidity": {
+        "illiquidSchemes": [
+          "SBI Mutual Fund ELSS Fund 799",
+          "Kotak Mahindra ELSS Fund 720"
+        ]
+      },
+      "sip_discontinuation": {
+        "sipCount": 3,
+        "missedCount": 0,
+        "risk": "Low"
+      },
+      "redemption_likelihood": {
+        "score": 0.0,
+        "flag": "Normal"
+      },
+      "aum_forecast": {
+        "projectedGrowthPct": 1.01
+      },
+      "churn_risk": {
+        "churnRisk": "Low",
+        "score": 0
+      },
+      "goal_forecast": {
+        "status": "NoGoalDeclared"
+      },
+      "rebalancing_recommendations": {
+        "suggestions": [
+          "Increase debt allocation for stability"
+        ]
+      },
+      "performance_suggestions": {
+        "suggestions": [
+          "Portfolio is performing well. Continue monitoring and rebalance annually."
+        ]
+      },
+      "goal_rebalancing_advice": {
+        "advice": "Map long-term goals to equity heavy funds and short-term to debt; rebalance annually."
+      },
+      "ai_summary": {
+        "portfolioScore": 94,
+        "summary": "Investor Investor 250 holds 5 schemes with 5.63% gain/loss.",
+        "recommendation": "Continue SIP discipline and review top losing funds."
+      }
+    },
+    "created_at": "2025-11-05T18:46:27.675777+00:00"
+  },
+  {
+    "investor_id": "INV0010",
+    "ai_summary": {
+      "summary": "1) The portfolio currently has an Asset Under Management (AUM) of \u20b9521,189.15, but it is experiencing a loss of 9.57%. The high concentration in Franklin Templeton funds poses a risk, and churn risk is deemed high.\n\n2) \n   - Recommend diversifying the portfolio by reallocating funds from high-concentration assets, specifically reducing exposure to Franklin Templeton, and investing in a broader range of funds to enhance overall stability.\n   - Consider shifting some investments into funds with a consistent performance track record while closely monitoring market conditions to mitigate further losses and improve growth potential."
+    },
+    "analysis_result": {
+      "investor_id": "INV0010",
+      "name": "Shilpa Iyer",
+      "performance": {
+        "invested": 1320245.0,
+        "value": 1199572.0,
+        "gainLoss": -9.14
+      },
+      "allocation": {
+        "total": 1199572.0,
+        "allocation": {
+          "ELSS": 4.72,
+          "Equity": 14.04,
+          "Balanced": 17.89,
+          "Liquid": 38.28,
+          "Hybrid": 25.07
+        }
+      },
+      "concentration": {
+        "totals": {
+          "Franklin Templeton": 56674.62,
+          "DSP Mutual Fund": 168425.58,
+          "Axis Mutual Fund": 450755.9,
+          "UTI Mutual Fund": 222949.27,
+          "HDFC Mutual Fund": 68167.25,
+          "Aditya Birla Sun Life": 232599.38
+        },
+        "alerts": []
+      },
+      "underperforming": [
+        {
+          "scheme": "Franklin Templeton ELSS Fund 767",
+          "loss": -7.01
+        },
+        {
+          "scheme": "DSP Mutual Fund Equity Fund 577",
+          "loss": -12.66
+        },
+        {
+          "scheme": "Axis Mutual Fund Balanced Fund 351",
+          "loss": -13.98
+        },
+        {
+          "scheme": "UTI Mutual Fund Liquid Fund 464",
+          "loss": -8.24
+        },
+        {
+          "scheme": "Axis Mutual Fund Liquid Fund 917",
+          "loss": -6.24
+        },
+        {
+          "scheme": "HDFC Mutual Fund Hybrid Fund 779",
+          "loss": -11.61
+        },
+        {
+          "scheme": "Aditya Birla Sun Life Hybrid Fund 708",
+          "loss": -5.07
+        }
+      ],
+      "sip_health": {
+        "active": 5,
+        "details": [
+          {
+            "scheme": "Franklin Templeton ELSS Fund 767",
+            "freq": "Monthly",
+            "next_due": "2025-10-18T19:01:10.033173+00:00"
+          },
+          {
+            "scheme": "UTI Mutual Fund Liquid Fund 464",
+            "freq": "Monthly",
+            "next_due": "2025-11-15T19:01:10.033416+00:00"
+          },
+          {
+            "scheme": "Axis Mutual Fund Liquid Fund 917",
+            "freq": "Quarterly",
+            "next_due": null
+          },
+          {
+            "scheme": "HDFC Mutual Fund Hybrid Fund 779",
+            "freq": "Quarterly",
+            "next_due": null
+          },
+          {
+            "scheme": "Aditya Birla Sun Life Hybrid Fund 708",
+            "freq": "Monthly",
+            "next_due": "2025-12-01T19:01:10.033667+00:00"
+          }
+        ]
+      },
+      "diversification": {
+        "amcCount": 6,
+        "catCount": 5,
+        "diversificationScore": 100
+      },
+      "risk_mismatch": {
+        "equityShare": 14.04,
+        "alert": null
+      },
+      "category_imbalance": {
+        "alerts": []
+      },
+      "aum_concentration": {
+        "top3": [
+          {
+            "scheme": "Axis Mutual Fund Liquid Fund 917",
+            "value": 236193.63
+          },
+          {
+            "scheme": "Aditya Birla Sun Life Hybrid Fund 708",
+            "value": 232599.38
+          },
+          {
+            "scheme": "UTI Mutual Fund Liquid Fund 464",
+            "value": 222949.27
+          }
+        ],
+        "concentration": 57.67
+      },
+      "underperf_alert": [
+        {
+          "scheme": "Franklin Templeton ELSS Fund 767",
+          "loss": -7.01
+        },
+        {
+          "scheme": "DSP Mutual Fund Equity Fund 577",
+          "loss": -12.66
+        },
+        {
+          "scheme": "Axis Mutual Fund Balanced Fund 351",
+          "loss": -13.98
+        },
+        {
+          "scheme": "UTI Mutual Fund Liquid Fund 464",
+          "loss": -8.24
+        },
+        {
+          "scheme": "Axis Mutual Fund Liquid Fund 917",
+          "loss": -6.24
+        },
+        {
+          "scheme": "HDFC Mutual Fund Hybrid Fund 779",
+          "loss": -11.61
+        },
+        {
+          "scheme": "Aditya Birla Sun Life Hybrid Fund 708",
+          "loss": -5.07
+        }
+      ],
+      "liquidity": {
+        "illiquidSchemes": [
+          "Franklin Templeton ELSS Fund 767"
+        ]
+      },
+      "sip_discontinuation": {
+        "sipCount": 5,
+        "missedCount": 0,
+        "highRiskCount": 0,
+        "mediumRiskCount": 0,
+        "lowRiskCount": 3,
+        "risk": "Low",
+        "details": "0 SIPs with 2+ missed payments, 0 with 1 missed payment"
+      },
+      "redemption_likelihood": {
+        "score": 0.0,
+        "flag": "Normal"
+      },
+      "aum_forecast": {
+        "projectedGrowthPct": 3.5
+      },
+      "churn_risk": {
+        "churnRisk": "High",
+        "score": 0.6
+      },
+      "goal_forecast": {
+        "status": "NoGoalDeclared"
+      },
+      "rebalancing_recommendations": {
+        "suggestions": [
+          "Increase debt allocation for stability"
+        ]
+      },
+      "performance_suggestions": {
+        "suggestions": [
+          "Consider replacing Franklin Templeton ELSS Fund 767 with better performing same-category funds",
+          "Consider replacing DSP Mutual Fund Equity Fund 577 with better performing same-category funds",
+          "Consider replacing Axis Mutual Fund Balanced Fund 351 with better performing same-category funds",
+          "Consider replacing UTI Mutual Fund Liquid Fund 464 with better performing same-category funds",
+          "Consider replacing Axis Mutual Fund Liquid Fund 917 with better performing same-category funds",
+          "Consider replacing HDFC Mutual Fund Hybrid Fund 779 with better performing same-category funds",
+          "Consider replacing Aditya Birla Sun Life Hybrid Fund 708 with better performing same-category funds"
+        ]
+      },
+      "goal_rebalancing_advice": {
+        "advice": "Map long-term goals to equity heavy funds and short-term to debt; rebalance annually."
+      },
+      "ai_summary": {
+        "portfolioScore": 91,
+        "summary": "Investor Shilpa Iyer holds 7 schemes with -9.14% gain/loss.",
+        "recommendation": "Continue SIP discipline and review top losing funds."
+      }
+    },
+    "created_at": "2025-11-06T19:07:32.670237+00:00"
+  },
+  {
+    "investor_id": "INV0004",
+    "ai_summary": {
+      "summary": "1) The portfolio currently has assets under management (AUM) of \u20b9968,038.32, reporting a loss of 10.56%. While diversification is relatively good at 92%, there is a high concentration in Kotak Mahindra funds, presenting a potential risk.\n\n2) Recommendations:\n   - Suggest the client reduce their exposure to Kotak Mahindra funds to mitigate concentration risk and explore more diversified investment options across various fund houses.\n   - Encourage the client to consider rebalancing their portfolio to include more growth-oriented funds, which could help improve overall returns and reduce the churn risk associated with current holdings."
+    },
+    "analysis_result": {
+      "investor_id": "INV0004",
+      "name": "Manish Mishra",
+      "performance": {
+        "invested": 1082293.0,
+        "value": 968038.32,
+        "gainLoss": -10.56
+      },
+      "allocation": {
+        "total": 968038.3200000002,
+        "allocation": {
+          "Liquid": 35.48,
+          "Balanced": 40.49,
+          "Equity": 15.4,
+          "Debt": 8.63
+        }
+      },
+      "concentration": {
+        "totals": {
+          "UTI Mutual Fund": 226522.29,
+          "Kotak Mahindra": 413960.02,
+          "DSP Mutual Fund": 149123.69,
+          "ICICI Prudential": 83523.65,
+          "Aditya Birla Sun Life": 94908.67
+        },
+        "alerts": [
+          {
+            "type": "HighAMCConcentration",
+            "amc": "Kotak Mahindra",
+            "pct": 42.76
+          }
+        ]
+      },
+      "underperforming": [
+        {
+          "scheme": "UTI Mutual Fund Liquid Fund 591",
+          "loss": -11.67
+        },
+        {
+          "scheme": "Kotak Mahindra Balanced Fund 375",
+          "loss": -6.16
+        },
+        {
+          "scheme": "DSP Mutual Fund Equity Fund 453",
+          "loss": -5.27
+        },
+        {
+          "scheme": "DSP Mutual Fund Equity Fund 541",
+          "loss": -13.89
+        },
+        {
+          "scheme": "ICICI Prudential Debt Fund 614",
+          "loss": -12.8
+        },
+        {
+          "scheme": "Kotak Mahindra Balanced Fund 159",
+          "loss": -9.89
+        },
+        {
+          "scheme": "Aditya Birla Sun Life Balanced Fund 515",
+          "loss": -13.38
+        },
+        {
+          "scheme": "Kotak Mahindra Liquid Fund 166",
+          "loss": -8.15
+        }
+      ],
+      "sip_health": {
+        "active": 4,
+        "details": [
+          {
+            "scheme": "DSP Mutual Fund Equity Fund 541",
+            "freq": "Quarterly",
+            "next_due": "2025-10-15T19:01:10.030110+00:00"
+          },
+          {
+            "scheme": "ICICI Prudential Debt Fund 614",
+            "freq": "Monthly",
+            "next_due": "2025-11-09T19:01:10.030195+00:00"
+          },
+          {
+            "scheme": "Kotak Mahindra Balanced Fund 159",
+            "freq": "Quarterly",
+            "next_due": "2025-10-27T19:01:10.030284+00:00"
+          },
+          {
+            "scheme": "Aditya Birla Sun Life Balanced Fund 515",
+            "freq": "Monthly",
+            "next_due": null
+          }
+        ]
+      },
+      "diversification": {
+        "amcCount": 5,
+        "catCount": 4,
+        "diversificationScore": 92
+      },
+      "risk_mismatch": {
+        "equityShare": 15.4,
+        "alert": null
+      },
+      "category_imbalance": {
+        "alerts": []
+      },
+      "aum_concentration": {
+        "top3": [
+          {
+            "scheme": "UTI Mutual Fund Liquid Fund 591",
+            "value": 226522.29
+          },
+          {
+            "scheme": "Kotak Mahindra Balanced Fund 375",
+            "value": 152303.26
+          },
+          {
+            "scheme": "Kotak Mahindra Balanced Fund 159",
+            "value": 144698.64
+          }
+        ],
+        "concentration": 54.08
+      },
+      "underperf_alert": [
+        {
+          "scheme": "UTI Mutual Fund Liquid Fund 591",
+          "loss": -11.67
+        },
+        {
+          "scheme": "Kotak Mahindra Balanced Fund 375",
+          "loss": -6.16
+        },
+        {
+          "scheme": "DSP Mutual Fund Equity Fund 453",
+          "loss": -5.27
+        },
+        {
+          "scheme": "DSP Mutual Fund Equity Fund 541",
+          "loss": -13.89
+        },
+        {
+          "scheme": "ICICI Prudential Debt Fund 614",
+          "loss": -12.8
+        },
+        {
+          "scheme": "Kotak Mahindra Balanced Fund 159",
+          "loss": -9.89
+        },
+        {
+          "scheme": "Aditya Birla Sun Life Balanced Fund 515",
+          "loss": -13.38
+        },
+        {
+          "scheme": "Kotak Mahindra Liquid Fund 166",
+          "loss": -8.15
+        }
+      ],
+      "liquidity": {
+        "illiquidSchemes": []
+      },
+      "sip_discontinuation": {
+        "sipCount": 4,
+        "missedCount": 0,
+        "highRiskCount": 0,
+        "mediumRiskCount": 0,
+        "lowRiskCount": 3,
+        "risk": "Low",
+        "details": "0 SIPs with 2+ missed payments, 0 with 1 missed payment"
+      },
+      "redemption_likelihood": {
+        "score": 0.0,
+        "flag": "Normal"
+      },
+      "aum_forecast": {
+        "projectedGrowthPct": -0.46
+      },
+      "churn_risk": {
+        "churnRisk": "High",
+        "score": 0.6
+      },
+      "goal_forecast": {
+        "status": "NoGoalDeclared"
+      },
+      "rebalancing_recommendations": {
+        "suggestions": [
+          "Increase debt allocation for stability"
+        ]
+      },
+      "performance_suggestions": {
+        "suggestions": [
+          "Consider replacing UTI Mutual Fund Liquid Fund 591 with better performing same-category funds",
+          "Consider replacing Kotak Mahindra Balanced Fund 375 with better performing same-category funds",
+          "Consider replacing DSP Mutual Fund Equity Fund 453 with better performing same-category funds",
+          "Consider replacing DSP Mutual Fund Equity Fund 541 with better performing same-category funds",
+          "Consider replacing ICICI Prudential Debt Fund 614 with better performing same-category funds",
+          "Consider replacing Kotak Mahindra Balanced Fund 159 with better performing same-category funds",
+          "Consider replacing Aditya Birla Sun Life Balanced Fund 515 with better performing same-category funds",
+          "Consider replacing Kotak Mahindra Liquid Fund 166 with better performing same-category funds"
+        ]
+      },
+      "goal_rebalancing_advice": {
+        "advice": "Map long-term goals to equity heavy funds and short-term to debt; rebalance annually."
+      },
+      "ai_summary": {
+        "portfolioScore": 89,
+        "summary": "Investor Manish Mishra holds 8 schemes with -10.56% gain/loss.",
+        "recommendation": "Continue SIP discipline and review top losing funds."
+      }
+    },
+    "created_at": "2025-11-15T05:30:44.270674+00:00"
+  },
+  {
+    "investor_id": "INV0015",
+    "ai_summary": {
+      "summary": "**Summary of Portfolio Health:**  \nThe portfolio has a healthy asset under management (AUM) of approximately $355,193, with a slight gain of 15.53%. However, there is a high concentration risk in the Aditya Birla Sun Life fund, which makes up 79.6% of the holdings, indicating a need for diversification.\n\n**Actionable Recommendations:**  \n1. Recommend broadening the client's investment by allocating funds to additional asset classes or mutual funds to mitigate exposure to a single provider (particularly the Aditya Birla Sun Life fund) and enhance overall portfolio diversification.\n2. Review and balance the allocation strategy to ensure that the client maintains a risk profile aligned with their investment goals, paying attention to any potential shifts in market conditions."
+    },
+    "analysis_result": {
+      "investor_id": "INV0015",
+      "name": "Tara Gupta",
+      "performance": {
+        "invested": 307455.0,
+        "value": 355193.4,
+        "gainLoss": 15.53
+      },
+      "allocation": {
+        "total": 355193.39999999997,
+        "allocation": {
+          "Balanced": 90.24,
+          "Equity": 9.76
+        }
+      },
+      "concentration": {
+        "totals": {
+          "Aditya Birla Sun Life": 282748.56,
+          "Axis Mutual Fund": 37771.74,
+          "HDFC Mutual Fund": 34673.1
+        },
+        "alerts": [
+          {
+            "type": "HighAMCConcentration",
+            "amc": "Aditya Birla Sun Life",
+            "pct": 79.6
+          }
+        ]
+      },
+      "underperforming": [
+        {
+          "scheme": "Axis Mutual Fund Balanced Fund 940",
+          "loss": -3.04
+        }
+      ],
+      "sip_health": {
+        "active": 2,
+        "details": [
+          {
+            "scheme": "Aditya Birla Sun Life Balanced Fund 885",
+            "freq": "Monthly",
+            "next_due": "2025-11-13T18:57:18.386884"
+          },
+          {
+            "scheme": "Axis Mutual Fund Balanced Fund 940",
+            "freq": "Monthly",
+            "next_due": "2025-11-30T18:57:18.386962"
+          }
+        ]
+      },
+      "diversification": {
+        "amcCount": 3,
+        "catCount": 2,
+        "diversificationScore": 52
+      },
+      "risk_mismatch": {
+        "equityShare": 9.76,
+        "alert": null
+      },
+      "category_imbalance": {
+        "alerts": [
+          {
+            "type": "CategoryOverweight",
+            "category": "Balanced",
+            "pct": 90.24
+          }
+        ]
+      },
+      "aum_concentration": {
+        "top3": [
+          {
+            "scheme": "Aditya Birla Sun Life Balanced Fund 885",
+            "value": 282748.56
+          },
+          {
+            "scheme": "Axis Mutual Fund Balanced Fund 940",
+            "value": 37771.74
+          },
+          {
+            "scheme": "HDFC Mutual Fund Equity Fund 360",
+            "value": 34673.1
+          }
+        ],
+        "concentration": 100.0
+      },
+      "underperf_alert": [
+        {
+          "scheme": "Axis Mutual Fund Balanced Fund 940",
+          "loss": -3.04
+        }
+      ],
+      "liquidity": {
+        "illiquidSchemes": []
+      },
+      "sip_discontinuation": {
+        "sipCount": 2,
+        "missedCount": 0,
+        "risk": "Low"
+      },
+      "redemption_likelihood": {
+        "score": 0.2,
+        "flag": "Normal"
+      },
+      "aum_forecast": {
+        "projectedGrowthPct": 4.24
+      },
+      "churn_risk": {
+        "churnRisk": "Low",
+        "score": 0
+      },
+      "goal_forecast": {
+        "status": "NoGoalDeclared"
+      },
+      "rebalancing_recommendations": {
+        "suggestions": [
+          "Increase debt allocation for stability",
+          "Add more asset classes for better diversification"
+        ]
+      },
+      "performance_suggestions": {
+        "suggestions": [
+          "Consider replacing Axis Mutual Fund Balanced Fund 940 with better performing same-category funds"
+        ]
+      },
+      "goal_rebalancing_advice": {
+        "advice": "Map long-term goals to equity heavy funds and short-term to debt; rebalance annually."
+      },
+      "ai_summary": {
+        "portfolioScore": 84,
+        "summary": "Investor Tara Gupta holds 3 schemes with 15.53% gain/loss.",
+        "recommendation": "Continue SIP discipline and review top losing funds."
+      }
+    },
+    "created_at": "2025-11-06T09:39:09.251560+00:00"
+  },
+  {
+    "investor_id": "INV0016",
+    "ai_summary": {
+      "summary": "1) The portfolio is currently healthy, with a total AUM of approximately $1.24 million and a modest gain of 7.99%. The client enjoys complete diversification and a low risk of churn.\n\n2) \n- Suggest the client consider reallocating a portion of their portfolio to higher growth assets to enhance potential returns, while still maintaining diversification.\n- Recommend regular portfolio reviews to monitor market conditions and ensure alignment with the client's investment goals, especially to adapt to any changes in risk tolerance."
+    },
+    "analysis_result": {
+      "investor_id": "INV0016",
+      "name": "Vishal Chopra",
+      "performance": {
+        "invested": 1144048.0,
+        "value": 1235403.74,
+        "gainLoss": 7.99
+      },
+      "allocation": {
+        "total": 1235403.7400000002,
+        "allocation": {
+          "Debt": 43.43,
+          "Hybrid": 5.42,
+          "Equity": 28.08,
+          "Balanced": 23.07
+        }
+      },
+      "concentration": {
+        "totals": {
+          "Aditya Birla Sun Life": 244163.53,
+          "HDFC Mutual Fund": 67004.5,
+          "Axis Mutual Fund": 77003.31,
+          "UTI Mutual Fund": 284992.26,
+          "Kotak Mahindra": 269861.62,
+          "DSP Mutual Fund": 292378.52
+        },
+        "alerts": []
+      },
+      "underperforming": [],
+      "sip_health": {
+        "active": 5,
+        "details": [
+          {
+            "scheme": "Aditya Birla Sun Life Debt Fund 937",
+            "freq": "Quarterly",
+            "next_due": "2025-11-17T18:57:18.387120"
+          },
+          {
+            "scheme": "HDFC Mutual Fund Hybrid Fund 163",
+            "freq": "Quarterly",
+            "next_due": "2025-11-24T18:57:18.387194"
+          },
+          {
+            "scheme": "Axis Mutual Fund Equity Fund 581",
+            "freq": "Quarterly",
+            "next_due": "2025-11-12T18:57:18.387263"
+          },
+          {
+            "scheme": "UTI Mutual Fund Balanced Fund 719",
+            "freq": "Quarterly",
+            "next_due": "2025-11-19T18:57:18.387345"
+          },
+          {
+            "scheme": "Kotak Mahindra Equity Fund 941",
+            "freq": "Monthly",
+            "next_due": "2025-11-27T18:57:18.387424"
+          }
+        ]
+      },
+      "diversification": {
+        "amcCount": 6,
+        "catCount": 4,
+        "diversificationScore": 100
+      },
+      "risk_mismatch": {
+        "equityShare": 28.08,
+        "alert": null
+      },
+      "category_imbalance": {
+        "alerts": []
+      },
+      "aum_concentration": {
+        "top3": [
+          {
+            "scheme": "DSP Mutual Fund Debt Fund 619",
+            "value": 292378.52
+          },
+          {
+            "scheme": "UTI Mutual Fund Balanced Fund 719",
+            "value": 284992.26
+          },
+          {
+            "scheme": "Kotak Mahindra Equity Fund 941",
+            "value": 269861.62
+          }
+        ],
+        "concentration": 68.58
+      },
+      "underperf_alert": [],
+      "liquidity": {
+        "illiquidSchemes": []
+      },
+      "sip_discontinuation": {
+        "sipCount": 5,
+        "missedCount": 0,
+        "risk": "Low"
+      },
+      "redemption_likelihood": {
+        "score": 0.2,
+        "flag": "Normal"
+      },
+      "aum_forecast": {
+        "projectedGrowthPct": 6.17
+      },
+      "churn_risk": {
+        "churnRisk": "Low",
+        "score": 0
+      },
+      "goal_forecast": {
+        "status": "NoGoalDeclared"
+      },
+      "rebalancing_recommendations": {
+        "suggestions": []
+      },
+      "performance_suggestions": {
+        "suggestions": [
+          "Portfolio is performing well. Continue monitoring and rebalance annually."
+        ]
+      },
+      "goal_rebalancing_advice": {
+        "advice": "Map long-term goals to equity heavy funds and short-term to debt; rebalance annually."
+      },
+      "ai_summary": {
+        "portfolioScore": 92,
+        "summary": "Investor Vishal Chopra holds 6 schemes with 7.99% gain/loss.",
+        "recommendation": "Continue SIP discipline and review top losing funds."
+      }
+    },
+    "created_at": "2025-11-06T09:40:12.448284+00:00"
+  },
+  {
+    "investor_id": "INV0090",
+    "ai_summary": {
+      "summary": "1) The portfolio shows strong overall health with a diversified allocation of 88%, a modest gain of 3.56%, and a low churn risk, indicating stability. However, there is an alert on the Nippon India Equity Fund, which may require attention.\n\n2) Recommendations for the client:\n   - Review the Nippon India Equity Fund to assess its performance and consider rebalancing if necessary to mitigate any potential risks.\n   - Explore opportunities to enhance growth by diversifying into other sectors or asset classes that align with the investor\u2019s risk tolerance and financial goals."
+    },
+    "analysis_result": {
+      "investor_id": "INV0090",
+      "name": "Kunal Desai",
+      "performance": {
+        "invested": 880222.0,
+        "value": 911539.41,
+        "gainLoss": 3.56
+      },
+      "allocation": {
+        "total": 911539.41,
+        "allocation": {
+          "Hybrid": 5.11,
+          "Liquid": 28.58,
+          "ELSS": 17.95,
+          "Debt": 28.41,
+          "Equity": 19.95
+        }
+      },
+      "concentration": {
+        "totals": {
+          "Kotak Mahindra": 210206.54,
+          "SBI Mutual Fund": 260488.8,
+          "DSP Mutual Fund": 258959.99,
+          "Nippon India": 181884.08
+        },
+        "alerts": []
+      },
+      "underperforming": [
+        {
+          "scheme": "DSP Mutual Fund Debt Fund 199",
+          "loss": -2.83
+        },
+        {
+          "scheme": "Nippon India Equity Fund 629",
+          "loss": -3.32
+        }
+      ],
+      "sip_health": {
+        "active": 1,
+        "details": [
+          {
+            "scheme": "Kotak Mahindra Hybrid Fund 413",
+            "freq": "Monthly",
+            "next_due": "2025-12-02T18:57:18.418240"
+          }
+        ]
+      },
+      "diversification": {
+        "amcCount": 4,
+        "catCount": 5,
+        "diversificationScore": 88
+      },
+      "risk_mismatch": {
+        "equityShare": 19.95,
+        "alert": null
+      },
+      "category_imbalance": {
+        "alerts": []
+      },
+      "aum_concentration": {
+        "top3": [
+          {
+            "scheme": "SBI Mutual Fund Liquid Fund 385",
+            "value": 260488.8
+          },
+          {
+            "scheme": "DSP Mutual Fund Debt Fund 199",
+            "value": 258959.99
+          },
+          {
+            "scheme": "Nippon India Equity Fund 629",
+            "value": 181884.08
+          }
+        ],
+        "concentration": 76.94
+      },
+      "underperf_alert": [
+        {
+          "scheme": "Nippon India Equity Fund 629",
+          "loss": -3.32
+        }
+      ],
+      "liquidity": {
+        "illiquidSchemes": [
+          "Kotak Mahindra ELSS Fund 302"
+        ]
+      },
+      "sip_discontinuation": {
+        "sipCount": 1,
+        "missedCount": 0,
+        "risk": "Low"
+      },
+      "redemption_likelihood": {
+        "score": 0.2,
+        "flag": "Normal"
+      },
+      "aum_forecast": {
+        "projectedGrowthPct": 2.91
+      },
+      "churn_risk": {
+        "churnRisk": "Low",
+        "score": 0
+      },
+      "goal_forecast": {
+        "status": "NoGoalDeclared"
+      },
+      "rebalancing_recommendations": {
+        "suggestions": []
+      },
+      "performance_suggestions": {
+        "suggestions": [
+          "Consider replacing DSP Mutual Fund Debt Fund 199 with better performing same-category funds",
+          "Consider replacing Nippon India Equity Fund 629 with better performing same-category funds"
+        ]
+      },
+      "goal_rebalancing_advice": {
+        "advice": "Map long-term goals to equity heavy funds and short-term to debt; rebalance annually."
+      },
+      "ai_summary": {
+        "portfolioScore": 96,
+        "summary": "Investor Kunal Desai holds 5 schemes with 3.56% gain/loss.",
+        "recommendation": "Continue SIP discipline and review top losing funds."
+      }
+    },
+    "created_at": "2025-11-06T09:47:42.481832+00:00"
+  },
+  {
+    "investor_id": "INV0128",
+    "ai_summary": {
+      "summary": "1) The investor's portfolio has a total assets under management (AUM) of approximately $881,624, with a small gain of 2%. The portfolio is fully diversified, which indicates a strong risk management strategy, but there is an alert regarding the Kotak Mahindra Equity Fund.\n\n2) \n- Recommend a review of the Kotak Mahindra Equity Fund to determine the reason behind the alert and assess whether adjustments are needed.\n- Suggest reallocating a portion of the portfolio towards funds with higher growth potential or emerging markets to enhance returns, while still maintaining a balanced risk profile."
+    },
+    "analysis_result": {
+      "investor_id": "INV0128",
+      "name": "Sameer Iyer",
+      "performance": {
+        "invested": 864319.0,
+        "value": 881623.64,
+        "gainLoss": 2.0
+      },
+      "allocation": {
+        "total": 881623.6399999999,
+        "allocation": {
+          "Equity": 3.48,
+          "Hybrid": 21.96,
+          "Balanced": 19.79,
+          "ELSS": 24.52,
+          "Debt": 30.25
+        }
+      },
+      "concentration": {
+        "totals": {
+          "Kotak Mahindra": 30698.29,
+          "Nippon India": 193592.62,
+          "ICICI Prudential": 174448.95,
+          "DSP Mutual Fund": 216159.07,
+          "Franklin Templeton": 266724.71
+        },
+        "alerts": []
+      },
+      "underperforming": [
+        {
+          "scheme": "Kotak Mahindra Equity Fund 263",
+          "loss": -3.51
+        },
+        {
+          "scheme": "Franklin Templeton Debt Fund 164",
+          "loss": -1.51
+        }
+      ],
+      "sip_health": {
+        "active": 3,
+        "details": [
+          {
+            "scheme": "Kotak Mahindra Equity Fund 263",
+            "freq": "Quarterly",
+            "next_due": "2025-11-24T18:57:18.433477"
+          },
+          {
+            "scheme": "Nippon India Hybrid Fund 801",
+            "freq": "Quarterly",
+            "next_due": "2025-11-23T18:57:18.433572"
+          },
+          {
+            "scheme": "ICICI Prudential Balanced Fund 431",
+            "freq": "Quarterly",
+            "next_due": "2025-11-24T18:57:18.433666"
+          }
+        ]
+      },
+      "diversification": {
+        "amcCount": 5,
+        "catCount": 5,
+        "diversificationScore": 100
+      },
+      "risk_mismatch": {
+        "equityShare": 3.48,
+        "alert": null
+      },
+      "category_imbalance": {
+        "alerts": []
+      },
+      "aum_concentration": {
+        "top3": [
+          {
+            "scheme": "Franklin Templeton Debt Fund 164",
+            "value": 266724.71
+          },
+          {
+            "scheme": "DSP Mutual Fund ELSS Fund 287",
+            "value": 216159.07
+          },
+          {
+            "scheme": "Nippon India Hybrid Fund 801",
+            "value": 193592.62
+          }
+        ],
+        "concentration": 76.73
+      },
+      "underperf_alert": [
+        {
+          "scheme": "Kotak Mahindra Equity Fund 263",
+          "loss": -3.51
+        }
+      ],
+      "liquidity": {
+        "illiquidSchemes": [
+          "DSP Mutual Fund ELSS Fund 287"
+        ]
+      },
+      "sip_discontinuation": {
+        "sipCount": 3,
+        "missedCount": 0,
+        "risk": "Low"
+      },
+      "redemption_likelihood": {
+        "score": 0.0,
+        "flag": "Normal"
+      },
+      "aum_forecast": {
+        "projectedGrowthPct": 2.08
+      },
+      "churn_risk": {
+        "churnRisk": "Low",
+        "score": 0
+      },
+      "goal_forecast": {
+        "status": "NoGoalDeclared"
+      },
+      "rebalancing_recommendations": {
+        "suggestions": []
+      },
+      "performance_suggestions": {
+        "suggestions": [
+          "Consider replacing Kotak Mahindra Equity Fund 263 with better performing same-category funds",
+          "Consider replacing Franklin Templeton Debt Fund 164 with better performing same-category funds"
+        ]
+      },
+      "goal_rebalancing_advice": {
+        "advice": "Map long-term goals to equity heavy funds and short-term to debt; rebalance annually."
+      },
+      "ai_summary": {
+        "portfolioScore": 98,
+        "summary": "Investor Sameer Iyer holds 5 schemes with 2.00% gain/loss.",
+        "recommendation": "Continue SIP discipline and review top losing funds."
+      }
+    },
+    "created_at": "2025-11-06T09:47:58.695275+00:00"
+  },
+  {
+    "investor_id": "INV0044",
+    "ai_summary": {
+      "summary": "1) The portfolio shows a slight overall loss of -9.04% and has a high AMC concentration in ICICI Prudential, indicating potential risk due to lack of diversification. A churn risk rating is high, suggesting the investor may consider changing their investments soon.\n\n2) \n- Recommend diversifying the portfolio by allocating funds from high-concentration areas into more varied asset classes or other mutual fund schemes to enhance stability and growth potential.\n- Consider reviewing and potentially rebalancing the portfolio to mitigate churn risk, ensuring alignment with financial goals and risk tolerance, which could include reducing exposure to over-concentrated AMCs."
+    },
+    "analysis_result": {
+      "investor_id": "INV0044",
+      "name": "Ishita Shah",
+      "performance": {
+        "invested": 775943.0,
+        "value": 719904.98,
+        "gainLoss": -7.22
+      },
+      "allocation": {
+        "total": 719904.9800000001,
+        "allocation": {
+          "Debt": 44.55,
+          "Equity": 32.73,
+          "ELSS": 22.72
+        }
+      },
+      "concentration": {
+        "totals": {
+          "Kotak Mahindra": 249401.46,
+          "Nippon India": 306969.08999999997,
+          "DSP Mutual Fund": 118498.65,
+          "HDFC Mutual Fund": 45035.78
+        },
+        "alerts": [
+          {
+            "type": "HighAMCConcentration",
+            "amc": "Nippon India",
+            "pct": 42.64
+          }
+        ]
+      },
+      "underperforming": [
+        {
+          "scheme": "Kotak Mahindra Debt Fund 104",
+          "loss": -8.09
+        },
+        {
+          "scheme": "Nippon India Equity Fund 985",
+          "loss": -5.37
+        },
+        {
+          "scheme": "Nippon India Debt Fund 475",
+          "loss": -12.78
+        },
+        {
+          "scheme": "DSP Mutual Fund ELSS Fund 207",
+          "loss": -5.32
+        },
+        {
+          "scheme": "HDFC Mutual Fund ELSS Fund 293",
+          "loss": -7.41
+        }
+      ],
+      "sip_health": {
+        "active": 3,
+        "details": [
+          {
+            "scheme": "Kotak Mahindra Debt Fund 104",
+            "freq": "Quarterly",
+            "next_due": "2025-11-20T14:41:22.634894"
+          },
+          {
+            "scheme": "DSP Mutual Fund ELSS Fund 207",
+            "freq": "Monthly",
+            "next_due": "2025-11-27T14:41:22.635118"
+          },
+          {
+            "scheme": "HDFC Mutual Fund ELSS Fund 293",
+            "freq": "Quarterly",
+            "next_due": "2025-11-16T14:41:22.635195"
+          }
+        ]
+      },
+      "diversification": {
+        "amcCount": 4,
+        "catCount": 3,
+        "diversificationScore": 72
+      },
+      "risk_mismatch": {
+        "equityShare": 32.73,
+        "alert": null
+      },
+      "category_imbalance": {
+        "alerts": []
+      },
+      "aum_concentration": {
+        "top3": [
+          {
+            "scheme": "Kotak Mahindra Debt Fund 104",
+            "value": 249401.46
+          },
+          {
+            "scheme": "Nippon India Equity Fund 985",
+            "value": 235646.68
+          },
+          {
+            "scheme": "DSP Mutual Fund ELSS Fund 207",
+            "value": 118498.65
+          }
+        ],
+        "concentration": 83.84
+      },
+      "underperf_alert": [
+        {
+          "scheme": "Kotak Mahindra Debt Fund 104",
+          "loss": -8.09
+        },
+        {
+          "scheme": "Nippon India Equity Fund 985",
+          "loss": -5.37
+        },
+        {
+          "scheme": "Nippon India Debt Fund 475",
+          "loss": -12.78
+        },
+        {
+          "scheme": "DSP Mutual Fund ELSS Fund 207",
+          "loss": -5.32
+        },
+        {
+          "scheme": "HDFC Mutual Fund ELSS Fund 293",
+          "loss": -7.41
+        }
+      ],
+      "liquidity": {
+        "illiquidSchemes": [
+          "DSP Mutual Fund ELSS Fund 207",
+          "HDFC Mutual Fund ELSS Fund 293"
+        ]
+      },
+      "sip_discontinuation": {
+        "sipCount": 3,
+        "missedCount": 1,
+        "highRiskCount": 0,
+        "mediumRiskCount": 1,
+        "lowRiskCount": 2,
+        "risk": "Medium",
+        "details": "0 SIPs with 2+ missed payments, 1 with 1 missed payment"
+      },
+      "redemption_likelihood": {
+        "score": 0.0,
+        "flag": "Normal"
+      },
+      "aum_forecast": {
+        "projectedGrowthPct": 1.24
+      },
+      "churn_risk": {
+        "churnRisk": "High",
+        "score": 0.6
+      },
+      "goal_forecast": {
+        "status": "NoGoalDeclared"
+      },
+      "rebalancing_recommendations": {
+        "suggestions": []
+      },
+      "performance_suggestions": {
+        "suggestions": [
+          "Consider replacing Kotak Mahindra Debt Fund 104 with better performing same-category funds",
+          "Consider replacing Nippon India Equity Fund 985 with better performing same-category funds",
+          "Consider replacing Nippon India Debt Fund 475 with better performing same-category funds",
+          "Consider replacing DSP Mutual Fund ELSS Fund 207 with better performing same-category funds",
+          "Consider replacing HDFC Mutual Fund ELSS Fund 293 with better performing same-category funds"
+        ]
+      },
+      "goal_rebalancing_advice": {
+        "advice": "Map long-term goals to equity heavy funds and short-term to debt; rebalance annually."
+      },
+      "ai_summary": {
+        "portfolioScore": 93,
+        "summary": "Investor Ishita Shah holds 5 schemes with -7.22% gain/loss.",
+        "recommendation": "Continue SIP discipline and review top losing funds."
+      }
+    },
+    "created_at": "2025-11-06T14:47:52.028427+00:00"
+  },
+  {
+    "investor_id": "INV0008",
+    "ai_summary": {
+      "summary": "1) The portfolio has a total AUM of \u20b91,361,630.73 but is currently experiencing a loss of 9.53%. While the portfolio is well-diversified, there is a high churn risk that may impact overall stability.\n\n2) \n- Recommend the client to consider rebalancing their portfolio by reallocating some funds from underperforming debt and hybrid funds to more stable or high-growth equity funds to enhance potential recovery and growth.\n- Suggest setting up a regular review mechanism to monitor fund performance closely and make timely adjustments, especially given the high churn risk."
+    },
+    "analysis_result": {
+      "investor_id": "INV0008",
+      "name": "Sanjay Sharma",
+      "performance": {
+        "invested": 1505005.0,
+        "value": 1361630.73,
+        "gainLoss": -9.53
+      },
+      "allocation": {
+        "total": 1361630.7300000002,
+        "allocation": {
+          "Debt": 36.39,
+          "ELSS": 15.58,
+          "Liquid": 29.07,
+          "Hybrid": 18.96
+        }
+      },
+      "concentration": {
+        "totals": {
+          "Axis Mutual Fund": 71962.1,
+          "HDFC Mutual Fund": 161503.93,
+          "Aditya Birla Sun Life": 310273.93,
+          "Franklin Templeton": 248917.47,
+          "Kotak Mahindra": 260209.32,
+          "ICICI Prudential": 50648.68,
+          "DSP Mutual Fund": 258115.3
+        },
+        "alerts": []
+      },
+      "underperforming": [
+        {
+          "scheme": "Axis Mutual Fund Debt Fund 628",
+          "loss": -6.67
+        },
+        {
+          "scheme": "HDFC Mutual Fund ELSS Fund 370",
+          "loss": -14.68
+        },
+        {
+          "scheme": "Aditya Birla Sun Life Debt Fund 104",
+          "loss": -5.12
+        },
+        {
+          "scheme": "Franklin Templeton Liquid Fund 172",
+          "loss": -6.31
+        },
+        {
+          "scheme": "Kotak Mahindra Debt Fund 489",
+          "loss": -12.74
+        },
+        {
+          "scheme": "ICICI Prudential ELSS Fund 856",
+          "loss": -10.6
+        },
+        {
+          "scheme": "Aditya Birla Sun Life Liquid Fund 982",
+          "loss": -10.53
+        },
+        {
+          "scheme": "DSP Mutual Fund Hybrid Fund 617",
+          "loss": -8.37
+        }
+      ],
+      "sip_health": {
+        "active": 5,
+        "details": [
+          {
+            "scheme": "HDFC Mutual Fund ELSS Fund 370",
+            "freq": "Monthly",
+            "next_due": "2025-11-22T19:01:10.032192+00:00"
+          },
+          {
+            "scheme": "Aditya Birla Sun Life Debt Fund 104",
+            "freq": "Quarterly",
+            "next_due": "2025-11-10T19:01:10.032268+00:00"
+          },
+          {
+            "scheme": "Kotak Mahindra Debt Fund 489",
+            "freq": "Quarterly",
+            "next_due": "2025-11-25T19:01:10.032418+00:00"
+          },
+          {
+            "scheme": "ICICI Prudential ELSS Fund 856",
+            "freq": "Quarterly",
+            "next_due": "2025-11-08T19:01:10.032502+00:00"
+          },
+          {
+            "scheme": "DSP Mutual Fund Hybrid Fund 617",
+            "freq": "Quarterly",
+            "next_due": null
+          }
+        ]
+      },
+      "diversification": {
+        "amcCount": 7,
+        "catCount": 4,
+        "diversificationScore": 100
+      },
+      "risk_mismatch": {
+        "equityShare": 0.0,
+        "alert": null
+      },
+      "category_imbalance": {
+        "alerts": []
+      },
+      "aum_concentration": {
+        "top3": [
+          {
+            "scheme": "Kotak Mahindra Debt Fund 489",
+            "value": 260209.32
+          },
+          {
+            "scheme": "DSP Mutual Fund Hybrid Fund 617",
+            "value": 258115.3
+          },
+          {
+            "scheme": "Franklin Templeton Liquid Fund 172",
+            "value": 248917.47
+          }
+        ],
+        "concentration": 56.35
+      },
+      "underperf_alert": [
+        {
+          "scheme": "Axis Mutual Fund Debt Fund 628",
+          "loss": -6.67
+        },
+        {
+          "scheme": "HDFC Mutual Fund ELSS Fund 370",
+          "loss": -14.68
+        },
+        {
+          "scheme": "Aditya Birla Sun Life Debt Fund 104",
+          "loss": -5.12
+        },
+        {
+          "scheme": "Franklin Templeton Liquid Fund 172",
+          "loss": -6.31
+        },
+        {
+          "scheme": "Kotak Mahindra Debt Fund 489",
+          "loss": -12.74
+        },
+        {
+          "scheme": "ICICI Prudential ELSS Fund 856",
+          "loss": -10.6
+        },
+        {
+          "scheme": "Aditya Birla Sun Life Liquid Fund 982",
+          "loss": -10.53
+        },
+        {
+          "scheme": "DSP Mutual Fund Hybrid Fund 617",
+          "loss": -8.37
+        }
+      ],
+      "liquidity": {
+        "illiquidSchemes": [
+          "HDFC Mutual Fund ELSS Fund 370",
+          "ICICI Prudential ELSS Fund 856"
+        ]
+      },
+      "sip_discontinuation": {
+        "sipCount": 5,
+        "missedCount": 0,
+        "highRiskCount": 0,
+        "mediumRiskCount": 0,
+        "lowRiskCount": 4,
+        "risk": "Low",
+        "details": "0 SIPs with 2+ missed payments, 0 with 1 missed payment"
+      },
+      "redemption_likelihood": {
+        "score": 0.0,
+        "flag": "Normal"
+      },
+      "aum_forecast": {
+        "projectedGrowthPct": 7.0
+      },
+      "churn_risk": {
+        "churnRisk": "High",
+        "score": 0.6
+      },
+      "goal_forecast": {
+        "status": "NoGoalDeclared"
+      },
+      "rebalancing_recommendations": {
+        "suggestions": []
+      },
+      "performance_suggestions": {
+        "suggestions": [
+          "Consider replacing Axis Mutual Fund Debt Fund 628 with better performing same-category funds",
+          "Consider replacing HDFC Mutual Fund ELSS Fund 370 with better performing same-category funds",
+          "Consider replacing Aditya Birla Sun Life Debt Fund 104 with better performing same-category funds",
+          "Consider replacing Franklin Templeton Liquid Fund 172 with better performing same-category funds",
+          "Consider replacing Kotak Mahindra Debt Fund 489 with better performing same-category funds",
+          "Consider replacing ICICI Prudential ELSS Fund 856 with better performing same-category funds",
+          "Consider replacing Aditya Birla Sun Life Liquid Fund 982 with better performing same-category funds",
+          "Consider replacing DSP Mutual Fund Hybrid Fund 617 with better performing same-category funds"
+        ]
+      },
+      "goal_rebalancing_advice": {
+        "advice": "Map long-term goals to equity heavy funds and short-term to debt; rebalance annually."
+      },
+      "ai_summary": {
+        "portfolioScore": 90,
+        "summary": "Investor Sanjay Sharma holds 8 schemes with -9.53% gain/loss.",
+        "recommendation": "Continue SIP discipline and review top losing funds."
+      }
+    },
+    "created_at": "2025-11-08T12:14:01.612204+00:00"
+  },
+  {
+    "investor_id": "INV0041",
+    "ai_summary": {
+      "summary": "1) The portfolio currently has a total AUM of approximately $706,234 with a loss of 10%. It shows high concentration in DSP Mutual Fund, accounting for 48.52% of the total investments, which may expose the investor to increased risk.\n\n2) \n   - Recommend reallocating a portion of investments from the DSP Mutual Fund to diversify the portfolio and reduce concentration risk. Consider introducing funds from other asset classes to enhance diversification.\n   - Advise on implementing a regular portfolio review schedule to monitor performance and adjust allocations as necessary, addressing the high churn risk to foster better long-term growth and stability."
+    },
+    "analysis_result": {
+      "investor_id": "INV0041",
+      "name": "Manoj Bhatia",
+      "performance": {
+        "invested": 784668.0,
+        "value": 706233.86,
+        "gainLoss": -10.0
+      },
+      "allocation": {
+        "total": 706233.86,
+        "allocation": {
+          "Debt": 14.0,
+          "Equity": 51.48,
+          "Balanced": 34.52
+        }
+      },
+      "concentration": {
+        "totals": {
+          "DSP Mutual Fund": 342676.45,
+          "Kotak Mahindra": 234874.91,
+          "UTI Mutual Fund": 128682.5
+        },
+        "alerts": [
+          {
+            "type": "HighAMCConcentration",
+            "amc": "DSP Mutual Fund",
+            "pct": 48.52
+          }
+        ]
+      },
+      "underperforming": [
+        {
+          "scheme": "DSP Mutual Fund Debt Fund 986",
+          "loss": -13.7
+        },
+        {
+          "scheme": "Kotak Mahindra Equity Fund 172",
+          "loss": -9.84
+        },
+        {
+          "scheme": "UTI Mutual Fund Equity Fund 663",
+          "loss": -12.67
+        },
+        {
+          "scheme": "DSP Mutual Fund Balanced Fund 346",
+          "loss": -7.03
+        }
+      ],
+      "sip_health": {
+        "active": 2,
+        "details": [
+          {
+            "scheme": "Kotak Mahindra Equity Fund 172",
+            "freq": "Quarterly",
+            "next_due": "2025-11-27T14:20:54.915708"
+          },
+          {
+            "scheme": "DSP Mutual Fund Balanced Fund 346",
+            "freq": "Monthly",
+            "next_due": "2025-11-21T14:20:54.915842"
+          }
+        ]
+      },
+      "diversification": {
+        "amcCount": 3,
+        "catCount": 3,
+        "diversificationScore": 60
+      },
+      "risk_mismatch": {
+        "equityShare": 51.48,
+        "alert": null
+      },
+      "category_imbalance": {
+        "alerts": []
+      },
+      "aum_concentration": {
+        "top3": [
+          {
+            "scheme": "DSP Mutual Fund Balanced Fund 346",
+            "value": 243812.9
+          },
+          {
+            "scheme": "Kotak Mahindra Equity Fund 172",
+            "value": 234874.91
+          },
+          {
+            "scheme": "UTI Mutual Fund Equity Fund 663",
+            "value": 128682.5
+          }
+        ],
+        "concentration": 86.0
+      },
+      "underperf_alert": [
+        {
+          "scheme": "DSP Mutual Fund Debt Fund 986",
+          "loss": -13.7
+        },
+        {
+          "scheme": "Kotak Mahindra Equity Fund 172",
+          "loss": -9.84
+        },
+        {
+          "scheme": "UTI Mutual Fund Equity Fund 663",
+          "loss": -12.67
+        },
+        {
+          "scheme": "DSP Mutual Fund Balanced Fund 346",
+          "loss": -7.03
+        }
+      ],
+      "liquidity": {
+        "illiquidSchemes": []
+      },
+      "sip_discontinuation": {
+        "sipCount": 2,
+        "missedCount": 0,
+        "risk": "Low"
+      },
+      "redemption_likelihood": {
+        "score": 0.0,
+        "flag": "Normal"
+      },
+      "aum_forecast": {
+        "projectedGrowthPct": 8.87
+      },
+      "churn_risk": {
+        "churnRisk": "High",
+        "score": 0.6
+      },
+      "goal_forecast": {
+        "status": "NoGoalDeclared"
+      },
+      "rebalancing_recommendations": {
+        "suggestions": [
+          "Increase debt allocation for stability"
+        ]
+      },
+      "performance_suggestions": {
+        "suggestions": [
+          "Consider replacing DSP Mutual Fund Debt Fund 986 with better performing same-category funds",
+          "Consider replacing Kotak Mahindra Equity Fund 172 with better performing same-category funds",
+          "Consider replacing UTI Mutual Fund Equity Fund 663 with better performing same-category funds",
+          "Consider replacing DSP Mutual Fund Balanced Fund 346 with better performing same-category funds"
+        ]
+      },
+      "goal_rebalancing_advice": {
+        "advice": "Map long-term goals to equity heavy funds and short-term to debt; rebalance annually."
+      },
+      "ai_summary": {
+        "portfolioScore": 90,
+        "summary": "Investor Manoj Bhatia holds 4 schemes with -10.00% gain/loss.",
+        "recommendation": "Continue SIP discipline and review top losing funds."
+      }
+    },
+    "created_at": "2025-11-06T14:35:14.341322+00:00"
+  },
+  {
+    "investor_id": "INV0063",
+    "ai_summary": {
+      "summary": "1) The portfolio appears to be in good health, with a solid asset under management (AUM) of approximately $683,096 and a positive gain of 5.4%. The diversification level is acceptable at 52%, and there is a low risk of churn.\n\n2) \n- Recommend increasing diversification by exploring additional asset classes or sectors to further mitigate risks and enhance potential returns.\n- Suggest periodic portfolio reviews to ensure alignment with the investor\u2019s financial goals and market conditions, leveraging the positive gain for potential reinvestment opportunities."
+    },
+    "analysis_result": {
+      "investor_id": "INV0063",
+      "name": "Nidhi Kumar",
+      "performance": {
+        "invested": 648098.0,
+        "value": 683095.64,
+        "gainLoss": 5.4
+      },
+      "allocation": {
+        "total": 683095.64,
+        "allocation": {
+          "Equity": 61.27,
+          "Hybrid": 38.73
+        }
+      },
+      "concentration": {
+        "totals": {
+          "DSP Mutual Fund": 239910.26,
+          "Aditya Birla Sun Life": 178619.53,
+          "ICICI Prudential": 264565.85
+        },
+        "alerts": []
+      },
+      "underperforming": [],
+      "sip_health": {
+        "active": 0,
+        "details": []
+      },
+      "diversification": {
+        "amcCount": 3,
+        "catCount": 2,
+        "diversificationScore": 52
+      },
+      "risk_mismatch": {
+        "equityShare": 61.27,
+        "alert": null
+      },
+      "category_imbalance": {
+        "alerts": []
+      },
+      "aum_concentration": {
+        "top3": [
+          {
+            "scheme": "ICICI Prudential Hybrid Fund 474",
+            "value": 264565.85
+          },
+          {
+            "scheme": "DSP Mutual Fund Equity Fund 827",
+            "value": 239910.26
+          },
+          {
+            "scheme": "Aditya Birla Sun Life Equity Fund 811",
+            "value": 178619.53
+          }
+        ],
+        "concentration": 100.0
+      },
+      "underperf_alert": [],
+      "liquidity": {
+        "illiquidSchemes": []
+      },
+      "sip_discontinuation": {
+        "sipCount": 0,
+        "missedCount": 0,
+        "risk": "None",
+        "details": "No active SIPs"
+      },
+      "redemption_likelihood": {
+        "score": 0.0,
+        "flag": "Normal"
+      },
+      "aum_forecast": {
+        "projectedGrowthPct": 5.77
+      },
+      "churn_risk": {
+        "churnRisk": "Low",
+        "score": 0
+      },
+      "goal_forecast": {
+        "status": "NoGoalDeclared"
+      },
+      "rebalancing_recommendations": {
+        "suggestions": [
+          "Increase debt allocation for stability",
+          "Add more asset classes for better diversification"
+        ]
+      },
+      "performance_suggestions": {
+        "suggestions": [
+          "Portfolio is performing well. Continue monitoring and rebalance annually."
+        ]
+      },
+      "goal_rebalancing_advice": {
+        "advice": "Map long-term goals to equity heavy funds and short-term to debt; rebalance annually."
+      },
+      "ai_summary": {
+        "portfolioScore": 95,
+        "summary": "Investor Nidhi Kumar holds 3 schemes with 5.40% gain/loss.",
+        "recommendation": "Continue SIP discipline and review top losing funds."
+      }
+    },
+    "created_at": "2025-11-06T14:45:10.988460+00:00"
+  },
+  {
+    "investor_id": "INV0053",
+    "ai_summary": {
+      "summary": "1) The portfolio shows a healthy AUM of approximately $1.18 million with a modest gain of 4.42%. It is fully diversified, indicating a solid risk management approach, and there is a low churn risk, suggesting the investor is likely satisfied with their investments.\n\n2) Recommendations:\n   - Suggest periodic reviews to ensure the diversification remains aligned with market conditions and the investor's evolving goals.\n   - Consider reallocating a portion of the funds into higher-growth opportunities if the client has a longer investment horizon and can tolerate some additional risk."
+    },
+    "analysis_result": {
+      "investor_id": "INV0053",
+      "name": "Harsh Nair",
+      "performance": {
+        "invested": 1126934.0,
+        "value": 1176776.66,
+        "gainLoss": 4.42
+      },
+      "allocation": {
+        "total": 1176776.66,
+        "allocation": {
+          "Balanced": 4.42,
+          "Debt": 32.38,
+          "Hybrid": 16.46,
+          "Liquid": 40.71,
+          "Equity": 6.03
+        }
+      },
+      "concentration": {
+        "totals": {
+          "SBI Mutual Fund": 307029.47000000003,
+          "DSP Mutual Fund": 276066.97,
+          "Axis Mutual Fund": 417723.33,
+          "ICICI Prudential": 70944.69,
+          "UTI Mutual Fund": 105012.2
+        },
+        "alerts": []
+      },
+      "underperforming": [
+        {
+          "scheme": "DSP Mutual Fund Debt Fund 380",
+          "loss": -0.08
+        }
+      ],
+      "sip_health": {
+        "active": 6,
+        "details": [
+          {
+            "scheme": "SBI Mutual Fund Balanced Fund 358",
+            "freq": "Monthly",
+            "next_due": "2025-09-12T14:41:22.639124"
+          },
+          {
+            "scheme": "DSP Mutual Fund Debt Fund 380",
+            "freq": "Quarterly",
+            "next_due": "2025-09-28T14:41:22.639215"
+          },
+          {
+            "scheme": "Axis Mutual Fund Hybrid Fund 353",
+            "freq": "Quarterly",
+            "next_due": "2025-11-13T14:41:22.639296"
+          },
+          {
+            "scheme": "SBI Mutual Fund Liquid Fund 501",
+            "freq": "Quarterly",
+            "next_due": "2025-11-09T14:41:22.639392"
+          },
+          {
+            "scheme": "ICICI Prudential Equity Fund 663",
+            "freq": "Monthly",
+            "next_due": "2025-09-12T14:41:22.639473"
+          },
+          {
+            "scheme": "Axis Mutual Fund Liquid Fund 553",
+            "freq": "Quarterly",
+            "next_due": "2025-11-25T14:41:22.639560"
+          }
+        ]
+      },
+      "diversification": {
+        "amcCount": 5,
+        "catCount": 5,
+        "diversificationScore": 100
+      },
+      "risk_mismatch": {
+        "equityShare": 6.03,
+        "alert": null
+      },
+      "category_imbalance": {
+        "alerts": []
+      },
+      "aum_concentration": {
+        "top3": [
+          {
+            "scheme": "DSP Mutual Fund Debt Fund 380",
+            "value": 276066.97
+          },
+          {
+            "scheme": "SBI Mutual Fund Liquid Fund 501",
+            "value": 255024.85
+          },
+          {
+            "scheme": "Axis Mutual Fund Liquid Fund 553",
+            "value": 224014.57
+          }
+        ],
+        "concentration": 64.17
+      },
+      "underperf_alert": [],
+      "liquidity": {
+        "illiquidSchemes": []
+      },
+      "sip_discontinuation": {
+        "sipCount": 6,
+        "missedCount": 4,
+        "highRiskCount": 3,
+        "mediumRiskCount": 1,
+        "lowRiskCount": 2,
+        "risk": "Very High",
+        "details": "3 SIPs with 2+ missed payments, 1 with 1 missed payment"
+      },
+      "redemption_likelihood": {
+        "score": 0.2,
+        "flag": "Normal"
+      },
+      "aum_forecast": {
+        "projectedGrowthPct": 9.2
+      },
+      "churn_risk": {
+        "churnRisk": "Low",
+        "score": 0
+      },
+      "goal_forecast": {
+        "status": "NoGoalDeclared"
+      },
+      "rebalancing_recommendations": {
+        "suggestions": []
+      },
+      "performance_suggestions": {
+        "suggestions": [
+          "Consider replacing DSP Mutual Fund Debt Fund 380 with better performing same-category funds"
+        ]
+      },
+      "goal_rebalancing_advice": {
+        "advice": "Map long-term goals to equity heavy funds and short-term to debt; rebalance annually."
+      },
+      "ai_summary": {
+        "portfolioScore": 96,
+        "summary": "Investor Harsh Nair holds 7 schemes with 4.42% gain/loss.",
+        "recommendation": "Continue SIP discipline and review top losing funds."
+      }
+    },
+    "created_at": "2025-11-06T14:45:31.795348+00:00"
+  },
+  {
+    "investor_id": "INV0011",
+    "ai_summary": {
+      "summary": "1) The portfolio has an Asset Under Management (AUM) of \u20b9909,600.32 but is underperforming with a slight loss of \u20b910.66. It's fully diversified but exhibits a significant risk mismatch, as it holds no equity despite the investor\u2019s high-risk profile.\n\n2) \n- Recommend increasing equity exposure to align the portfolio with the investor's high-risk profile, which could help enhance potential growth.\n- Suggest reviewing and rebalancing the funds with alerts, particularly those that may be underperforming or contributing to the churn risk, to improve overall portfolio performance."
+    },
+    "analysis_result": {
+      "investor_id": "INV0011",
+      "name": "Riya Joshi",
+      "performance": {
+        "invested": 1018180.0,
+        "value": 909600.32,
+        "gainLoss": -10.66
+      },
+      "allocation": {
+        "total": 909600.3200000001,
+        "allocation": {
+          "Hybrid": 45.02,
+          "ELSS": 12.39,
+          "Debt": 22.19,
+          "Liquid": 12.38,
+          "Balanced": 8.01
+        }
+      },
+      "concentration": {
+        "totals": {
+          "ICICI Prudential": 254733.21,
+          "Axis Mutual Fund": 154808.0,
+          "Aditya Birla Sun Life": 112730.25,
+          "Franklin Templeton": 201817.32,
+          "UTI Mutual Fund": 112639.56,
+          "DSP Mutual Fund": 72871.98
+        },
+        "alerts": []
+      },
+      "underperforming": [
+        {
+          "scheme": "ICICI Prudential Hybrid Fund 252",
+          "loss": -13.86
+        },
+        {
+          "scheme": "Axis Mutual Fund Hybrid Fund 545",
+          "loss": -8.11
+        },
+        {
+          "scheme": "Aditya Birla Sun Life ELSS Fund 958",
+          "loss": -8.49
+        },
+        {
+          "scheme": "Franklin Templeton Debt Fund 967",
+          "loss": -12.89
+        },
+        {
+          "scheme": "UTI Mutual Fund Liquid Fund 651",
+          "loss": -6.51
+        },
+        {
+          "scheme": "DSP Mutual Fund Balanced Fund 488",
+          "loss": -7.33
+        }
+      ],
+      "sip_health": {
+        "active": 3,
+        "details": [
+          {
+            "scheme": "Axis Mutual Fund Hybrid Fund 545",
+            "freq": "Quarterly",
+            "next_due": "2025-11-17T14:41:22.618677"
+          },
+          {
+            "scheme": "Aditya Birla Sun Life ELSS Fund 958",
+            "freq": "Monthly",
+            "next_due": "2025-09-15T14:41:22.618768"
+          },
+          {
+            "scheme": "UTI Mutual Fund Liquid Fund 651",
+            "freq": "Monthly",
+            "next_due": "2025-09-19T14:41:22.618916"
+          }
+        ]
+      },
+      "diversification": {
+        "amcCount": 6,
+        "catCount": 5,
+        "diversificationScore": 100
+      },
+      "risk_mismatch": {
+        "equityShare": 0.0,
+        "alert": "Risk Mismatch: Equity only 0.0% but profile High"
+      },
+      "category_imbalance": {
+        "alerts": []
+      },
+      "aum_concentration": {
+        "top3": [
+          {
+            "scheme": "ICICI Prudential Hybrid Fund 252",
+            "value": 254733.21
+          },
+          {
+            "scheme": "Franklin Templeton Debt Fund 967",
+            "value": 201817.32
+          },
+          {
+            "scheme": "Axis Mutual Fund Hybrid Fund 545",
+            "value": 154808.0
+          }
+        ],
+        "concentration": 67.21
+      },
+      "underperf_alert": [
+        {
+          "scheme": "ICICI Prudential Hybrid Fund 252",
+          "loss": -13.86
+        },
+        {
+          "scheme": "Axis Mutual Fund Hybrid Fund 545",
+          "loss": -8.11
+        },
+        {
+          "scheme": "Aditya Birla Sun Life ELSS Fund 958",
+          "loss": -8.49
+        },
+        {
+          "scheme": "Franklin Templeton Debt Fund 967",
+          "loss": -12.89
+        },
+        {
+          "scheme": "UTI Mutual Fund Liquid Fund 651",
+          "loss": -6.51
+        },
+        {
+          "scheme": "DSP Mutual Fund Balanced Fund 488",
+          "loss": -7.33
+        }
+      ],
+      "liquidity": {
+        "illiquidSchemes": [
+          "Aditya Birla Sun Life ELSS Fund 958"
+        ]
+      },
+      "sip_discontinuation": {
+        "sipCount": 3,
+        "missedCount": 2,
+        "highRiskCount": 2,
+        "mediumRiskCount": 0,
+        "lowRiskCount": 1,
+        "risk": "Very High",
+        "details": "2 SIPs with 2+ missed payments, 0 with 1 missed payment"
+      },
+      "redemption_likelihood": {
+        "score": 0.0,
+        "flag": "Normal"
+      },
+      "aum_forecast": {
+        "projectedGrowthPct": 0.36
+      },
+      "churn_risk": {
+        "churnRisk": "High",
+        "score": 0.6
+      },
+      "goal_forecast": {
+        "status": "NoGoalDeclared"
+      },
+      "rebalancing_recommendations": {
+        "suggestions": []
+      },
+      "performance_suggestions": {
+        "suggestions": [
+          "Consider replacing ICICI Prudential Hybrid Fund 252 with better performing same-category funds",
+          "Consider replacing Axis Mutual Fund Hybrid Fund 545 with better performing same-category funds",
+          "Consider replacing Aditya Birla Sun Life ELSS Fund 958 with better performing same-category funds",
+          "Consider replacing Franklin Templeton Debt Fund 967 with better performing same-category funds",
+          "Consider replacing UTI Mutual Fund Liquid Fund 651 with better performing same-category funds",
+          "Consider replacing DSP Mutual Fund Balanced Fund 488 with better performing same-category funds"
+        ]
+      },
+      "goal_rebalancing_advice": {
+        "advice": "Map long-term goals to equity heavy funds and short-term to debt; rebalance annually."
+      },
+      "ai_summary": {
+        "portfolioScore": 89,
+        "summary": "Investor Riya Joshi holds 6 schemes with -10.66% gain/loss.",
+        "recommendation": "Continue SIP discipline and review top losing funds."
+      }
+    },
+    "created_at": "2025-11-06T15:47:31.067588+00:00"
+  },
+  {
+    "investor_id": "INV0006",
+    "ai_summary": {
+      "summary": "1) The portfolio currently holds an AUM of \u20b91,204,281.07, reflecting a loss of approximately 11.8%. It is highly diversified with a score of 92 but faces a high churn risk, indicating potential volatility.\n\n2) \n- Recommend that the client reassess and rebalance the portfolio to address the significant losses while considering more stable investment options, particularly in underperforming funds like the SBI Mutual Fund ELSS Fund and DSP Mutual Fund Debt Fund.\n- Suggest implementing a systematic investment plan (SIP) or increasing contributions to stronger-performing funds to capitalize on future growth opportunities and mitigate churn risk over time."
+    },
+    "analysis_result": {
+      "investor_id": "INV0006",
+      "name": "Pallavi Bhatia",
+      "performance": {
+        "invested": 1365379.0,
+        "value": 1204281.07,
+        "gainLoss": -11.8
+      },
+      "allocation": {
+        "total": 1204281.07,
+        "allocation": {
+          "ELSS": 30.02,
+          "Debt": 32.07,
+          "Hybrid": 21.15,
+          "Equity": 16.77
+        }
+      },
+      "concentration": {
+        "totals": {
+          "SBI Mutual Fund": 113631.87,
+          "DSP Mutual Fund": 231498.77,
+          "ICICI Prudential": 254659.13,
+          "HDFC Mutual Fund": 449758.73,
+          "UTI Mutual Fund": 154732.57
+        },
+        "alerts": []
+      },
+      "underperforming": [
+        {
+          "scheme": "SBI Mutual Fund ELSS Fund 313",
+          "loss": -7.08
+        },
+        {
+          "scheme": "DSP Mutual Fund Debt Fund 313",
+          "loss": -12.19
+        },
+        {
+          "scheme": "ICICI Prudential Hybrid Fund 453",
+          "loss": -12.99
+        },
+        {
+          "scheme": "HDFC Mutual Fund ELSS Fund 226",
+          "loss": -14.23
+        },
+        {
+          "scheme": "HDFC Mutual Fund Equity Fund 920",
+          "loss": -14.03
+        },
+        {
+          "scheme": "UTI Mutual Fund Debt Fund 628",
+          "loss": -5.04
+        }
+      ],
+      "sip_health": {
+        "active": 4,
+        "details": [
+          {
+            "scheme": "SBI Mutual Fund ELSS Fund 313",
+            "freq": "Monthly",
+            "next_due": "2025-11-27T19:01:10.031128+00:00"
+          },
+          {
+            "scheme": "DSP Mutual Fund Debt Fund 313",
+            "freq": "Quarterly",
+            "next_due": "2025-12-03T19:01:10.031239+00:00"
+          },
+          {
+            "scheme": "ICICI Prudential Hybrid Fund 453",
+            "freq": "Monthly",
+            "next_due": null
+          },
+          {
+            "scheme": "HDFC Mutual Fund ELSS Fund 226",
+            "freq": "Quarterly",
+            "next_due": null
+          }
+        ]
+      },
+      "diversification": {
+        "amcCount": 5,
+        "catCount": 4,
+        "diversificationScore": 92
+      },
+      "risk_mismatch": {
+        "equityShare": 16.77,
+        "alert": null
+      },
+      "category_imbalance": {
+        "alerts": []
+      },
+      "aum_concentration": {
+        "top3": [
+          {
+            "scheme": "ICICI Prudential Hybrid Fund 453",
+            "value": 254659.13
+          },
+          {
+            "scheme": "HDFC Mutual Fund ELSS Fund 226",
+            "value": 247841.85
+          },
+          {
+            "scheme": "DSP Mutual Fund Debt Fund 313",
+            "value": 231498.77
+          }
+        ],
+        "concentration": 60.95
+      },
+      "underperf_alert": [
+        {
+          "scheme": "SBI Mutual Fund ELSS Fund 313",
+          "loss": -7.08
+        },
+        {
+          "scheme": "DSP Mutual Fund Debt Fund 313",
+          "loss": -12.19
+        },
+        {
+          "scheme": "ICICI Prudential Hybrid Fund 453",
+          "loss": -12.99
+        },
+        {
+          "scheme": "HDFC Mutual Fund ELSS Fund 226",
+          "loss": -14.23
+        },
+        {
+          "scheme": "HDFC Mutual Fund Equity Fund 920",
+          "loss": -14.03
+        },
+        {
+          "scheme": "UTI Mutual Fund Debt Fund 628",
+          "loss": -5.04
+        }
+      ],
+      "liquidity": {
+        "illiquidSchemes": [
+          "SBI Mutual Fund ELSS Fund 313",
+          "HDFC Mutual Fund ELSS Fund 226"
+        ]
+      },
+      "sip_discontinuation": {
+        "sipCount": 4,
+        "missedCount": 0,
+        "highRiskCount": 0,
+        "mediumRiskCount": 0,
+        "lowRiskCount": 2,
+        "risk": "Low",
+        "details": "0 SIPs with 2+ missed payments, 0 with 1 missed payment"
+      },
+      "redemption_likelihood": {
+        "score": 0.0,
+        "flag": "Normal"
+      },
+      "aum_forecast": {
+        "projectedGrowthPct": 4.2
+      },
+      "churn_risk": {
+        "churnRisk": "High",
+        "score": 0.6
+      },
+      "goal_forecast": {
+        "status": "NoGoalDeclared"
+      },
+      "rebalancing_recommendations": {
+        "suggestions": []
+      },
+      "performance_suggestions": {
+        "suggestions": [
+          "Consider replacing SBI Mutual Fund ELSS Fund 313 with better performing same-category funds",
+          "Consider replacing DSP Mutual Fund Debt Fund 313 with better performing same-category funds",
+          "Consider replacing ICICI Prudential Hybrid Fund 453 with better performing same-category funds",
+          "Consider replacing HDFC Mutual Fund ELSS Fund 226 with better performing same-category funds",
+          "Consider replacing HDFC Mutual Fund Equity Fund 920 with better performing same-category funds",
+          "Consider replacing UTI Mutual Fund Debt Fund 628 with better performing same-category funds"
+        ]
+      },
+      "goal_rebalancing_advice": {
+        "advice": "Map long-term goals to equity heavy funds and short-term to debt; rebalance annually."
+      },
+      "ai_summary": {
+        "portfolioScore": 88,
+        "summary": "Investor Pallavi Bhatia holds 6 schemes with -11.80% gain/loss.",
+        "recommendation": "Continue SIP discipline and review top losing funds."
+      }
+    },
+    "created_at": "2025-11-17T17:26:36.381982+00:00"
+  },
+  {
+    "investor_id": "INV0021",
+    "ai_summary": {
+      "summary": "**Portfolio Health Summary:**  \nThe investor's portfolio has an assets under management (AUM) of \u20b9588,174.2, but it has experienced a loss of 11.28%. With a high churn risk and complete diversification, attention is needed to stabilize the portfolio and improve returns.\n\n**Actionable Recommendations:**  \n1. **Reassess the Core Holdings:** Suggest reviewing the performance and suitability of the funds that have triggered alerts, particularly the Axis Mutual Fund Debt Fund and the Kotak Mahindra Liquid Fund, to identify potential underperformers and replace them with better options that align with the investor's risk tolerance and financial goals.  \n2. **Consider Risk Management Strategies:** Recommend introducing more balanced investment strategies, possibly reallocating some funds towards growth-oriented equity mutual funds if the investor's risk tolerance allows, to help recover losses and enhance long-term capital growth."
+    },
+    "analysis_result": {
+      "investor_id": "INV0021",
+      "name": "Manish Rao",
+      "performance": {
+        "invested": 662991.0,
+        "value": 588174.2,
+        "gainLoss": -11.28
+      },
+      "allocation": {
+        "total": 588174.2,
+        "allocation": {
+          "Debt": 7.05,
+          "Liquid": 8.27,
+          "ELSS": 39.0,
+          "Equity": 19.44,
+          "Balanced": 26.24
+        }
+      },
+      "concentration": {
+        "totals": {
+          "Axis Mutual Fund": 195843.53999999998,
+          "Kotak Mahindra": 48626.39,
+          "Franklin Templeton": 100536.27,
+          "UTI Mutual Fund": 114341.76,
+          "Aditya Birla Sun Life": 128826.24
+        },
+        "alerts": []
+      },
+      "underperforming": [
+        {
+          "scheme": "Axis Mutual Fund Debt Fund 668",
+          "loss": -9.07
+        },
+        {
+          "scheme": "Kotak Mahindra Liquid Fund 607",
+          "loss": -11.29
+        },
+        {
+          "scheme": "Franklin Templeton ELSS Fund 864",
+          "loss": -9.04
+        },
+        {
+          "scheme": "UTI Mutual Fund Equity Fund 299",
+          "loss": -11.84
+        },
+        {
+          "scheme": "Axis Mutual Fund Balanced Fund 944",
+          "loss": -12.18
+        },
+        {
+          "scheme": "Aditya Birla Sun Life ELSS Fund 757",
+          "loss": -12.1
+        }
+      ],
+      "sip_health": {
+        "active": 5,
+        "details": [
+          {
+            "scheme": "Axis Mutual Fund Debt Fund 668",
+            "freq": "Quarterly",
+            "next_due": "2025-11-19T19:01:10.038801+00:00"
+          },
+          {
+            "scheme": "Franklin Templeton ELSS Fund 864",
+            "freq": "Monthly",
+            "next_due": "2025-11-22T19:01:10.039020+00:00"
+          },
+          {
+            "scheme": "UTI Mutual Fund Equity Fund 299",
+            "freq": "Quarterly",
+            "next_due": "2025-11-19T19:01:10.039110+00:00"
+          },
+          {
+            "scheme": "Axis Mutual Fund Balanced Fund 944",
+            "freq": "Monthly",
+            "next_due": null
+          },
+          {
+            "scheme": "Aditya Birla Sun Life ELSS Fund 757",
+            "freq": "Monthly",
+            "next_due": "2025-11-21T19:01:10.039282+00:00"
+          }
+        ]
+      },
+      "diversification": {
+        "amcCount": 5,
+        "catCount": 5,
+        "diversificationScore": 100
+      },
+      "risk_mismatch": {
+        "equityShare": 19.44,
+        "alert": null
+      },
+      "category_imbalance": {
+        "alerts": []
+      },
+      "aum_concentration": {
+        "top3": [
+          {
+            "scheme": "Axis Mutual Fund Balanced Fund 944",
+            "value": 154359.46
+          },
+          {
+            "scheme": "Aditya Birla Sun Life ELSS Fund 757",
+            "value": 128826.24
+          },
+          {
+            "scheme": "UTI Mutual Fund Equity Fund 299",
+            "value": 114341.76
+          }
+        ],
+        "concentration": 67.59
+      },
+      "underperf_alert": [
+        {
+          "scheme": "Axis Mutual Fund Debt Fund 668",
+          "loss": -9.07
+        },
+        {
+          "scheme": "Kotak Mahindra Liquid Fund 607",
+          "loss": -11.29
+        },
+        {
+          "scheme": "Franklin Templeton ELSS Fund 864",
+          "loss": -9.04
+        },
+        {
+          "scheme": "UTI Mutual Fund Equity Fund 299",
+          "loss": -11.84
+        },
+        {
+          "scheme": "Axis Mutual Fund Balanced Fund 944",
+          "loss": -12.18
+        },
+        {
+          "scheme": "Aditya Birla Sun Life ELSS Fund 757",
+          "loss": -12.1
+        }
+      ],
+      "liquidity": {
+        "illiquidSchemes": [
+          "Franklin Templeton ELSS Fund 864",
+          "Aditya Birla Sun Life ELSS Fund 757"
+        ]
+      },
+      "sip_discontinuation": {
+        "sipCount": 5,
+        "missedCount": 0,
+        "highRiskCount": 0,
+        "mediumRiskCount": 0,
+        "lowRiskCount": 4,
+        "risk": "Low",
+        "details": "0 SIPs with 2+ missed payments, 0 with 1 missed payment"
+      },
+      "redemption_likelihood": {
+        "score": 0.0,
+        "flag": "Normal"
+      },
+      "aum_forecast": {
+        "projectedGrowthPct": 0.35
+      },
+      "churn_risk": {
+        "churnRisk": "High",
+        "score": 0.6
+      },
+      "goal_forecast": {
+        "status": "NoGoalDeclared"
+      },
+      "rebalancing_recommendations": {
+        "suggestions": [
+          "Increase debt allocation for stability"
+        ]
+      },
+      "performance_suggestions": {
+        "suggestions": [
+          "Consider replacing Axis Mutual Fund Debt Fund 668 with better performing same-category funds",
+          "Consider replacing Kotak Mahindra Liquid Fund 607 with better performing same-category funds",
+          "Consider replacing Franklin Templeton ELSS Fund 864 with better performing same-category funds",
+          "Consider replacing UTI Mutual Fund Equity Fund 299 with better performing same-category funds",
+          "Consider replacing Axis Mutual Fund Balanced Fund 944 with better performing same-category funds",
+          "Consider replacing Aditya Birla Sun Life ELSS Fund 757 with better performing same-category funds"
+        ]
+      },
+      "goal_rebalancing_advice": {
+        "advice": "Map long-term goals to equity heavy funds and short-term to debt; rebalance annually."
+      },
+      "ai_summary": {
+        "portfolioScore": 89,
+        "summary": "Investor Manish Rao holds 6 schemes with -11.28% gain/loss.",
+        "recommendation": "Continue SIP discipline and review top losing funds."
+      }
+    },
+    "created_at": "2025-11-15T10:41:40.243957+00:00"
+  },
+  {
+    "investor_id": "INV0034",
+    "ai_summary": {
+      "summary": "**Portfolio Health Summary:**\nThe investor's portfolio, amounting to \u20b94,87,953.25, has experienced a loss of 8.48%. It shows a high level of diversification at 92%, but there is a significant churn risk involved.\n\n**Actionable Recommendations:**\n1. Consider reallocating funds from the alerting mutual funds, particularly the SBI Mutual Fund ELSS and the Axis Mutual Fund Equity Fund, to more stable options or funds with a stronger performance to mitigate losses.\n2. Explore the possibility of investing in lower-risk assets or your client's preferred risk-profile alternatives to balance the portfolio and reduce overall churn risk."
+    },
+    "analysis_result": {
+      "investor_id": "INV0034",
+      "name": "Ananya Shah",
+      "performance": {
+        "invested": 533176.0,
+        "value": 487953.25,
+        "gainLoss": -8.48
+      },
+      "allocation": {
+        "total": 487953.25,
+        "allocation": {
+          "ELSS": 17.52,
+          "Hybrid": 24.48,
+          "Equity": 38.17,
+          "Liquid": 19.83
+        }
+      },
+      "concentration": {
+        "totals": {
+          "SBI Mutual Fund": 85475.96,
+          "Kotak Mahindra": 51230.98,
+          "Axis Mutual Fund": 186237.2,
+          "Nippon India": 96767.64,
+          "UTI Mutual Fund": 68241.47
+        },
+        "alerts": []
+      },
+      "underperforming": [
+        {
+          "scheme": "SBI Mutual Fund ELSS Fund 951",
+          "loss": -9.44
+        },
+        {
+          "scheme": "Kotak Mahindra Hybrid Fund 777",
+          "loss": -7.78
+        },
+        {
+          "scheme": "Axis Mutual Fund Equity Fund 443",
+          "loss": -10.19
+        },
+        {
+          "scheme": "Nippon India Liquid Fund 536",
+          "loss": -6.34
+        },
+        {
+          "scheme": "UTI Mutual Fund Hybrid Fund 739",
+          "loss": -5.94
+        }
+      ],
+      "sip_health": {
+        "active": 4,
+        "details": [
+          {
+            "scheme": "SBI Mutual Fund ELSS Fund 951",
+            "freq": "Quarterly",
+            "next_due": "2025-11-18T14:41:22.630686"
+          },
+          {
+            "scheme": "Kotak Mahindra Hybrid Fund 777",
+            "freq": "Quarterly",
+            "next_due": "2025-11-22T14:41:22.630780"
+          },
+          {
+            "scheme": "Axis Mutual Fund Equity Fund 443",
+            "freq": "Quarterly",
+            "next_due": "2025-12-06T14:41:22.630867"
+          },
+          {
+            "scheme": "UTI Mutual Fund Hybrid Fund 739",
+            "freq": "Quarterly",
+            "next_due": "2025-11-23T14:41:22.631024"
+          }
+        ]
+      },
+      "diversification": {
+        "amcCount": 5,
+        "catCount": 4,
+        "diversificationScore": 92
+      },
+      "risk_mismatch": {
+        "equityShare": 38.17,
+        "alert": null
+      },
+      "category_imbalance": {
+        "alerts": []
+      },
+      "aum_concentration": {
+        "top3": [
+          {
+            "scheme": "Axis Mutual Fund Equity Fund 443",
+            "value": 186237.2
+          },
+          {
+            "scheme": "Nippon India Liquid Fund 536",
+            "value": 96767.64
+          },
+          {
+            "scheme": "SBI Mutual Fund ELSS Fund 951",
+            "value": 85475.96
+          }
+        ],
+        "concentration": 75.52
+      },
+      "underperf_alert": [
+        {
+          "scheme": "SBI Mutual Fund ELSS Fund 951",
+          "loss": -9.44
+        },
+        {
+          "scheme": "Kotak Mahindra Hybrid Fund 777",
+          "loss": -7.78
+        },
+        {
+          "scheme": "Axis Mutual Fund Equity Fund 443",
+          "loss": -10.19
+        },
+        {
+          "scheme": "Nippon India Liquid Fund 536",
+          "loss": -6.34
+        },
+        {
+          "scheme": "UTI Mutual Fund Hybrid Fund 739",
+          "loss": -5.94
+        }
+      ],
+      "liquidity": {
+        "illiquidSchemes": [
+          "SBI Mutual Fund ELSS Fund 951"
+        ]
+      },
+      "sip_discontinuation": {
+        "sipCount": 4,
+        "missedCount": 1,
+        "highRiskCount": 0,
+        "mediumRiskCount": 1,
+        "lowRiskCount": 3,
+        "risk": "Medium",
+        "details": "0 SIPs with 2+ missed payments, 1 with 1 missed payment"
+      },
+      "redemption_likelihood": {
+        "score": 0.0,
+        "flag": "Normal"
+      },
+      "aum_forecast": {
+        "projectedGrowthPct": -1.96
+      },
+      "churn_risk": {
+        "churnRisk": "High",
+        "score": 0.6
+      },
+      "goal_forecast": {
+        "status": "NoGoalDeclared"
+      },
+      "rebalancing_recommendations": {
+        "suggestions": [
+          "Increase debt allocation for stability"
+        ]
+      },
+      "performance_suggestions": {
+        "suggestions": [
+          "Consider replacing SBI Mutual Fund ELSS Fund 951 with better performing same-category funds",
+          "Consider replacing Kotak Mahindra Hybrid Fund 777 with better performing same-category funds",
+          "Consider replacing Axis Mutual Fund Equity Fund 443 with better performing same-category funds",
+          "Consider replacing Nippon India Liquid Fund 536 with better performing same-category funds",
+          "Consider replacing UTI Mutual Fund Hybrid Fund 739 with better performing same-category funds"
+        ]
+      },
+      "goal_rebalancing_advice": {
+        "advice": "Map long-term goals to equity heavy funds and short-term to debt; rebalance annually."
+      },
+      "ai_summary": {
+        "portfolioScore": 92,
+        "summary": "Investor Ananya Shah holds 5 schemes with -8.48% gain/loss.",
+        "recommendation": "Continue SIP discipline and review top losing funds."
+      }
+    },
+    "created_at": "2025-11-06T15:21:20.017275+00:00"
+  },
+  {
+    "investor_id": "INV0023",
+    "ai_summary": {
+      "summary": "1) The investor's portfolio, with an AUM of \u20b9779,721.39, is currently experiencing a loss of 7.33%. It shows a concerning high concentration in ICICI Prudential funds and a moderate level of diversification at 80%. Furthermore, the churn risk is classified as high, indicating potential instability.\n\n2) \n   - Recommend the client to reduce exposure to ICICI Prudential funds to lower concentration risk; consider diversifying investments across various fund houses and categories to enhance stability.\n   - Suggest a review of the portfolio to identify underperforming funds and consider re-allocating those assets into higher-performing options, including equity or hybrid funds, to offset current losses and promote growth."
+    },
+    "analysis_result": {
+      "investor_id": "INV0023",
+      "name": "Manish Kulkarni",
+      "performance": {
+        "invested": 841355.0,
+        "value": 779721.39,
+        "gainLoss": -7.33
+      },
+      "allocation": {
+        "total": 779721.3899999999,
+        "allocation": {
+          "Balanced": 31.86,
+          "Liquid": 7.05,
+          "Debt": 45.88,
+          "Hybrid": 15.21
+        }
+      },
+      "concentration": {
+        "totals": {
+          "ICICI Prudential": 371782.36,
+          "Nippon India": 54954.29,
+          "UTI Mutual Fund": 234391.66,
+          "HDFC Mutual Fund": 118593.08
+        },
+        "alerts": [
+          {
+            "type": "HighAMCConcentration",
+            "amc": "ICICI Prudential",
+            "pct": 47.68
+          }
+        ]
+      },
+      "underperforming": [
+        {
+          "scheme": "ICICI Prudential Balanced Fund 796",
+          "loss": -6.89
+        },
+        {
+          "scheme": "Nippon India Liquid Fund 809",
+          "loss": -5.31
+        },
+        {
+          "scheme": "ICICI Prudential Debt Fund 609",
+          "loss": -10.05
+        },
+        {
+          "scheme": "UTI Mutual Fund Debt Fund 429",
+          "loss": -7.49
+        },
+        {
+          "scheme": "HDFC Mutual Fund Hybrid Fund 990",
+          "loss": -5.88
+        }
+      ],
+      "sip_health": {
+        "active": 3,
+        "details": [
+          {
+            "scheme": "ICICI Prudential Debt Fund 609",
+            "freq": "Quarterly",
+            "next_due": "2025-11-08T14:41:22.624972"
+          },
+          {
+            "scheme": "UTI Mutual Fund Debt Fund 429",
+            "freq": "Quarterly",
+            "next_due": "2025-11-16T14:41:22.625077"
+          },
+          {
+            "scheme": "HDFC Mutual Fund Hybrid Fund 990",
+            "freq": "Quarterly",
+            "next_due": "2025-11-08T14:41:22.625155"
+          }
+        ]
+      },
+      "diversification": {
+        "amcCount": 4,
+        "catCount": 4,
+        "diversificationScore": 80
+      },
+      "risk_mismatch": {
+        "equityShare": 0.0,
+        "alert": null
+      },
+      "category_imbalance": {
+        "alerts": []
+      },
+      "aum_concentration": {
+        "top3": [
+          {
+            "scheme": "ICICI Prudential Balanced Fund 796",
+            "value": 248424.93
+          },
+          {
+            "scheme": "UTI Mutual Fund Debt Fund 429",
+            "value": 234391.66
+          },
+          {
+            "scheme": "ICICI Prudential Debt Fund 609",
+            "value": 123357.43
+          }
+        ],
+        "concentration": 77.74
+      },
+      "underperf_alert": [
+        {
+          "scheme": "ICICI Prudential Balanced Fund 796",
+          "loss": -6.89
+        },
+        {
+          "scheme": "Nippon India Liquid Fund 809",
+          "loss": -5.31
+        },
+        {
+          "scheme": "ICICI Prudential Debt Fund 609",
+          "loss": -10.05
+        },
+        {
+          "scheme": "UTI Mutual Fund Debt Fund 429",
+          "loss": -7.49
+        },
+        {
+          "scheme": "HDFC Mutual Fund Hybrid Fund 990",
+          "loss": -5.88
+        }
+      ],
+      "liquidity": {
+        "illiquidSchemes": []
+      },
+      "sip_discontinuation": {
+        "sipCount": 3,
+        "missedCount": 0,
+        "highRiskCount": 0,
+        "mediumRiskCount": 0,
+        "lowRiskCount": 3,
+        "risk": "Low",
+        "details": "0 SIPs with 2+ missed payments, 0 with 1 missed payment"
+      },
+      "redemption_likelihood": {
+        "score": 0.0,
+        "flag": "Normal"
+      },
+      "aum_forecast": {
+        "projectedGrowthPct": 5.79
+      },
+      "churn_risk": {
+        "churnRisk": "High",
+        "score": 0.6
+      },
+      "goal_forecast": {
+        "status": "NoGoalDeclared"
+      },
+      "rebalancing_recommendations": {
+        "suggestions": []
+      },
+      "performance_suggestions": {
+        "suggestions": [
+          "Consider replacing ICICI Prudential Balanced Fund 796 with better performing same-category funds",
+          "Consider replacing Nippon India Liquid Fund 809 with better performing same-category funds",
+          "Consider replacing ICICI Prudential Debt Fund 609 with better performing same-category funds",
+          "Consider replacing UTI Mutual Fund Debt Fund 429 with better performing same-category funds",
+          "Consider replacing HDFC Mutual Fund Hybrid Fund 990 with better performing same-category funds"
+        ]
+      },
+      "goal_rebalancing_advice": {
+        "advice": "Map long-term goals to equity heavy funds and short-term to debt; rebalance annually."
+      },
+      "ai_summary": {
+        "portfolioScore": 93,
+        "summary": "Investor Manish Kulkarni holds 5 schemes with -7.33% gain/loss.",
+        "recommendation": "Continue SIP discipline and review top losing funds."
+      }
+    },
+    "created_at": "2025-11-06T15:45:12.683639+00:00"
+  },
+  {
+    "investor_id": "INV0193",
+    "ai_summary": {
+      "summary": "1) The portfolio shows healthy growth with an AUM of \u20b9479,294.23 and a gain of 11.9%. It exhibits good diversification at 72%, and there is a low risk of churn, indicating satisfied investment conditions.\n\n2) \n- Suggest exploring additional asset classes or sectors to further enhance diversification and potential returns. \n- Consider gradually allocating a portion of the investment into equity funds or growth-oriented schemes to capitalize on potential market upswings while still managing risk effectively."
+    },
+    "analysis_result": {
+      "investor_id": "INV0193",
+      "name": "Anjali Desai",
+      "performance": {
+        "invested": 428314.0,
+        "value": 479294.23,
+        "gainLoss": 11.9
+      },
+      "allocation": {
+        "total": 479294.23,
+        "allocation": {
+          "Equity": 20.46,
+          "Liquid": 43.14,
+          "Debt": 36.4
+        }
+      },
+      "concentration": {
+        "totals": {
+          "Nippon India": 98070.51,
+          "Kotak Mahindra": 100968.46,
+          "DSP Mutual Fund": 174455.38,
+          "Aditya Birla Sun Life": 105799.88
+        },
+        "alerts": []
+      },
+      "underperforming": [],
+      "sip_health": {
+        "active": 3,
+        "details": [
+          {
+            "scheme": "Nippon India Equity Fund 257",
+            "freq": "Monthly",
+            "next_due": "2025-11-20T14:41:22.711177"
+          },
+          {
+            "scheme": "Kotak Mahindra Liquid Fund 854",
+            "freq": "Quarterly",
+            "next_due": "2025-11-22T14:41:22.711253"
+          },
+          {
+            "scheme": "DSP Mutual Fund Debt Fund 436",
+            "freq": "Quarterly",
+            "next_due": "2025-11-17T14:41:22.711337"
+          }
+        ]
+      },
+      "diversification": {
+        "amcCount": 4,
+        "catCount": 3,
+        "diversificationScore": 72
+      },
+      "risk_mismatch": {
+        "equityShare": 20.46,
+        "alert": null
+      },
+      "category_imbalance": {
+        "alerts": []
+      },
+      "aum_concentration": {
+        "top3": [
+          {
+            "scheme": "DSP Mutual Fund Debt Fund 436",
+            "value": 174455.38
+          },
+          {
+            "scheme": "Aditya Birla Sun Life Liquid Fund 500",
+            "value": 105799.88
+          },
+          {
+            "scheme": "Kotak Mahindra Liquid Fund 854",
+            "value": 100968.46
+          }
+        ],
+        "concentration": 79.54
+      },
+      "underperf_alert": [],
+      "liquidity": {
+        "illiquidSchemes": []
+      },
+      "sip_discontinuation": {
+        "sipCount": 3,
+        "missedCount": 0,
+        "highRiskCount": 0,
+        "mediumRiskCount": 0,
+        "lowRiskCount": 3,
+        "risk": "Low",
+        "details": "0 SIPs with 2+ missed payments, 0 with 1 missed payment"
+      },
+      "redemption_likelihood": {
+        "score": 0.2,
+        "flag": "Normal"
+      },
+      "aum_forecast": {
+        "projectedGrowthPct": 7.99
+      },
+      "churn_risk": {
+        "churnRisk": "Low",
+        "score": 0
+      },
+      "goal_forecast": {
+        "status": "NoGoalDeclared"
+      },
+      "rebalancing_recommendations": {
+        "suggestions": []
+      },
+      "performance_suggestions": {
+        "suggestions": [
+          "Portfolio is performing well. Continue monitoring and rebalance annually."
+        ]
+      },
+      "goal_rebalancing_advice": {
+        "advice": "Map long-term goals to equity heavy funds and short-term to debt; rebalance annually."
+      },
+      "ai_summary": {
+        "portfolioScore": 88,
+        "summary": "Investor Anjali Desai holds 4 schemes with 11.90% gain/loss.",
+        "recommendation": "Continue SIP discipline and review top losing funds."
+      }
+    },
+    "created_at": "2025-11-06T15:52:29.203771+00:00"
+  },
+  {
+    "investor_id": "INV0299",
+    "ai_summary": {
+      "summary": "1) The portfolio has a healthy asset under management (AUM) of \u20b91,004,171.79 with a modest gain of 4.19%. The diversification level is strong at 80%, with low churn risk but an alert related to the ICICI Prudential Liquid Fund indicating a potential area for review.\n\n2) \n- Recommend assessing the ICICI Prudential Liquid Fund for any needed adjustments, considering its alert status, to ensure it aligns with the overall portfolio objectives.\n- Suggest diversifying into equity or hybrid funds to potentially enhance growth while maintaining the current high level of diversification."
+    },
+    "analysis_result": {
+      "investor_id": "INV0299",
+      "name": "Meera Verma",
+      "performance": {
+        "invested": 963754.0,
+        "value": 1004171.79,
+        "gainLoss": 4.19
+      },
+      "allocation": {
+        "total": 1004171.7899999998,
+        "allocation": {
+          "Equity": 31.8,
+          "Balanced": 19.08,
+          "Liquid": 21.44,
+          "ELSS": 27.67
+        }
+      },
+      "concentration": {
+        "totals": {
+          "ICICI Prudential": 357111.75,
+          "UTI Mutual Fund": 162065.24,
+          "Franklin Templeton": 207126.26,
+          "Axis Mutual Fund": 277868.54
+        },
+        "alerts": []
+      },
+      "underperforming": [
+        {
+          "scheme": "ICICI Prudential Liquid Fund 775",
+          "loss": -3.9
+        },
+        {
+          "scheme": "Franklin Templeton Balanced Fund 375",
+          "loss": -0.44
+        },
+        {
+          "scheme": "Axis Mutual Fund ELSS Fund 841",
+          "loss": -1.7
+        }
+      ],
+      "sip_health": {
+        "active": 4,
+        "details": [
+          {
+            "scheme": "ICICI Prudential Equity Fund 766",
+            "freq": "Monthly",
+            "next_due": "2025-11-24T14:41:22.762584"
+          },
+          {
+            "scheme": "ICICI Prudential Liquid Fund 775",
+            "freq": "Quarterly",
+            "next_due": "2025-11-09T14:41:22.762761"
+          },
+          {
+            "scheme": "Franklin Templeton Equity Fund 791",
+            "freq": "Monthly",
+            "next_due": "2025-11-18T14:41:22.762834"
+          },
+          {
+            "scheme": "Axis Mutual Fund ELSS Fund 841",
+            "freq": "Quarterly",
+            "next_due": "2025-11-24T14:41:22.762994"
+          }
+        ]
+      },
+      "diversification": {
+        "amcCount": 4,
+        "catCount": 4,
+        "diversificationScore": 80
+      },
+      "risk_mismatch": {
+        "equityShare": 31.8,
+        "alert": null
+      },
+      "category_imbalance": {
+        "alerts": []
+      },
+      "aum_concentration": {
+        "top3": [
+          {
+            "scheme": "Axis Mutual Fund ELSS Fund 841",
+            "value": 277868.54
+          },
+          {
+            "scheme": "ICICI Prudential Liquid Fund 775",
+            "value": 215338.0
+          },
+          {
+            "scheme": "Franklin Templeton Equity Fund 791",
+            "value": 177556.94
+          }
+        ],
+        "concentration": 66.8
+      },
+      "underperf_alert": [
+        {
+          "scheme": "ICICI Prudential Liquid Fund 775",
+          "loss": -3.9
+        }
+      ],
+      "liquidity": {
+        "illiquidSchemes": [
+          "Axis Mutual Fund ELSS Fund 841"
+        ]
+      },
+      "sip_discontinuation": {
+        "sipCount": 4,
+        "missedCount": 0,
+        "highRiskCount": 0,
+        "mediumRiskCount": 0,
+        "lowRiskCount": 4,
+        "risk": "Low",
+        "details": "0 SIPs with 2+ missed payments, 0 with 1 missed payment"
+      },
+      "redemption_likelihood": {
+        "score": 0.4,
+        "flag": "Normal"
+      },
+      "aum_forecast": {
+        "projectedGrowthPct": 0.6
+      },
+      "churn_risk": {
+        "churnRisk": "Low",
+        "score": 0
+      },
+      "goal_forecast": {
+        "status": "NoGoalDeclared"
+      },
+      "rebalancing_recommendations": {
+        "suggestions": [
+          "Increase debt allocation for stability"
+        ]
+      },
+      "performance_suggestions": {
+        "suggestions": [
+          "Consider replacing ICICI Prudential Liquid Fund 775 with better performing same-category funds",
+          "Consider replacing Franklin Templeton Balanced Fund 375 with better performing same-category funds",
+          "Consider replacing Axis Mutual Fund ELSS Fund 841 with better performing same-category funds"
+        ]
+      },
+      "goal_rebalancing_advice": {
+        "advice": "Map long-term goals to equity heavy funds and short-term to debt; rebalance annually."
+      },
+      "ai_summary": {
+        "portfolioScore": 96,
+        "summary": "Investor Meera Verma holds 6 schemes with 4.19% gain/loss.",
+        "recommendation": "Continue SIP discipline and review top losing funds."
+      }
+    },
+    "created_at": "2025-11-06T15:54:35.165029+00:00"
+  },
+  {
+    "investor_id": "INV0028",
+    "ai_summary": {
+      "summary": "1) The investor's portfolio has an Assets Under Management (AUM) of \u20b91,225,192.58, but it is currently experiencing a loss of 8.22%. The portfolio shows a high concentration in Franklin Templeton, posing a risk of over-exposure, while the overall diversification score is moderate at 80.\n\n2) Recommendations: \n   - Suggest reducing exposure to the concentrated fund, Franklin Templeton, and reallocating funds into a more diverse mix of investments to improve risk management and stability.\n   - Advise the client to consider adding equity or international funds to enhance growth potential and reduce churn risk, allowing for better performance recovery from the current loss."
+    },
+    "analysis_result": {
+      "investor_id": "INV0028",
+      "name": "Varun Singh",
+      "performance": {
+        "invested": 1334873.0,
+        "value": 1225192.58,
+        "gainLoss": -8.22
+      },
+      "allocation": {
+        "total": 1225192.58,
+        "allocation": {
+          "Liquid": 35.62,
+          "Balanced": 40.59,
+          "Debt": 11.49,
+          "Hybrid": 12.3
+        }
+      },
+      "concentration": {
+        "totals": {
+          "Axis Mutual Fund": 436450.07999999996,
+          "Franklin Templeton": 497292.06000000006,
+          "SBI Mutual Fund": 227073.34000000003,
+          "HDFC Mutual Fund": 64377.1
+        },
+        "alerts": [
+          {
+            "type": "HighAMCConcentration",
+            "amc": "Franklin Templeton",
+            "pct": 40.59
+          }
+        ]
+      },
+      "underperforming": [
+        {
+          "scheme": "Axis Mutual Fund Liquid Fund 854",
+          "loss": -12.05
+        },
+        {
+          "scheme": "Franklin Templeton Balanced Fund 349",
+          "loss": -8.31
+        },
+        {
+          "scheme": "SBI Mutual Fund Debt Fund 215",
+          "loss": -5.9
+        },
+        {
+          "scheme": "Axis Mutual Fund Liquid Fund 785",
+          "loss": -6.89
+        },
+        {
+          "scheme": "HDFC Mutual Fund Debt Fund 585",
+          "loss": -6.43
+        },
+        {
+          "scheme": "Franklin Templeton Balanced Fund 726",
+          "loss": -7.26
+        },
+        {
+          "scheme": "SBI Mutual Fund Hybrid Fund 685",
+          "loss": -7.34
+        }
+      ],
+      "sip_health": {
+        "active": 2,
+        "details": [
+          {
+            "scheme": "HDFC Mutual Fund Debt Fund 585",
+            "freq": "Quarterly",
+            "next_due": "2025-11-12T14:41:22.627815"
+          },
+          {
+            "scheme": "SBI Mutual Fund Hybrid Fund 685",
+            "freq": "Monthly",
+            "next_due": "2025-11-19T14:41:22.627993"
+          }
+        ]
+      },
+      "diversification": {
+        "amcCount": 4,
+        "catCount": 4,
+        "diversificationScore": 80
+      },
+      "risk_mismatch": {
+        "equityShare": 0.0,
+        "alert": null
+      },
+      "category_imbalance": {
+        "alerts": []
+      },
+      "aum_concentration": {
+        "top3": [
+          {
+            "scheme": "Franklin Templeton Balanced Fund 349",
+            "value": 265566.33
+          },
+          {
+            "scheme": "Franklin Templeton Balanced Fund 726",
+            "value": 231725.73
+          },
+          {
+            "scheme": "Axis Mutual Fund Liquid Fund 854",
+            "value": 222583.86
+          }
+        ],
+        "concentration": 58.76
+      },
+      "underperf_alert": [
+        {
+          "scheme": "Axis Mutual Fund Liquid Fund 854",
+          "loss": -12.05
+        },
+        {
+          "scheme": "Franklin Templeton Balanced Fund 349",
+          "loss": -8.31
+        },
+        {
+          "scheme": "SBI Mutual Fund Debt Fund 215",
+          "loss": -5.9
+        },
+        {
+          "scheme": "Axis Mutual Fund Liquid Fund 785",
+          "loss": -6.89
+        },
+        {
+          "scheme": "HDFC Mutual Fund Debt Fund 585",
+          "loss": -6.43
+        },
+        {
+          "scheme": "Franklin Templeton Balanced Fund 726",
+          "loss": -7.26
+        },
+        {
+          "scheme": "SBI Mutual Fund Hybrid Fund 685",
+          "loss": -7.34
+        }
+      ],
+      "liquidity": {
+        "illiquidSchemes": []
+      },
+      "sip_discontinuation": {
+        "sipCount": 2,
+        "missedCount": 1,
+        "highRiskCount": 0,
+        "mediumRiskCount": 1,
+        "lowRiskCount": 1,
+        "risk": "Medium",
+        "details": "0 SIPs with 2+ missed payments, 1 with 1 missed payment"
+      },
+      "redemption_likelihood": {
+        "score": 0.0,
+        "flag": "Normal"
+      },
+      "aum_forecast": {
+        "projectedGrowthPct": 3.73
+      },
+      "churn_risk": {
+        "churnRisk": "High",
+        "score": 0.6
+      },
+      "goal_forecast": {
+        "status": "NoGoalDeclared"
+      },
+      "rebalancing_recommendations": {
+        "suggestions": [
+          "Increase debt allocation for stability"
+        ]
+      },
+      "performance_suggestions": {
+        "suggestions": [
+          "Consider replacing Axis Mutual Fund Liquid Fund 854 with better performing same-category funds",
+          "Consider replacing Franklin Templeton Balanced Fund 349 with better performing same-category funds",
+          "Consider replacing SBI Mutual Fund Debt Fund 215 with better performing same-category funds",
+          "Consider replacing Axis Mutual Fund Liquid Fund 785 with better performing same-category funds",
+          "Consider replacing HDFC Mutual Fund Debt Fund 585 with better performing same-category funds",
+          "Consider replacing Franklin Templeton Balanced Fund 726 with better performing same-category funds",
+          "Consider replacing SBI Mutual Fund Hybrid Fund 685 with better performing same-category funds"
+        ]
+      },
+      "goal_rebalancing_advice": {
+        "advice": "Map long-term goals to equity heavy funds and short-term to debt; rebalance annually."
+      },
+      "ai_summary": {
+        "portfolioScore": 92,
+        "summary": "Investor Varun Singh holds 7 schemes with -8.22% gain/loss.",
+        "recommendation": "Continue SIP discipline and review top losing funds."
+      }
+    },
+    "created_at": "2025-11-06T17:53:07.271103+00:00"
+  },
+  {
+    "investor_id": "INV0127",
+    "ai_summary": {
+      "summary": "1) The portfolio for investor ID INV0127 has a healthy AUM of \u20b91,453,131.85, with a modest gain of 8.87%. The diversification score of 100 suggests that the investments are well-spread across different assets, and the churn risk is low, indicating stable investment behavior.\n\n2) \n   - Recommend reviewing the current asset allocation to maintain optimal diversification, ensuring continued stability and growth potential.\n   - Suggest exploring opportunities in emerging market mutual funds to enhance growth, considering the investor's risk profile and investment horizon."
+    },
+    "analysis_result": {
+      "investor_id": "INV0127",
+      "name": "Simran Reddy",
+      "performance": {
+        "invested": 1334756.0,
+        "value": 1453131.85,
+        "gainLoss": 8.87
+      },
+      "allocation": {
+        "total": 1453131.8500000003,
+        "allocation": {
+          "Debt": 18.6,
+          "Liquid": 19.41,
+          "Hybrid": 43.21,
+          "ELSS": 7.0,
+          "Balanced": 11.78
+        }
+      },
+      "concentration": {
+        "totals": {
+          "HDFC Mutual Fund": 390020.95999999996,
+          "UTI Mutual Fund": 282112.97,
+          "Kotak Mahindra": 510484.94000000006,
+          "Nippon India": 101740.12,
+          "Aditya Birla Sun Life": 168772.86
+        },
+        "alerts": []
+      },
+      "underperforming": [
+        {
+          "scheme": "HDFC Mutual Fund Hybrid Fund 783",
+          "loss": -2.78
+        },
+        {
+          "scheme": "Aditya Birla Sun Life Hybrid Fund 513",
+          "loss": -1.5
+        }
+      ],
+      "sip_health": {
+        "active": 7,
+        "details": [
+          {
+            "scheme": "HDFC Mutual Fund Debt Fund 908",
+            "freq": "Quarterly",
+            "next_due": null
+          },
+          {
+            "scheme": "UTI Mutual Fund Liquid Fund 836",
+            "freq": "Monthly",
+            "next_due": "2025-11-26T19:01:10.090771+00:00"
+          },
+          {
+            "scheme": "Kotak Mahindra Hybrid Fund 424",
+            "freq": "Quarterly",
+            "next_due": "2025-11-20T19:01:10.090856+00:00"
+          },
+          {
+            "scheme": "Kotak Mahindra Balanced Fund 201",
+            "freq": "Quarterly",
+            "next_due": "2025-11-13T19:01:10.091005+00:00"
+          },
+          {
+            "scheme": "HDFC Mutual Fund Hybrid Fund 783",
+            "freq": "Monthly",
+            "next_due": "2025-11-07T19:01:10.091103+00:00"
+          },
+          {
+            "scheme": "Aditya Birla Sun Life Hybrid Fund 513",
+            "freq": "Monthly",
+            "next_due": "2025-11-29T19:01:10.091187+00:00"
+          },
+          {
+            "scheme": "Kotak Mahindra Hybrid Fund 902",
+            "freq": "Quarterly",
+            "next_due": "2025-11-27T19:01:10.091288+00:00"
+          }
+        ]
+      },
+      "diversification": {
+        "amcCount": 5,
+        "catCount": 5,
+        "diversificationScore": 100
+      },
+      "risk_mismatch": {
+        "equityShare": 0.0,
+        "alert": null
+      },
+      "category_imbalance": {
+        "alerts": []
+      },
+      "aum_concentration": {
+        "top3": [
+          {
+            "scheme": "UTI Mutual Fund Liquid Fund 836",
+            "value": 282112.97
+          },
+          {
+            "scheme": "HDFC Mutual Fund Debt Fund 908",
+            "value": 270212.87
+          },
+          {
+            "scheme": "Kotak Mahindra Hybrid Fund 424",
+            "value": 225298.95
+          }
+        ],
+        "concentration": 53.51
+      },
+      "underperf_alert": [],
+      "liquidity": {
+        "illiquidSchemes": [
+          "Nippon India ELSS Fund 574"
+        ]
+      },
+      "sip_discontinuation": {
+        "sipCount": 7,
+        "missedCount": 0,
+        "highRiskCount": 0,
+        "mediumRiskCount": 0,
+        "lowRiskCount": 6,
+        "risk": "Low",
+        "details": "0 SIPs with 2+ missed payments, 0 with 1 missed payment"
+      },
+      "redemption_likelihood": {
+        "score": 0.4,
+        "flag": "Normal"
+      },
+      "aum_forecast": {
+        "projectedGrowthPct": 0.88
+      },
+      "churn_risk": {
+        "churnRisk": "Low",
+        "score": 0
+      },
+      "goal_forecast": {
+        "status": "NoGoalDeclared"
+      },
+      "rebalancing_recommendations": {
+        "suggestions": [
+          "Increase debt allocation for stability"
+        ]
+      },
+      "performance_suggestions": {
+        "suggestions": [
+          "Consider replacing HDFC Mutual Fund Hybrid Fund 783 with better performing same-category funds",
+          "Consider replacing Aditya Birla Sun Life Hybrid Fund 513 with better performing same-category funds"
+        ]
+      },
+      "goal_rebalancing_advice": {
+        "advice": "Map long-term goals to equity heavy funds and short-term to debt; rebalance annually."
+      },
+      "ai_summary": {
+        "portfolioScore": 91,
+        "summary": "Investor Simran Reddy holds 8 schemes with 8.87% gain/loss.",
+        "recommendation": "Continue SIP discipline and review top losing funds."
+      }
+    },
+    "created_at": "2025-11-07T05:56:01.116168+00:00"
+  },
+  {
+    "investor_id": "INV0032",
+    "ai_summary": {
+      "summary": "1) The investor's portfolio is currently showing a loss of approximately \u20b91,40,000, reflecting a decline of 9.62%. Additionally, there is a high concentration in Aditya Birla Sun Life assets, which may increase risk exposure.\n\n2) \n- Recommend the client to diversify their investments by reallocating funds from the heavily concentrated Aditya Birla Sun Life offerings into other mutual funds to achieve a more balanced portfolio.\n- Suggest considering systematic investment plans (SIPs) in different mutual fund categories to mitigate churn risk and promote steady growth over the long term."
+    },
+    "analysis_result": {
+      "investor_id": "INV0032",
+      "name": "Akash Rao",
+      "performance": {
+        "invested": 1617012.0,
+        "value": 1461476.6,
+        "gainLoss": -9.62
+      },
+      "allocation": {
+        "total": 1461476.6,
+        "allocation": {
+          "Debt": 28.64,
+          "Equity": 38.41,
+          "Liquid": 12.14,
+          "Hybrid": 8.36,
+          "ELSS": 12.45
+        }
+      },
+      "concentration": {
+        "totals": {
+          "UTI Mutual Fund": 378086.70999999996,
+          "Aditya Birla Sun Life": 714254.96,
+          "SBI Mutual Fund": 187123.23,
+          "Axis Mutual Fund": 182011.7
+        },
+        "alerts": [
+          {
+            "type": "HighAMCConcentration",
+            "amc": "Aditya Birla Sun Life",
+            "pct": 48.87
+          }
+        ]
+      },
+      "underperforming": [
+        {
+          "scheme": "UTI Mutual Fund Debt Fund 240",
+          "loss": -5.42
+        },
+        {
+          "scheme": "Aditya Birla Sun Life Equity Fund 239",
+          "loss": -13.12
+        },
+        {
+          "scheme": "UTI Mutual Fund Liquid Fund 372",
+          "loss": -5.44
+        },
+        {
+          "scheme": "Aditya Birla Sun Life Equity Fund 474",
+          "loss": -13.89
+        },
+        {
+          "scheme": "Aditya Birla Sun Life Hybrid Fund 492",
+          "loss": -8.28
+        },
+        {
+          "scheme": "SBI Mutual Fund Equity Fund 567",
+          "loss": -8.78
+        },
+        {
+          "scheme": "Aditya Birla Sun Life Debt Fund 919",
+          "loss": -9.69
+        },
+        {
+          "scheme": "Axis Mutual Fund ELSS Fund 511",
+          "loss": -11.41
+        }
+      ],
+      "sip_health": {
+        "active": 4,
+        "details": [
+          {
+            "scheme": "UTI Mutual Fund Liquid Fund 372",
+            "freq": "Quarterly",
+            "next_due": null
+          },
+          {
+            "scheme": "Aditya Birla Sun Life Equity Fund 474",
+            "freq": "Monthly",
+            "next_due": "2025-11-26T19:01:10.044639+00:00"
+          },
+          {
+            "scheme": "SBI Mutual Fund Equity Fund 567",
+            "freq": "Monthly",
+            "next_due": "2025-11-26T19:01:10.044797+00:00"
+          },
+          {
+            "scheme": "Axis Mutual Fund ELSS Fund 511",
+            "freq": "Monthly",
+            "next_due": "2026-01-31T19:01:10.044988+00:00"
+          }
+        ]
+      },
+      "diversification": {
+        "amcCount": 4,
+        "catCount": 5,
+        "diversificationScore": 88
+      },
+      "risk_mismatch": {
+        "equityShare": 38.41,
+        "alert": null
+      },
+      "category_imbalance": {
+        "alerts": []
+      },
+      "aum_concentration": {
+        "top3": [
+          {
+            "scheme": "Aditya Birla Sun Life Equity Fund 239",
+            "value": 232667.25
+          },
+          {
+            "scheme": "Aditya Birla Sun Life Debt Fund 919",
+            "value": 217903.58
+          },
+          {
+            "scheme": "UTI Mutual Fund Debt Fund 240",
+            "value": 200699.71
+          }
+        ],
+        "concentration": 44.56
+      },
+      "underperf_alert": [
+        {
+          "scheme": "UTI Mutual Fund Debt Fund 240",
+          "loss": -5.42
+        },
+        {
+          "scheme": "Aditya Birla Sun Life Equity Fund 239",
+          "loss": -13.12
+        },
+        {
+          "scheme": "UTI Mutual Fund Liquid Fund 372",
+          "loss": -5.44
+        },
+        {
+          "scheme": "Aditya Birla Sun Life Equity Fund 474",
+          "loss": -13.89
+        },
+        {
+          "scheme": "Aditya Birla Sun Life Hybrid Fund 492",
+          "loss": -8.28
+        },
+        {
+          "scheme": "SBI Mutual Fund Equity Fund 567",
+          "loss": -8.78
+        },
+        {
+          "scheme": "Aditya Birla Sun Life Debt Fund 919",
+          "loss": -9.69
+        },
+        {
+          "scheme": "Axis Mutual Fund ELSS Fund 511",
+          "loss": -11.41
+        }
+      ],
+      "liquidity": {
+        "illiquidSchemes": [
+          "Axis Mutual Fund ELSS Fund 511"
+        ]
+      },
+      "sip_discontinuation": {
+        "sipCount": 4,
+        "missedCount": 0,
+        "highRiskCount": 0,
+        "mediumRiskCount": 0,
+        "lowRiskCount": 3,
+        "risk": "Low",
+        "details": "0 SIPs with 2+ missed payments, 0 with 1 missed payment"
+      },
+      "redemption_likelihood": {
+        "score": 0.0,
+        "flag": "Normal"
+      },
+      "aum_forecast": {
+        "projectedGrowthPct": -1.48
+      },
+      "churn_risk": {
+        "churnRisk": "High",
+        "score": 0.6
+      },
+      "goal_forecast": {
+        "status": "NoGoalDeclared"
+      },
+      "rebalancing_recommendations": {
+        "suggestions": []
+      },
+      "performance_suggestions": {
+        "suggestions": [
+          "Consider replacing UTI Mutual Fund Debt Fund 240 with better performing same-category funds",
+          "Consider replacing Aditya Birla Sun Life Equity Fund 239 with better performing same-category funds",
+          "Consider replacing UTI Mutual Fund Liquid Fund 372 with better performing same-category funds",
+          "Consider replacing Aditya Birla Sun Life Equity Fund 474 with better performing same-category funds",
+          "Consider replacing Aditya Birla Sun Life Hybrid Fund 492 with better performing same-category funds",
+          "Consider replacing SBI Mutual Fund Equity Fund 567 with better performing same-category funds",
+          "Consider replacing Aditya Birla Sun Life Debt Fund 919 with better performing same-category funds",
+          "Consider replacing Axis Mutual Fund ELSS Fund 511 with better performing same-category funds"
+        ]
+      },
+      "goal_rebalancing_advice": {
+        "advice": "Map long-term goals to equity heavy funds and short-term to debt; rebalance annually."
+      },
+      "ai_summary": {
+        "portfolioScore": 90,
+        "summary": "Investor Akash Rao holds 8 schemes with -9.62% gain/loss.",
+        "recommendation": "Continue SIP discipline and review top losing funds."
+      }
+    },
+    "created_at": "2025-11-07T05:58:12.692030+00:00"
+  },
+  {
+    "investor_id": "INV0020",
+    "ai_summary": {
+      "summary": "1) The portfolio shows a negative gain of \u20b9-34,569.07, indicating a drop in value and presents a high concentration risk with 70.64% of the assets invested in DSP Mutual Fund, leading to reduced diversification at only 40%. Additionally, there is a significant risk mismatch as the investor's profile suggests a high risk tolerance but has no equity exposure.\n\n2) \n   - Suggest the client diversify their portfolio by reallocating funds from the heavily concentrated DSP Mutual Fund to other asset classes like equity, which could align with their high-risk profile and potentially promote growth.\n   - Recommend reducing the churn risk by maintaining a balanced portfolio that minimizes high concentration in any single fund, thus improving overall portfolio stability and mitigating potential losses."
+    },
+    "analysis_result": {
+      "investor_id": "INV0020",
+      "name": "Anil Desai",
+      "performance": {
+        "invested": 575408.0,
+        "value": 538409.27,
+        "gainLoss": -6.43
+      },
+      "allocation": {
+        "total": 538409.27,
+        "allocation": {
+          "Liquid": 76.07,
+          "Debt": 23.93
+        }
+      },
+      "concentration": {
+        "totals": {
+          "DSP Mutual Fund": 380336.51,
+          "Axis Mutual Fund": 158072.76
+        },
+        "alerts": [
+          {
+            "type": "HighAMCConcentration",
+            "amc": "DSP Mutual Fund",
+            "pct": 70.64
+          }
+        ]
+      },
+      "underperforming": [
+        {
+          "scheme": "DSP Mutual Fund Liquid Fund 620",
+          "loss": -5.76
+        },
+        {
+          "scheme": "Axis Mutual Fund Liquid Fund 101",
+          "loss": -8.51
+        },
+        {
+          "scheme": "DSP Mutual Fund Debt Fund 885",
+          "loss": -5.1
+        }
+      ],
+      "sip_health": {
+        "active": 1,
+        "details": [
+          {
+            "scheme": "Axis Mutual Fund Liquid Fund 101",
+            "freq": "Quarterly",
+            "next_due": "2026-01-24T19:01:10.038653+00:00"
+          }
+        ]
+      },
+      "diversification": {
+        "amcCount": 2,
+        "catCount": 2,
+        "diversificationScore": 40
+      },
+      "risk_mismatch": {
+        "equityShare": 0.0,
+        "alert": "Risk Mismatch: Equity only 0.0% but profile High"
+      },
+      "category_imbalance": {
+        "alerts": [
+          {
+            "type": "CategoryOverweight",
+            "category": "Liquid",
+            "pct": 76.07
+          }
+        ]
+      },
+      "aum_concentration": {
+        "top3": [
+          {
+            "scheme": "DSP Mutual Fund Liquid Fund 620",
+            "value": 251486.04
+          },
+          {
+            "scheme": "Axis Mutual Fund Liquid Fund 101",
+            "value": 158072.76
+          },
+          {
+            "scheme": "DSP Mutual Fund Debt Fund 885",
+            "value": 128850.47
+          }
+        ],
+        "concentration": 100.0
+      },
+      "underperf_alert": [
+        {
+          "scheme": "DSP Mutual Fund Liquid Fund 620",
+          "loss": -5.76
+        },
+        {
+          "scheme": "Axis Mutual Fund Liquid Fund 101",
+          "loss": -8.51
+        },
+        {
+          "scheme": "DSP Mutual Fund Debt Fund 885",
+          "loss": -5.1
+        }
+      ],
+      "liquidity": {
+        "illiquidSchemes": []
+      },
+      "sip_discontinuation": {
+        "sipCount": 1,
+        "missedCount": 0,
+        "highRiskCount": 0,
+        "mediumRiskCount": 0,
+        "lowRiskCount": 1,
+        "risk": "Low",
+        "details": "0 SIPs with 2+ missed payments, 0 with 1 missed payment"
+      },
+      "redemption_likelihood": {
+        "score": 0.0,
+        "flag": "Normal"
+      },
+      "aum_forecast": {
+        "projectedGrowthPct": -0.08
+      },
+      "churn_risk": {
+        "churnRisk": "High",
+        "score": 0.6
+      },
+      "goal_forecast": {
+        "status": "NoGoalDeclared"
+      },
+      "rebalancing_recommendations": {
+        "suggestions": [
+          "Add more asset classes for better diversification"
+        ]
+      },
+      "performance_suggestions": {
+        "suggestions": [
+          "Consider replacing DSP Mutual Fund Liquid Fund 620 with better performing same-category funds",
+          "Consider replacing Axis Mutual Fund Liquid Fund 101 with better performing same-category funds",
+          "Consider replacing DSP Mutual Fund Debt Fund 885 with better performing same-category funds"
+        ]
+      },
+      "goal_rebalancing_advice": {
+        "advice": "Map long-term goals to equity heavy funds and short-term to debt; rebalance annually."
+      },
+      "ai_summary": {
+        "portfolioScore": 94,
+        "summary": "Investor Anil Desai holds 3 schemes with -6.43% gain/loss.",
+        "recommendation": "Continue SIP discipline and review top losing funds."
+      }
+    },
+    "created_at": "2025-11-08T12:14:20.384413+00:00"
+  },
+  {
+    "investor_id": "INV0014",
+    "ai_summary": {
+      "summary": "1) The portfolio shows a total AUM of \u20b91,090,988.14 but has experienced a loss of 12.16%. There is a significant concentration in Nippon India funds, comprising 42.58%, which may pose a risk to portfolio diversity. \n\n2) \n- Recommend the client to reduce exposure to Nippon India funds to improve diversification and mitigate concentration risk.\n- Suggest including a wider range of mutual funds from different AMCs to enhance portfolio stability and potential for growth."
+    },
+    "analysis_result": {
+      "investor_id": "INV0014",
+      "name": "Pooja Agarwal",
+      "performance": {
+        "invested": 1242052.0,
+        "value": 1090988.14,
+        "gainLoss": -12.16
+      },
+      "allocation": {
+        "total": 1090988.1400000001,
+        "allocation": {
+          "ELSS": 19.05,
+          "Hybrid": 4.74,
+          "Liquid": 40.96,
+          "Balanced": 20.83,
+          "Debt": 14.41
+        }
+      },
+      "concentration": {
+        "totals": {
+          "Nippon India": 464548.46,
+          "Axis Mutual Fund": 51730.68,
+          "Franklin Templeton": 190251.25,
+          "DSP Mutual Fund": 384457.75
+        },
+        "alerts": [
+          {
+            "type": "HighAMCConcentration",
+            "amc": "Nippon India",
+            "pct": 42.58
+          }
+        ]
+      },
+      "underperforming": [
+        {
+          "scheme": "Nippon India ELSS Fund 962",
+          "loss": -12.13
+        },
+        {
+          "scheme": "Axis Mutual Fund Hybrid Fund 964",
+          "loss": -13.95
+        },
+        {
+          "scheme": "Franklin Templeton Liquid Fund 325",
+          "loss": -12.76
+        },
+        {
+          "scheme": "Nippon India Liquid Fund 435",
+          "loss": -11.65
+        },
+        {
+          "scheme": "DSP Mutual Fund Balanced Fund 767",
+          "loss": -12.05
+        },
+        {
+          "scheme": "DSP Mutual Fund Debt Fund 808",
+          "loss": -11.87
+        }
+      ],
+      "sip_health": {
+        "active": 3,
+        "details": [
+          {
+            "scheme": "Nippon India ELSS Fund 962",
+            "freq": "Monthly",
+            "next_due": "2025-11-07T19:01:10.035489+00:00"
+          },
+          {
+            "scheme": "Axis Mutual Fund Hybrid Fund 964",
+            "freq": "Monthly",
+            "next_due": "2025-10-19T19:01:10.035587+00:00"
+          },
+          {
+            "scheme": "DSP Mutual Fund Balanced Fund 767",
+            "freq": "Monthly",
+            "next_due": "2025-11-21T19:01:10.035825+00:00"
+          }
+        ]
+      },
+      "diversification": {
+        "amcCount": 4,
+        "catCount": 5,
+        "diversificationScore": 88
+      },
+      "risk_mismatch": {
+        "equityShare": 0.0,
+        "alert": null
+      },
+      "category_imbalance": {
+        "alerts": []
+      },
+      "aum_concentration": {
+        "top3": [
+          {
+            "scheme": "Nippon India Liquid Fund 435",
+            "value": 256670.89
+          },
+          {
+            "scheme": "DSP Mutual Fund Balanced Fund 767",
+            "value": 227203.87
+          },
+          {
+            "scheme": "Nippon India ELSS Fund 962",
+            "value": 207877.57
+          }
+        ],
+        "concentration": 63.41
+      },
+      "underperf_alert": [
+        {
+          "scheme": "Nippon India ELSS Fund 962",
+          "loss": -12.13
+        },
+        {
+          "scheme": "Axis Mutual Fund Hybrid Fund 964",
+          "loss": -13.95
+        },
+        {
+          "scheme": "Franklin Templeton Liquid Fund 325",
+          "loss": -12.76
+        },
+        {
+          "scheme": "Nippon India Liquid Fund 435",
+          "loss": -11.65
+        },
+        {
+          "scheme": "DSP Mutual Fund Balanced Fund 767",
+          "loss": -12.05
+        },
+        {
+          "scheme": "DSP Mutual Fund Debt Fund 808",
+          "loss": -11.87
+        }
+      ],
+      "liquidity": {
+        "illiquidSchemes": [
+          "Nippon India ELSS Fund 962"
+        ]
+      },
+      "sip_discontinuation": {
+        "sipCount": 3,
+        "missedCount": 0,
+        "highRiskCount": 0,
+        "mediumRiskCount": 0,
+        "lowRiskCount": 3,
+        "risk": "Low",
+        "details": "0 SIPs with 2+ missed payments, 0 with 1 missed payment"
+      },
+      "redemption_likelihood": {
+        "score": 0.0,
+        "flag": "Normal"
+      },
+      "aum_forecast": {
+        "projectedGrowthPct": 4.87
+      },
+      "churn_risk": {
+        "churnRisk": "High",
+        "score": 0.6
+      },
+      "goal_forecast": {
+        "status": "NoGoalDeclared"
+      },
+      "rebalancing_recommendations": {
+        "suggestions": [
+          "Increase debt allocation for stability"
+        ]
+      },
+      "performance_suggestions": {
+        "suggestions": [
+          "Consider replacing Nippon India ELSS Fund 962 with better performing same-category funds",
+          "Consider replacing Axis Mutual Fund Hybrid Fund 964 with better performing same-category funds",
+          "Consider replacing Franklin Templeton Liquid Fund 325 with better performing same-category funds",
+          "Consider replacing Nippon India Liquid Fund 435 with better performing same-category funds",
+          "Consider replacing DSP Mutual Fund Balanced Fund 767 with better performing same-category funds",
+          "Consider replacing DSP Mutual Fund Debt Fund 808 with better performing same-category funds"
+        ]
+      },
+      "goal_rebalancing_advice": {
+        "advice": "Map long-term goals to equity heavy funds and short-term to debt; rebalance annually."
+      },
+      "ai_summary": {
+        "portfolioScore": 88,
+        "summary": "Investor Pooja Agarwal holds 6 schemes with -12.16% gain/loss.",
+        "recommendation": "Continue SIP discipline and review top losing funds."
+      }
+    },
+    "created_at": "2025-11-08T12:14:43.887953+00:00"
+  },
+  {
+    "investor_id": "INV0163",
+    "ai_summary": {
+      "summary": "1) The investor's portfolio has a total AUM of \u20b9645,673.55 with a modest gain of 12.24%. There is a high concentration in ICICI Prudential, making the portfolio less diversified with a diversification score of 64%. \n\n2) Recommendations:\n   - Diversify the portfolio by adding investments from other asset management companies (AMCs) to reduce the concentration risk associated with ICICI Prudential.\n   - Consider reallocating part of the portfolio to different asset classes or sectors that show growth potential, which could enhance overall returns while maintaining a balanced risk profile."
+    },
+    "analysis_result": {
+      "investor_id": "INV0163",
+      "name": "Suresh Khanna",
+      "performance": {
+        "invested": 575266.0,
+        "value": 645673.55,
+        "gainLoss": 12.24
+      },
+      "allocation": {
+        "total": 645673.5499999999,
+        "allocation": {
+          "Balanced": 83.28,
+          "Liquid": 16.72
+        }
+      },
+      "concentration": {
+        "totals": {
+          "ICICI Prudential": 303512.82,
+          "DSP Mutual Fund": 107966.93,
+          "SBI Mutual Fund": 172320.98,
+          "UTI Mutual Fund": 61872.82
+        },
+        "alerts": [
+          {
+            "type": "HighAMCConcentration",
+            "amc": "ICICI Prudential",
+            "pct": 47.01
+          }
+        ]
+      },
+      "underperforming": [],
+      "sip_health": {
+        "active": 3,
+        "details": [
+          {
+            "scheme": "ICICI Prudential Balanced Fund 103",
+            "freq": "Monthly",
+            "next_due": "2025-11-28T19:01:10.108416+00:00"
+          },
+          {
+            "scheme": "SBI Mutual Fund Balanced Fund 674",
+            "freq": "Monthly",
+            "next_due": "2025-10-14T19:01:10.108563+00:00"
+          },
+          {
+            "scheme": "UTI Mutual Fund Balanced Fund 274",
+            "freq": "Quarterly",
+            "next_due": null
+          }
+        ]
+      },
+      "diversification": {
+        "amcCount": 4,
+        "catCount": 2,
+        "diversificationScore": 64
+      },
+      "risk_mismatch": {
+        "equityShare": 0.0,
+        "alert": null
+      },
+      "category_imbalance": {
+        "alerts": [
+          {
+            "type": "CategoryOverweight",
+            "category": "Balanced",
+            "pct": 83.28
+          }
+        ]
+      },
+      "aum_concentration": {
+        "top3": [
+          {
+            "scheme": "ICICI Prudential Balanced Fund 103",
+            "value": 303512.82
+          },
+          {
+            "scheme": "SBI Mutual Fund Balanced Fund 674",
+            "value": 172320.98
+          },
+          {
+            "scheme": "DSP Mutual Fund Liquid Fund 428",
+            "value": 107966.93
+          }
+        ],
+        "concentration": 90.42
+      },
+      "underperf_alert": [],
+      "liquidity": {
+        "illiquidSchemes": []
+      },
+      "sip_discontinuation": {
+        "sipCount": 3,
+        "missedCount": 0,
+        "highRiskCount": 0,
+        "mediumRiskCount": 0,
+        "lowRiskCount": 2,
+        "risk": "Low",
+        "details": "0 SIPs with 2+ missed payments, 0 with 1 missed payment"
+      },
+      "redemption_likelihood": {
+        "score": 0.2,
+        "flag": "Normal"
+      },
+      "aum_forecast": {
+        "projectedGrowthPct": 0.91
+      },
+      "churn_risk": {
+        "churnRisk": "Low",
+        "score": 0
+      },
+      "goal_forecast": {
+        "status": "NoGoalDeclared"
+      },
+      "rebalancing_recommendations": {
+        "suggestions": [
+          "Increase debt allocation for stability",
+          "Add more asset classes for better diversification"
+        ]
+      },
+      "performance_suggestions": {
+        "suggestions": [
+          "Portfolio is performing well. Continue monitoring and rebalance annually."
+        ]
+      },
+      "goal_rebalancing_advice": {
+        "advice": "Map long-term goals to equity heavy funds and short-term to debt; rebalance annually."
+      },
+      "ai_summary": {
+        "portfolioScore": 88,
+        "summary": "Investor Suresh Khanna holds 4 schemes with 12.24% gain/loss.",
+        "recommendation": "Continue SIP discipline and review top losing funds."
+      }
+    },
+    "created_at": "2025-11-08T12:15:10.390746+00:00"
+  },
+  {
+    "investor_id": "INV0029",
+    "ai_summary": {
+      "summary": "**Portfolio Health Summary:**  \nThe investor's portfolio, with an asset under management (AUM) of \u20b91,368,553.21, is currently experiencing a loss of 10.05%. The high level of churn risk indicates potential instability, while a diversification score of 92 suggests a good spread across various funds. However, immediate attention is required due to alerts from several funds.\n\n**Actionable Recommendations:**  \n1. **Review Underperforming Funds:** Advise the client to assess the flagged funds, such as HDFC Mutual Fund Debt Fund and Axis Mutual Fund Equity Fund, and consider reallocating investments to higher-performing options or more stable funds to improve overall returns and mitigate losses.\n\n2. **Enhance Diversification Strategy:** Suggest increasing exposure to different asset classes or sectors to reduce risk and enhance the potential for growth, especially considering the current high churn risk in the portfolio."
+    },
+    "analysis_result": {
+      "investor_id": "INV0029",
+      "name": "Nikhil Bansal",
+      "performance": {
+        "invested": 1521494.0,
+        "value": 1368553.21,
+        "gainLoss": -10.05
+      },
+      "allocation": {
+        "total": 1368553.21,
+        "allocation": {
+          "Debt": 20.59,
+          "Equity": 52.28,
+          "Liquid": 12.08,
+          "Balanced": 15.05
+        }
+      },
+      "concentration": {
+        "totals": {
+          "HDFC Mutual Fund": 82153.87,
+          "Axis Mutual Fund": 438823.24,
+          "ICICI Prudential": 371228.74,
+          "Aditya Birla Sun Life": 243388.2,
+          "Kotak Mahindra": 232959.16
+        },
+        "alerts": []
+      },
+      "underperforming": [
+        {
+          "scheme": "HDFC Mutual Fund Debt Fund 240",
+          "loss": -13.38
+        },
+        {
+          "scheme": "Axis Mutual Fund Debt Fund 399",
+          "loss": -14.7
+        },
+        {
+          "scheme": "Axis Mutual Fund Equity Fund 371",
+          "loss": -5.82
+        },
+        {
+          "scheme": "ICICI Prudential Liquid Fund 773",
+          "loss": -5.76
+        },
+        {
+          "scheme": "ICICI Prudential Balanced Fund 312",
+          "loss": -11.18
+        },
+        {
+          "scheme": "Aditya Birla Sun Life Equity Fund 952",
+          "loss": -10.92
+        },
+        {
+          "scheme": "Aditya Birla Sun Life Equity Fund 445",
+          "loss": -13.35
+        },
+        {
+          "scheme": "Kotak Mahindra Equity Fund 383",
+          "loss": -8.01
+        }
+      ],
+      "sip_health": {
+        "active": 4,
+        "details": [
+          {
+            "scheme": "HDFC Mutual Fund Debt Fund 240",
+            "freq": "Monthly",
+            "next_due": null
+          },
+          {
+            "scheme": "Aditya Birla Sun Life Equity Fund 952",
+            "freq": "Monthly",
+            "next_due": "2025-12-05T19:01:10.043575+00:00"
+          },
+          {
+            "scheme": "Aditya Birla Sun Life Equity Fund 445",
+            "freq": "Quarterly",
+            "next_due": null
+          },
+          {
+            "scheme": "Kotak Mahindra Equity Fund 383",
+            "freq": "Monthly",
+            "next_due": "2025-11-03T19:01:10.043746+00:00"
+          }
+        ]
+      },
+      "diversification": {
+        "amcCount": 5,
+        "catCount": 4,
+        "diversificationScore": 92
+      },
+      "risk_mismatch": {
+        "equityShare": 52.28,
+        "alert": null
+      },
+      "category_imbalance": {
+        "alerts": []
+      },
+      "aum_concentration": {
+        "top3": [
+          {
+            "scheme": "Axis Mutual Fund Equity Fund 371",
+            "value": 239178.59
+          },
+          {
+            "scheme": "Kotak Mahindra Equity Fund 383",
+            "value": 232959.16
+          },
+          {
+            "scheme": "ICICI Prudential Balanced Fund 312",
+            "value": 205932.72
+          }
+        ],
+        "concentration": 49.55
+      },
+      "underperf_alert": [
+        {
+          "scheme": "HDFC Mutual Fund Debt Fund 240",
+          "loss": -13.38
+        },
+        {
+          "scheme": "Axis Mutual Fund Debt Fund 399",
+          "loss": -14.7
+        },
+        {
+          "scheme": "Axis Mutual Fund Equity Fund 371",
+          "loss": -5.82
+        },
+        {
+          "scheme": "ICICI Prudential Liquid Fund 773",
+          "loss": -5.76
+        },
+        {
+          "scheme": "ICICI Prudential Balanced Fund 312",
+          "loss": -11.18
+        },
+        {
+          "scheme": "Aditya Birla Sun Life Equity Fund 952",
+          "loss": -10.92
+        },
+        {
+          "scheme": "Aditya Birla Sun Life Equity Fund 445",
+          "loss": -13.35
+        },
+        {
+          "scheme": "Kotak Mahindra Equity Fund 383",
+          "loss": -8.01
+        }
+      ],
+      "liquidity": {
+        "illiquidSchemes": []
+      },
+      "sip_discontinuation": {
+        "sipCount": 4,
+        "missedCount": 0,
+        "highRiskCount": 0,
+        "mediumRiskCount": 0,
+        "lowRiskCount": 2,
+        "risk": "Low",
+        "details": "0 SIPs with 2+ missed payments, 0 with 1 missed payment"
+      },
+      "redemption_likelihood": {
+        "score": 0.0,
+        "flag": "Normal"
+      },
+      "aum_forecast": {
+        "projectedGrowthPct": -0.85
+      },
+      "churn_risk": {
+        "churnRisk": "High",
+        "score": 0.6
+      },
+      "goal_forecast": {
+        "status": "NoGoalDeclared"
+      },
+      "rebalancing_recommendations": {
+        "suggestions": []
+      },
+      "performance_suggestions": {
+        "suggestions": [
+          "Consider replacing HDFC Mutual Fund Debt Fund 240 with better performing same-category funds",
+          "Consider replacing Axis Mutual Fund Debt Fund 399 with better performing same-category funds",
+          "Consider replacing Axis Mutual Fund Equity Fund 371 with better performing same-category funds",
+          "Consider replacing ICICI Prudential Liquid Fund 773 with better performing same-category funds",
+          "Consider replacing ICICI Prudential Balanced Fund 312 with better performing same-category funds",
+          "Consider replacing Aditya Birla Sun Life Equity Fund 952 with better performing same-category funds",
+          "Consider replacing Aditya Birla Sun Life Equity Fund 445 with better performing same-category funds",
+          "Consider replacing Kotak Mahindra Equity Fund 383 with better performing same-category funds"
+        ]
+      },
+      "goal_rebalancing_advice": {
+        "advice": "Map long-term goals to equity heavy funds and short-term to debt; rebalance annually."
+      },
+      "ai_summary": {
+        "portfolioScore": 90,
+        "summary": "Investor Nikhil Bansal holds 8 schemes with -10.05% gain/loss.",
+        "recommendation": "Continue SIP discipline and review top losing funds."
+      }
+    },
+    "created_at": "2025-11-17T07:02:54.948459+00:00"
+  },
+  {
+    "investor_id": "INV0019",
+    "ai_summary": {
+      "summary": "**Summary of Portfolio Health:**  \nThe investor's portfolio currently has an Asset Under Management (AUM) of \u20b99,45,174.69, reflecting a slight overall loss of 9.65%. The portfolio is well-diversified, but there is a high churn risk, indicating potential volatility.\n\n**Actionable Recommendations:**  \n1. Review and possibly rebalance the portfolio by reallocating funds from underperforming sectors or funds, especially from the alerts list, to minimize losses and enhance potential growth.\n2. Consider adding stable, low-risk investment options to mitigate churn risk and protect the overall portfolio value against market fluctuations."
+    },
+    "analysis_result": {
+      "investor_id": "INV0019",
+      "name": "Ajay Jain",
+      "performance": {
+        "invested": 1046155.0,
+        "value": 945174.69,
+        "gainLoss": -9.65
+      },
+      "allocation": {
+        "total": 945174.6900000001,
+        "allocation": {
+          "Equity": 16.87,
+          "Hybrid": 30.53,
+          "Debt": 2.2,
+          "Liquid": 23.12,
+          "ELSS": 27.29
+        }
+      },
+      "concentration": {
+        "totals": {
+          "SBI Mutual Fund": 82811.55,
+          "Aditya Birla Sun Life": 209929.6,
+          "Franklin Templeton": 20773.36,
+          "ICICI Prudential": 373754.42,
+          "Axis Mutual Fund": 257905.76
+        },
+        "alerts": []
+      },
+      "underperforming": [
+        {
+          "scheme": "SBI Mutual Fund Equity Fund 521",
+          "loss": -11.79
+        },
+        {
+          "scheme": "Aditya Birla Sun Life Hybrid Fund 908",
+          "loss": -13.23
+        },
+        {
+          "scheme": "Franklin Templeton Debt Fund 838",
+          "loss": -13.52
+        },
+        {
+          "scheme": "ICICI Prudential Liquid Fund 321",
+          "loss": -6.2
+        },
+        {
+          "scheme": "ICICI Prudential Hybrid Fund 157",
+          "loss": -5.6
+        },
+        {
+          "scheme": "Axis Mutual Fund ELSS Fund 478",
+          "loss": -9.26
+        },
+        {
+          "scheme": "ICICI Prudential Equity Fund 355",
+          "loss": -10.75
+        }
+      ],
+      "sip_health": {
+        "active": 4,
+        "details": [
+          {
+            "scheme": "Aditya Birla Sun Life Hybrid Fund 908",
+            "freq": "Quarterly",
+            "next_due": "2025-11-29T19:01:10.038036+00:00"
+          },
+          {
+            "scheme": "Franklin Templeton Debt Fund 838",
+            "freq": "Monthly",
+            "next_due": "2025-11-11T19:01:10.038137+00:00"
+          },
+          {
+            "scheme": "ICICI Prudential Hybrid Fund 157",
+            "freq": "Quarterly",
+            "next_due": null
+          },
+          {
+            "scheme": "ICICI Prudential Equity Fund 355",
+            "freq": "Monthly",
+            "next_due": null
+          }
+        ]
+      },
+      "diversification": {
+        "amcCount": 5,
+        "catCount": 5,
+        "diversificationScore": 100
+      },
+      "risk_mismatch": {
+        "equityShare": 16.87,
+        "alert": null
+      },
+      "category_imbalance": {
+        "alerts": []
+      },
+      "aum_concentration": {
+        "top3": [
+          {
+            "scheme": "Axis Mutual Fund ELSS Fund 478",
+            "value": 257905.76
+          },
+          {
+            "scheme": "ICICI Prudential Liquid Fund 321",
+            "value": 218522.11
+          },
+          {
+            "scheme": "Aditya Birla Sun Life Hybrid Fund 908",
+            "value": 209929.6
+          }
+        ],
+        "concentration": 72.62
+      },
+      "underperf_alert": [
+        {
+          "scheme": "SBI Mutual Fund Equity Fund 521",
+          "loss": -11.79
+        },
+        {
+          "scheme": "Aditya Birla Sun Life Hybrid Fund 908",
+          "loss": -13.23
+        },
+        {
+          "scheme": "Franklin Templeton Debt Fund 838",
+          "loss": -13.52
+        },
+        {
+          "scheme": "ICICI Prudential Liquid Fund 321",
+          "loss": -6.2
+        },
+        {
+          "scheme": "ICICI Prudential Hybrid Fund 157",
+          "loss": -5.6
+        },
+        {
+          "scheme": "Axis Mutual Fund ELSS Fund 478",
+          "loss": -9.26
+        },
+        {
+          "scheme": "ICICI Prudential Equity Fund 355",
+          "loss": -10.75
+        }
+      ],
+      "liquidity": {
+        "illiquidSchemes": [
+          "Axis Mutual Fund ELSS Fund 478"
+        ]
+      },
+      "sip_discontinuation": {
+        "sipCount": 4,
+        "missedCount": 0,
+        "highRiskCount": 0,
+        "mediumRiskCount": 0,
+        "lowRiskCount": 2,
+        "risk": "Low",
+        "details": "0 SIPs with 2+ missed payments, 0 with 1 missed payment"
+      },
+      "redemption_likelihood": {
+        "score": 0.0,
+        "flag": "Normal"
+      },
+      "aum_forecast": {
+        "projectedGrowthPct": 2.99
+      },
+      "churn_risk": {
+        "churnRisk": "High",
+        "score": 0.6
+      },
+      "goal_forecast": {
+        "status": "NoGoalDeclared"
+      },
+      "rebalancing_recommendations": {
+        "suggestions": [
+          "Increase debt allocation for stability"
+        ]
+      },
+      "performance_suggestions": {
+        "suggestions": [
+          "Consider replacing SBI Mutual Fund Equity Fund 521 with better performing same-category funds",
+          "Consider replacing Aditya Birla Sun Life Hybrid Fund 908 with better performing same-category funds",
+          "Consider replacing Franklin Templeton Debt Fund 838 with better performing same-category funds",
+          "Consider replacing ICICI Prudential Liquid Fund 321 with better performing same-category funds",
+          "Consider replacing ICICI Prudential Hybrid Fund 157 with better performing same-category funds",
+          "Consider replacing Axis Mutual Fund ELSS Fund 478 with better performing same-category funds",
+          "Consider replacing ICICI Prudential Equity Fund 355 with better performing same-category funds"
+        ]
+      },
+      "goal_rebalancing_advice": {
+        "advice": "Map long-term goals to equity heavy funds and short-term to debt; rebalance annually."
+      },
+      "ai_summary": {
+        "portfolioScore": 90,
+        "summary": "Investor Ajay Jain holds 7 schemes with -9.65% gain/loss.",
+        "recommendation": "Continue SIP discipline and review top losing funds."
+      }
+    },
+    "created_at": "2025-11-08T12:30:54.531438+00:00"
+  },
+  {
+    "investor_id": "INV0005",
+    "ai_summary": {
+      "summary": "1) The portfolio has an Asset Under Management (AUM) of \u20b9786,409.42 and has incurred a loss of \u20b910.24, indicating that it may not be performing well currently. The diversification level is at 72, which is healthy, but the high churn risk suggests the client may frequently alter their investments.\n\n2) \n- **Rebalance the Portfolio**: Recommend reassessing the current mutual fund allocations, particularly considering the five funds flagged in alerts.  It may be prudent to replace any funds that are consistently underperforming or carry high churn risks to enhance stability and performance.\n- **Focus on Growth Options**: Encourage the client to explore higher growth potential mutual funds (such as equity or hybrid funds) to counterbalance the losses and improve returns, while ensuring that it aligns with their risk tolerance."
+    },
+    "analysis_result": {
+      "investor_id": "INV0005",
+      "name": "Tanvi Sharma",
+      "performance": {
+        "invested": 876091.0,
+        "value": 786409.42,
+        "gainLoss": -10.24
+      },
+      "allocation": {
+        "total": 786409.42,
+        "allocation": {
+          "Liquid": 52.03,
+          "ELSS": 39.33,
+          "Balanced": 8.64
+        }
+      },
+      "concentration": {
+        "totals": {
+          "Axis Mutual Fund": 242436.48,
+          "ICICI Prudential": 194356.56,
+          "Nippon India": 67967.19,
+          "UTI Mutual Fund": 281649.19
+        },
+        "alerts": []
+      },
+      "underperforming": [
+        {
+          "scheme": "Axis Mutual Fund Liquid Fund 718",
+          "loss": -6.38
+        },
+        {
+          "scheme": "ICICI Prudential ELSS Fund 799",
+          "loss": -14.0
+        },
+        {
+          "scheme": "Nippon India Balanced Fund 447",
+          "loss": -14.54
+        },
+        {
+          "scheme": "UTI Mutual Fund Liquid Fund 263",
+          "loss": -9.63
+        },
+        {
+          "scheme": "UTI Mutual Fund ELSS Fund 381",
+          "loss": -9.59
+        }
+      ],
+      "sip_health": {
+        "active": 3,
+        "details": [
+          {
+            "scheme": "Axis Mutual Fund Liquid Fund 718",
+            "freq": "Quarterly",
+            "next_due": "2025-10-30T19:01:10.030644+00:00"
+          },
+          {
+            "scheme": "ICICI Prudential ELSS Fund 799",
+            "freq": "Monthly",
+            "next_due": "2025-11-28T19:01:10.030729+00:00"
+          },
+          {
+            "scheme": "Nippon India Balanced Fund 447",
+            "freq": "Quarterly",
+            "next_due": "2025-11-21T19:01:10.030828+00:00"
+          }
+        ]
+      },
+      "diversification": {
+        "amcCount": 4,
+        "catCount": 3,
+        "diversificationScore": 72
+      },
+      "risk_mismatch": {
+        "equityShare": 0.0,
+        "alert": null
+      },
+      "category_imbalance": {
+        "alerts": []
+      },
+      "aum_concentration": {
+        "top3": [
+          {
+            "scheme": "Axis Mutual Fund Liquid Fund 718",
+            "value": 242436.48
+          },
+          {
+            "scheme": "ICICI Prudential ELSS Fund 799",
+            "value": 194356.56
+          },
+          {
+            "scheme": "UTI Mutual Fund Liquid Fund 263",
+            "value": 166706.44
+          }
+        ],
+        "concentration": 76.74
+      },
+      "underperf_alert": [
+        {
+          "scheme": "Axis Mutual Fund Liquid Fund 718",
+          "loss": -6.38
+        },
+        {
+          "scheme": "ICICI Prudential ELSS Fund 799",
+          "loss": -14.0
+        },
+        {
+          "scheme": "Nippon India Balanced Fund 447",
+          "loss": -14.54
+        },
+        {
+          "scheme": "UTI Mutual Fund Liquid Fund 263",
+          "loss": -9.63
+        },
+        {
+          "scheme": "UTI Mutual Fund ELSS Fund 381",
+          "loss": -9.59
+        }
+      ],
+      "liquidity": {
+        "illiquidSchemes": [
+          "ICICI Prudential ELSS Fund 799",
+          "UTI Mutual Fund ELSS Fund 381"
+        ]
+      },
+      "sip_discontinuation": {
+        "sipCount": 3,
+        "missedCount": 0,
+        "highRiskCount": 0,
+        "mediumRiskCount": 0,
+        "lowRiskCount": 3,
+        "risk": "Low",
+        "details": "0 SIPs with 2+ missed payments, 0 with 1 missed payment"
+      },
+      "redemption_likelihood": {
+        "score": 0.0,
+        "flag": "Normal"
+      },
+      "aum_forecast": {
+        "projectedGrowthPct": 7.03
+      },
+      "churn_risk": {
+        "churnRisk": "High",
+        "score": 0.6
+      },
+      "goal_forecast": {
+        "status": "NoGoalDeclared"
+      },
+      "rebalancing_recommendations": {
+        "suggestions": [
+          "Increase debt allocation for stability"
+        ]
+      },
+      "performance_suggestions": {
+        "suggestions": [
+          "Consider replacing Axis Mutual Fund Liquid Fund 718 with better performing same-category funds",
+          "Consider replacing ICICI Prudential ELSS Fund 799 with better performing same-category funds",
+          "Consider replacing Nippon India Balanced Fund 447 with better performing same-category funds",
+          "Consider replacing UTI Mutual Fund Liquid Fund 263 with better performing same-category funds",
+          "Consider replacing UTI Mutual Fund ELSS Fund 381 with better performing same-category funds"
+        ]
+      },
+      "goal_rebalancing_advice": {
+        "advice": "Map long-term goals to equity heavy funds and short-term to debt; rebalance annually."
+      },
+      "ai_summary": {
+        "portfolioScore": 90,
+        "summary": "Investor Tanvi Sharma holds 5 schemes with -10.24% gain/loss.",
+        "recommendation": "Continue SIP discipline and review top losing funds."
+      }
+    },
+    "created_at": "2025-11-18T08:51:43.822352+00:00"
+  }
+]
