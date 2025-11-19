@@ -65,7 +65,32 @@ const Investors = ({ user, onLogout }) => {
       style: 'currency',
       currency: 'INR',
       maximumFractionDigits: 0
-    }).format(value);
+    }).format(value || 0);
+  };
+
+  const handleAddInvestor = () => {
+    setSelectedInvestor(null);
+    setShowFormModal(true);
+  };
+
+  const handleEditInvestor = (investor, e) => {
+    e.stopPropagation();
+    setSelectedInvestor(investor);
+    setShowFormModal(true);
+  };
+
+  const handleDeleteInvestor = (investor, e) => {
+    e.stopPropagation();
+    setSelectedInvestor(investor);
+    setShowDeleteDialog(true);
+  };
+
+  const handleFormSuccess = () => {
+    loadInvestors();
+  };
+
+  const handleDeleteSuccess = () => {
+    loadInvestors();
   };
 
   const maskPAN = (pan) => {
